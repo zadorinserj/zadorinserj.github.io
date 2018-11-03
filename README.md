@@ -13,4 +13,4 @@
 [VR Box 2](https://zadorinserj.github.io/demo/vr_box/)  
 
 ### Certificates
-[Web Developer 10.0](https://zadorinserj.github.io/demo/certificates.png)
+[Web Developer 10.0](https://zadorinserj.github.io/demo/certificate.png)
