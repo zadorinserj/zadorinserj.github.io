@@ -1,0 +1,76 @@
+.main
+	background: url(../img/main-bg.jpg) center no-repeat
+	background-size: cover
+	padding-top: 30vh
+	color: $light
+	height: calc(100vh + 100px)
+	.title
+		margin-left: 100px
+		&::before
+			content: ''
+			position: absolute
+			background: url(../img/main-border.png) center no-repeat
+			width: 430px
+			height: 230px
+			margin-left: 70px
+			margin-top: -20px
+		h1
+			text-align: left
+			text-transform: uppercase
+			@include bold
+			font-size: 60px
+			margin: 0
+		.descr
+			@include ireg
+			font-size: 30px
+			.accent
+				color: #fed8a7
+	.mixer
+		position: absolute
+		left: 50%
+		transform: translateX(-115px)
+		margin-top: -95px
+		max-width: 714px
+
+@media(max-width: 1199px)
+	.main
+		.title
+			margin-left: 50px
+		.mixer
+			transform: translateX(-115px)
+			max-width: 590px
+@media(max-width: 992px)
+	.main
+		height: calc(100vh + 50px)
+		padding-top: 20vh
+		.title
+			margin-left: auto
+			margin-right: auto
+			display: block
+			width: 445px
+		.mixer
+			position: static
+			display: block
+			margin-left: auto
+			margin-right: auto
+			margin-top: 50px
+			max-width: 490px
+			transform: translateX(0)
+@media(max-width: 767px)
+	.main
+		height: 100vh
+@media(max-width: 576px)
+	.main
+		padding-top: 40vh
+		.title
+			width: 100%
+			&::before
+				display: none
+			h1
+				font-size: 35px
+				text-align: center
+			.descr
+				font-size: 20px
+				text-align: center
+		.mixer
+			display: none

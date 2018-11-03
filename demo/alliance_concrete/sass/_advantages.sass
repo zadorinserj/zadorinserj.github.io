@@ -1,0 +1,112 @@
+.advantages
+	margin-top: 612px
+	padding-top: 200px
+	padding-bottom: 260px
+	background: #fff url(../img/advantages-bg.png) center no-repeat
+	background-size: cover
+	opacity: 0.98
+	.content
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		.title
+			width: 370px
+			h2
+				text-align: left
+				margin: 0
+				text-transform: uppercase
+				@include bold
+				font-size: 48px
+				line-height: 1
+				text-shadow: 0px 3px 5px rgba(26, 35, 36, 0.33)
+				margin-bottom: 50px
+				.accent
+					color: #30678a
+			.descr
+				@include ibook
+				font-size: 18px
+		.block
+			width: 100%
+			max-width: 770px
+			padding-top: 90px
+			padding-bottom: 40px
+			padding-left: 70px
+			background-color: #1a2324
+			color: $light
+			@include ibook
+			font-size: 18px
+			box-shadow: 0px 0px 18px 0px rgba(26, 35, 36, 0.8)
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+			.block-item
+				width: 220px
+				margin-bottom: 30px
+				.img-box
+					margin-bottom: 10px
+
+@media(max-width: 1199px)
+	.advantages
+		opacity: 0.98
+		margin-top: 612px
+		.content
+			.title
+				h2
+					font-size: 40px
+				.descr
+					br
+						display: none
+			.block
+				margin-left: 25px
+				padding-left: 50px
+				.block-item
+					width: 200px
+@media(max-width: 992px)
+	.advantages
+		background: none
+		padding-top: 100px
+		padding-bottom: 100px
+		margin-top: 0
+		.content
+			flex-wrap: wrap
+			.block
+				margin-left: 0
+				padding-left: 30px
+			.title
+				width: 100%
+				h2
+					text-align: center
+					font-size: 35px
+					margin-bottom: 20px
+					br
+						display: none
+					.accent
+						display: inline-block
+				.descr
+					margin-bottom: 20px
+@media(max-width: 768px)
+	.advantages
+		.content
+			.title
+				h2
+					font-size: 37px
+			.block
+				justify-content: space-around
+				padding-left: 20px
+@media(max-width: 576px)
+	.advantages
+		padding-bottom: 30px
+		.content
+			.title
+				h2
+					font-size: 28px
+				.descr
+					font-size: 16px
+					text-align: center

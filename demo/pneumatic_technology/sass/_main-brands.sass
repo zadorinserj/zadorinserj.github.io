@@ -1,0 +1,71 @@
+.main-brands
+	padding-top: 100px
+	padding-bottom: 100px
+	h2
+		margin-bottom: 20px
+	.brands-slider
+		width: 100%
+		height: 100px
+		.brands-btn
+			position: absolute
+			right: 0
+			top: -60px
+			width: 50px
+			height: 50px
+			border: none
+			border-radius: 50%
+			transition: all 0.2s ease
+			&-prev
+				right: 60px
+				background: url(../img/main-brands-prev.png) center no-repeat
+				&:hover
+					box-shadow: -5.196px 3px 16.92px 1.08px rgba(0, 142, 232, 0.26)
+					background: url(../img/main-brands-prev-hover.png) center no-repeat
+			&-next
+				background: url(../img/main-brands-next.png) center no-repeat
+				&:hover
+					box-shadow: -5.196px 3px 16.92px 1.08px rgba(0, 142, 232, 0.26)
+					background: url(../img/main-brands-next-hover.png) center no-repeat
+		.slick-track
+			display: flex
+			align-items: center
+			.slide
+				img
+					margin-left: auto
+					margin-right: auto
+		.slick-dots
+			justify-content: flex-end
+			bottom: -70px
+			li
+				button
+					font-size: 0
+					background: none
+					border: 1px solid #545277
+					transition: background-color 0.3s ease
+				&::before
+					content: ''
+					position: absolute
+					left: 50%
+					top: 50%
+					transform: translate(-50%, -50%)
+					width: 6px
+					height: 6px
+					border: 1px solid #545277
+					border-radius: 50%
+					opacity: 0
+					transition: all 0.3s ease
+			li.slick-active
+				&::before
+					width: 30px
+					height: 30px
+					opacity: 1
+				button
+					background-color: $dark
+
+@media(max-width: 991px)
+	.main-brands
+		.brands-slider
+			.brands-btn-prev
+				left: 0
+			.slick-dots
+				justify-content: center

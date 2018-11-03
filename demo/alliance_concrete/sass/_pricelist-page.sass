@@ -1,0 +1,433 @@
+.pricelist-page
+	.price-main
+		&::after
+			content: url(../img/price-text.png) !important
+			position: absolute
+			right: 0
+			margin-top: -73px
+
+	// .feedback-section
+	// 	width: 70%
+	// 	margin: auto
+	// 	height: 200px
+	// 	background-color: #F9FEFD
+	// 	position: relative
+	// 	bottom: 100px
+	// 	border: 1px solid #000
+	// 	display: flex
+	// 	justify-content: space-between
+	// 	color: #1A2419
+	// 	@include ibook
+
+	// .feedback-text-call
+	// 	padding-left: 5%
+	// 	display: flex
+	// 	justify-content: center
+	// 	align-items: center
+	// 	text-align: left
+	// 	font-size: 30px
+	// 	font-weight: bold
+
+
+	// .feedback-section__form 
+	// 	display: flex
+	// 	justify-content: space-between
+	// 	align-items: center
+	// 	width: 70%
+
+	// .input-block
+	// 	display: flex
+	// 	flex-direction: column
+		
+		
+	// .input-block__input
+	// 	padding-right: 100px
+	// 	width: 100%
+	// 	display: flex
+	// 	justify-content: space-between
+
+	// .feedback-section__input
+	// 	line-height: 1.333;
+	// 	@include ibook
+	// 	background-color: #F9FEFD
+	// 	padding: 10px
+	// 	border-right: none
+	// 	border-left: none
+	// 	border-top: none
+	// 	border-bottom: 1px solid #000
+
+	// .feedback-section__alert
+	// 	width: 70% 
+	// 	padding-top: 20px
+	// 	font-size: 14px
+
+	// .feedback-section__link
+	// 	color: #1A2419
+	// 	text-decoration: underline
+
+	// .feedback-section__button 
+	// 	display: flex
+	// 	flex-direction: column
+	// 	justify-content: center
+	// 	align-items: center
+	// 	height: 100%
+	// 	width: 30%
+	// 	border: none
+	// 	@include ibook
+	// 	background-image: linear-gradient( 300deg, rgb(255,255,255) 0%, rgb(242,255,255) 2%, rgb(148,206,241) 25%, rgb(77,144,180) 50%, rgb(46,89,123) 75%, rgb(19,24,24) 98%, rgb(3,3,3) 100%)
+	   
+
+	// 	span 
+	// 		padding-top: 10px
+	// 		color: white
+
+	.pricelist
+		padding-bottom: 200px
+
+	.pricelist-text
+		.product-form
+			width: 970px
+			height: 170px
+			margin-top: -230px
+			color: $dark
+			background-color: $light
+			box-shadow: 0px 0px 27px 0px rgba(26, 35, 36, 0.4)
+			position: absolute
+			left: 50%
+			transform: translateX(-50%)
+			border-radius: 8px
+			.form
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				align-items: center
+				.small
+					display: block
+					padding-left: 30px
+					@include ilight 
+					font-size: 14px
+					a
+						color: $dark
+						text-decoration: underline
+				.title
+					width: 270px
+					padding-left: 70px
+					@include bold
+					font-size: 30px
+				.block
+					width: 400px
+					margin-left: auto
+					.input
+						width: 170px
+						margin-left: 28px
+						vertical-align: middle
+					/* Hoshi */
+					.input--hoshi 
+						overflow: hidden
+						margin-top: -30px
+
+					.input__field--hoshi 
+						margin-top: 30px
+						padding: 1em 0.15em
+						width: 100%
+						border: none
+
+					.input__label--hoshi 
+						position: absolute
+						bottom: 0
+						left: 0
+						padding: 0 0.25em
+						width: 100%
+						height: calc(100% - 1em)
+						pointer-events: none
+
+					.input__label-content--hoshi 
+						position: absolute
+						@include ibook
+						font-size: 18px
+
+					.input__label--hoshi::before,
+					.input__label--hoshi::after 
+						content: ''
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						height: calc(100% - 10px)
+						border-bottom: 1px solid #00456f
+
+
+					.input__label--hoshi::after 
+						margin-top: 2px
+						border-bottom: 4px solid #94cef1
+						transform: translate3d(-100%, 0, 0)
+						transition: transform 0.3s
+
+					.input__field--hoshi:focus + .input__label--hoshi::after,
+					.input--filled .input__label--hoshi::after 
+						transform: translate3d(0, 0, 0)
+
+
+					.input__field--hoshi:focus + .input__label--hoshi .input__label-content--hoshi,
+					.input--filled .input__label-content--hoshi 
+						animation: anim-1 0.3s forwards
+
+
+					@-webkit-keyframes anim-1 
+						50% 
+							opacity: 0
+							transform: translate3d(1em, 0, 0)
+						51% 
+							opacity: 0
+							transform: translate3d(-1em, -40%, 0)
+						100% 
+							opacity: 1
+							transform: translate3d(0, -40%, 0)
+						
+					@keyframes anim-1 
+						50% 
+							opacity: 0
+							transform: translate3d(1em, 0, 0)
+						51% 
+							opacity: 0
+							transform: translate3d(-1em, -40%, 0)
+						100% 
+							opacity: 1
+							transform: translate3d(0, -40%, 0)
+										
+				.product-form-btn
+					width: 170px
+					position: relative
+					height: 170px
+					margin-left: auto
+					padding-top: 40px
+					overflow: hidden
+					@include ibook
+					font-size: 18px
+					color: $light
+					border-top-right-radius: 8px
+					border-bottom-right-radius: 8px
+					background-image: linear-gradient(360deg, #b6d9f3 0%, #c9f0fd 2%, #94cef1 25%, #4d90b4 50%, #2e597b 75%, #1a2a3e 98%)
+					svg
+						width: 50px
+						position: absolute 
+						top: 50% 
+						left: 50% 
+						margin-top: -25px 
+						margin-left: -25px 
+						z-index: 1 
+						transition: all 0.5s ease
+						polygon
+							fill: $light
+				.product-form-btn:hover > svg  
+					animation: submit-button 1.5s ease both 
+						 
+				@keyframes submit-button
+					0%  
+						transform: translate3d(0, 0, 0) 
+						opacity: 1 
+					50%  
+						transform: translate3d(100px, -26px, 0) 
+						opacity: 0 
+					51%  
+						transform: translate3d(-100px, 26px, 0) 
+						opacity: 0 
+					100%  
+						transform: translate3d(0, 0, 0) 
+						opacity: 1 
+
+	.price-main
+		color: $light
+		padding-top: 220px
+		padding-bottom: 25px
+		background: url(../img/page-bg.jpg) center no-repeat
+		background-size: cover
+		&::after
+			content: url(../img/price-img.png)
+			position: absolute
+			right: 0
+			margin-top: -100px
+		h1
+			margin: 0
+			@include bold
+			font-size: 70px
+			text-align: left
+			text-transform: uppercase
+		.nav
+			margin-top: 20px
+			.general
+				margin-right: 40px
+				@include ilight 
+				font-size: 14px
+				color: $light
+				text-decoration: underline
+				transition: all 0.2s ease
+				&:hover
+					color: #9ddbff
+				&::after
+					content: url(../img/dot.png)
+					position: absolute
+					margin-left: 20px
+					color: $light
+			p
+				display: inline-block
+				margin: 0
+				@include ilight
+				font-size: 14px
+
+	.pricelist_background_none
+		background-image: none
+
+	.pricelist-table-header_font_sm	
+	  	font-size: 30px
+	  	
+	  
+	.pricelist
+
+		.title
+
+			h2
+				text-shadow: none
+				padding-left: 90px
+				font-size: 30px
+				text-transform: none
+			
+			b 
+				color: #225e82
+				font-size: 18px 
+
+	.pricelist-table-header_disabled 
+		display: none
+
+	.pricelist
+
+		.table-block
+
+			.table-block_long
+				width: 100%
+
+	.price .table-block .table-block_long tbody tr td 
+		padding-bottom: 10px
+		padding-right: 10px
+
+
+	.price .table-block .table-block_long tbody tr td:nth-child(2)
+			border-right: 1px solid #5985a1
+			border-left: 1px solid #5985a1
+
+	.price .table-block .table-block_long tbody tr td:nth-child(1)
+		border-right: none	
+
+	.price 
+		.table-block_disabled 
+			display: none
+
+	.price .table-block .table-block_border_right tbody tr td:nth-child(1n)
+		border-right: 1px solid #5985a1
+
+	.price .table-block .table-block_border_right tbody tr td:last-child
+		border-right: none	
+
+	.price .table-block .table-block_border_right thead tr th
+		padding-left: 20px
+
+	.price .table-block .table-block_border_right tbody tr td
+		padding-left: 20px
+		padding-right: 5px
+
+	.table-block_disabled 
+		display: none
+
+	.pricelist-text
+		color: $light
+		background: url(../img/products-bg.jpg) center no-repeat
+		background-size: cover
+		padding-top: 100px
+		padding-bottom: 190px
+		.title
+			@include bold
+			font-size: 30px
+			margin-bottom: 40px
+		.content
+			@include ibook
+			font-size: 18px
+
+	@media(max-width: 1199px) 
+		.feedback-section
+			display: none
+
+@media(max-width: 1199px)
+	.pricelist-page
+		.pricelist-text
+			.product-form
+				width: 900px
+
+@media(max-width: 992px)
+	.pricelist-page
+		.pricelist-text
+			.product-form
+				width: 700px
+				.form
+					.title
+						margin-bottom: 0
+
+@media(max-width: 768px)
+	.pricelist-page
+		.pricelist-text
+			.product-form
+				width: 520px
+				.form
+					.title
+						padding-left: 30px
+					.block
+						.input
+							margin-left: 0
+						.small
+							padding-left: 0
+
+@media(max-width: 576px)
+	.pricelist-page
+		.pricelist
+			.title
+				h2
+					padding: 0
+					.kk
+						display: block
+		.pricelist-text
+			.product-form
+				width: 90%
+				height: 100%
+				margin-bottom: 30px
+				margin-left: auto
+				margin-right: auto
+				position: static
+				transform: translateX(0)
+				.form
+					display: block
+					padding-top: 30px
+					.title
+						width: 100%
+						text-align: center
+						padding: 0
+						margin-bottom: 20px
+					.block
+						width: 100%
+						.input
+							width: 90%
+							display: block
+							margin-left: auto
+							margin-right: auto
+							margin-bottom: 20px
+					.small
+						width: 90%
+						margin-left: auto
+						margin-right: auto
+						margin-bottom: 30px
+						text-align: center
+					.product-form-btn
+						width: 100%
+						height: 100px
+						border-top-right-radius: 0
+						border-bottom-left-radius: 8px

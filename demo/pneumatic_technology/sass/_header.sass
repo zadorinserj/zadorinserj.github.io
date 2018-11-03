@@ -1,0 +1,573 @@
+.page-header
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 20
+	box-shadow: -22.517px 13px 25.38px 1.62px rgba(34, 34, 36, 0.26)
+	background-color: $light
+	.hat
+		width: 100%
+		background-color: #354146
+		padding-top: 12px
+		padding-bottom: 12px
+		.container
+			display: flex
+			justify-content: flex-end
+			align-items: center
+			padding-top: 0
+			.mail-link
+				margin-right: 40px
+				@include reg
+				color: $light
+				text-decoration: underline
+				transition: all 0.2s ease
+				&:hover
+					color: #008ee8
+			.number-link
+				margin-left: 18px
+				@include bold
+				color: $light
+				transition: all 0.2s ease
+				&:hover
+					color: #008ee8
+			.hat-btn
+				margin-left: 100px
+				@include reg
+				font-size: 14px
+				color: $light
+				text-decoration: underline
+				background-color: transparent
+				border: none
+				transition: all 0.2s ease
+				&:hover
+					color: #008ee8
+					&::before
+						background: url(../img/hat-btn-before-hover.png) center no-repeat
+				&::before
+					content: ''
+					position: absolute
+					top: 50%
+					transform: translateY(-50%)
+					left: 0
+					margin-left: -40px
+					width: 30px
+					height: 26px
+					background: url(../img/hat-btn-before.png) center no-repeat
+					transition: all 0.2s ease
+	.container
+		display: flex
+		justify-content: space-between
+		padding-top: 20px
+		.logo
+			.title
+				@include obold
+				text-transform: uppercase
+				font-size: 50px
+				color: #48466d
+				margin-bottom: 5px
+			.subtitle
+				@include reg
+				font-size: 14px
+				color: $dark
+		.content
+			.top-bar
+				display: flex
+				margin-bottom: 25px
+				.catalog-ul
+					width: 230px
+					margin: 0
+					padding: 10px 30px
+					list-style: none
+					@include bold
+					color: $light
+					background-color: #48466d
+					img
+						position: absolute
+						right: 30px
+						top: 50%
+						transform: translateY(-50%)
+						pointer-events: none
+					&:hover
+						cursor: pointer
+				.catalogs-ul
+					opacity: 0
+					pointer-events: none
+					transition: opacity 0.5s ease
+					position: absolute
+					margin: 0
+					padding: 0
+					list-style: none
+					width: 330px
+					margin-top: 44px
+					background-color: $light
+					border-top: 1px solid #48466d
+					box-shadow: 2.034px 4.568px 13px 0px rgba(34, 34, 36, 0.5)
+					z-index: 2
+					li
+						border: 1px solid #48466d
+						border-top: none
+						a
+							@include reg
+							color: #424561
+							display: block
+							width: 100%
+							padding: 12.5px 12.5px 12.5px 20px
+							overflow: hidden
+							transition: color 0.2s ease
+							&:hover
+								color: $light
+								&::after
+									animation: bounce 1s ease-in forwards
+							&:after 
+							  display: block
+							  position: absolute
+							  margin: 0
+							  top: 0
+							  bottom: 0
+							  left: 0
+							  right: 0
+							  content: ''
+							  width: 1px
+							  height: 1px
+							  border-radius: 40%
+							  background: #354146
+							@keyframes bounce 
+							  0% 
+							    width: 1px
+							    top: 0
+							    left: 0
+							    bottom: 0
+							    right: 0
+							    margin: auto
+							    height: 1px
+							    z-index: -1
+							    background: #eee
+							    border-radius: 100%
+							  100% 
+							    background: #354146
+							    height: 5000%
+							    width: 5000%
+							    z-index: -1
+							    top: 0
+							    bottom: 0
+							    left: 0
+							    right: 0
+							    margin: auto
+							    border-radius: 0
+						.link-sub::before
+							content: url(../img/submenu-arrow-2.png)
+							position: absolute
+							top: 50%
+							transform: translateY(-45%)
+							right: 10px
+						.link-sub:hover::before
+							content: url(../img/submenu-arrow.png)
+						.submenu
+							opacity: 0
+							pointer-events: none
+							transition: opacity 0.5s ease
+							border-top: 1px solid #48466d
+							width: 470px
+							margin-top: -1px
+							position: absolute
+							left: 100%
+							top: 0
+							z-index: 2
+							padding: 0
+							list-style: none
+							background-color: $light
+							box-shadow: 2.034px 4.568px 13px 0px rgba(34, 34, 36, 0.5)
+							li
+								a
+									@include reg
+									color: #424561
+									display: block
+									width: 100%
+									padding: 12.5px 12.5px 12.5px 20px
+									overflow: hidden
+									transition: color 0.2s ease
+									&:hover
+										color: $light
+										&::after
+											animation: bounce 1s ease-in forwards
+									&:after 
+									  display: block
+									  position: absolute
+									  margin: 0
+									  top: 0
+									  bottom: 0
+									  left: 0
+									  right: 0
+									  content: ''
+									  width: 1px
+									  height: 1px
+									  border-radius: 40%
+									  background: #354146
+						.submenu-active
+							opacity: 1
+							pointer-events: auto
+				.catalogs-ul-active
+					opacity: 1
+					pointer-events: auto
+				.block-fixed-link
+					display: none
+				.search-form
+					width: 470px
+					margin-left: 23px
+					input
+						width: 100%
+						padding: 10px 30px
+						border: 2px solid transparent
+						transition: all 0.2s ease
+						@include reg
+						font-size: 18px
+						background-color: #e4e4e4
+						&:focus
+							border: 2px solid #008ee8
+							background-color: #fff
+						&:focus + .search-btn
+							background: url(../img/loop-hover.png) center no-repeat
+					.search-btn
+						position: absolute
+						right: 12px
+						top: 50%
+						transform: translateY(-50%)
+						width: 25px
+						height: 26px
+						margin: 0
+						padding: 0
+						background: url(../img/loop.png) center no-repeat
+						border: none
+						transition: all 0.2s ease
+						&:hover
+							background: url(../img/loop-hover.png) center no-repeat
+				.search-form-active
+					z-index: 2
+					input
+						opacity: 1 !important
+						pointer-events: auto !important
+						position: absolute
+						width: 290px
+						left: -184px
+					.search-btn
+						right: -50px
+				.vesi-btn
+					width: 44px
+					height: 44px
+					margin-left: 23px
+					background-color: #e4e4e4
+					background-image: url(../img/vesi.png)
+					background-position: center
+					background-repeat: no-repeat
+					transition: all 0.2s ease
+					&:hover
+						background-image: url(../img/vesi-hover.png)
+			.bot-bar
+				display: flex
+				&::before
+					content: ''
+					position: absolute
+					width: 2000px
+					height: 1px
+					background-color: #999fa1
+				a
+					padding: 15px 25px
+					@include med
+					color: $dark
+					transition: all 0.2s ease
+					position: relative
+					overflow: hidden
+					&:hover
+						color: $light
+						&::after
+							animation: circle 1s ease-in forwards
+					&:after 
+					  display: block
+					  position: absolute
+					  margin: 0
+					  top: 0
+					  bottom: 0
+					  left: 0
+					  right: 0
+					  content: '.'
+					  color: transparent
+					  width: 1px
+					  height: 1px
+					  border-radius: 40%
+					  background: transparent
+					@keyframes circle 
+					  0% 
+					    width: 1px
+					    top: 0
+					    left: 0
+					    bottom: 0
+					    right: 0
+					    margin: auto
+					    height: 1px
+					    z-index: -1
+					    background: #eee
+					    border-radius: 100%
+					  100% 
+					    background: #48466d
+					    height: 5000%
+					    width: 5000%
+					    z-index: -1
+					    top: 0
+					    bottom: 0
+					    left: 0
+					    right: 0
+					    margin: auto
+					    border-radius: 0
+.catalog-burger-fixed
+	display: none
+.page-header-fixed
+	background-color: #48466d
+	.hat
+		display: none
+	.container
+		padding-top: 10px
+		padding-bottom: 10px
+		.logo
+			.title
+				font-size: 35px
+				margin-bottom: 0
+				color: $light
+			.subtitle
+				display: none
+		.content
+			.top-bar
+				margin-bottom: 0
+				.catalog-ul
+					color: #48466d
+					background-color: $light
+					.catalog-burder
+						display: none
+					.catalog-burger-fixed
+						display: block
+				.block-fixed-link
+					display: block
+					margin-left: 20px
+					.fixed-number-link
+						display: block
+						@include bold
+						color: $light
+						transition: color 0.2s ease
+						&:hover
+							color: #008ee8
+				.search-form
+					width: 420px
+			.bot-bar
+				display: none
+
+@media(max-width: 1199px)
+	.page-header
+		.container
+			.logo
+				.title
+					font-size: 42px
+				.subtitle
+					font-size: 12px
+			.content
+				.top-bar
+					.search-form
+						width: 340px
+					.catalogs-ul
+						width: 280px
+						li
+							.submenu
+								width: 400px
+				.bot-bar
+					a
+						padding: 15px
+	.page-header-fixed
+		.container
+			.logo
+				display: flex
+				align-items: center
+				.title
+					font-size: 35px
+			.content
+				.top-bar
+					.catalog-ul
+						width: 200px
+						padding: 10px
+					.block-fixed-link
+						display: flex
+						width: 165px
+						flex-wrap: wrap
+						align-items: center
+						.fixed-number-link
+							font-size: 15px
+					.search-form
+						width: 240px
+						input
+							padding-left: 10px
+
+@media(max-width: 991px)
+	.page-header
+		.hat
+			.container
+				justify-content: space-between
+				.hat-btn
+					margin-left: 50px
+				.number-link
+					margin-left: 0
+				.mail-link
+					margin-right: 0
+
+		.container
+			.logo
+				.title
+					font-size: 32px
+				.subtitle
+					font-size: 10px
+			.content
+				.top-bar
+					.catalog-ul
+						width: 200px
+					.catalogs-ul
+						li
+							.submenu
+								width: 400px
+								left: 47%
+					.search-form
+						width: 200px
+						input
+							font-size: 14px
+							height: 100%
+							padding-left: 10px
+				.bot-bar
+					a
+						font-size: 14px
+						padding: 10px
+	.page-header-fixed
+		.container
+			.content
+				.top-bar
+					.block-fixed-link
+						width: 152px
+						margin-left: 10px
+					.catalog-ul
+						font-size: 0
+						width: 44px
+						img
+							left: 50%
+							transform: translate(-50%, -50%)
+					.search-form
+						margin-left: 10px
+					.vesi-btn
+						margin-left: 10px
+
+@media(max-width: 767px)
+	.page-header
+		padding-bottom: 38px
+		.hat
+			.container
+				.mail-link
+					display: none
+				.number-link
+					font-size: 16px
+		.container
+			.content
+				position: static
+				.top-bar
+					.catalog-ul
+						width: 160px
+						font-size: 16px
+						padding: 12px 20px
+					.catalogs-ul
+						li
+							a
+								padding: 10px
+								font-size: 14px
+							.submenu
+								left: -60%
+								li
+									a
+										padding: 10px
+										font-size: 14px
+					.search-form
+						width: 44px
+						input
+							opacity: 0
+							pointer-events: none
+				.bot-bar
+					position: absolute
+					left: 50%
+					transform: translateX(-50%)
+					width: 100%
+					justify-content: space-between
+					&::before
+						left: 50%
+						transform: translateX(-50%)
+	.page-header-fixed
+		padding-bottom: 0
+		.container
+			flex-wrap: wrap
+			.logo
+				width: 100%
+				.title
+					width: 100%
+					text-align: center
+			.content
+				width: 100%
+				.top-bar
+					width: 100%
+					justify-content: center
+					.catalog-ul
+						font-size: 0
+						width: 44px
+					.block-fixed-link
+						.fixed-number-link
+							font-size: 12px
+
+@media(max-width: 575px)
+	.page-header
+		.hat
+			padding-top: 5px
+			padding-bottom: 5px
+			.container
+				flex-wrap: wrap
+				.number-link
+					width: 100%
+					text-align: center
+				.hat-btn
+					width: 100%
+					margin-left: 0
+					text-align: center
+					&::before
+						display: none
+		.container
+			flex-wrap: wrap
+			padding-top: 0
+			.logo
+				width: 100%
+				text-align: center
+				margin-bottom: 5px
+				.title
+					font-size: 40px
+					margin-bottom: 0
+				.subtitle
+					font-size: 12px
+			.content
+				width: 100%
+				.top-bar
+					margin-bottom: 0
+					justify-content: center
+					.vesi-btn
+						height: 40px
+						width: 40px
+					.catalogs-ul
+						li
+							.submenu
+								left: -1px
+								width: 250px
+				.bot-bar
+					flex-wrap: wrap
+					background-color: $light
+					box-shadow: -22.517px 13px 25.38px 1.62px rgba(34, 34, 36, 0.26)
+					a
+						width: 50%
+						text-align: center
+						padding: 8px

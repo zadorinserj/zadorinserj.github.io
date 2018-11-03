@@ -1,0 +1,268 @@
+.project-page
+	&-header
+		padding-top: 220px
+		margin-bottom: 30px
+		.nav
+			@include reg
+			font-size: 14px
+			margin-bottom: 40px
+			a
+				color: #88a6b2
+				transition: color 0.2s ease
+				&:hover
+					color: #008ee8
+			.nav-link
+				margin-left: 40px
+				&::before
+					content: ''
+					position: absolute
+					width: 16px
+					height: 1px
+					background-color: #5e6669
+					bottom: 0
+					margin-left: -30px
+			p
+				color: #354146
+				display: inline-block
+				margin-left: 40px
+				&::before
+					content: ''
+					position: absolute
+					width: 16px
+					height: 1px
+					background-color: #5e6669
+					bottom: 0
+					margin-left: -30px
+		h2
+			margin-bottom: 30px
+		.menu
+			display: flex
+			.item
+				width: 270px
+				margin-right: 30px
+				&:last-child
+					margin-top: -8px
+				.title
+					@include med
+					margin-bottom: 17px
+				.select-before
+					width: 13px
+					height: 7px
+					display: block
+					position: absolute
+					right: 11px
+					margin-top: -18px
+					z-index: 2
+					&::after
+						content: url(../img/select-arrow.png)
+						position: absolute
+						left: 0
+						top: 0
+						transition: transform 0.2s ease
+						line-height: 0
+					&::before
+						content: ''
+						position: absolute
+						height: 20px
+						width: 1px
+						background-color: #8c9295
+						left: -10px
+						top: 50%
+						transform: translateY(-50%)
+				select
+					width: 100%
+					@include reg
+					font-size: 14px
+					padding: 7px 20px
+					border: none
+					color: #9dadaa
+					appearance: none
+					background-color: #e4e4e4
+					&:focus
+						outline: none !important
+					&:focus ~ .select-before::after
+						transform: rotate(-180deg)
+					option
+						padding-top: 7px
+						padding-bottom: 7px
+						color: #9dadaa
+						border: 1px solid transparent
+				.btn-remove
+					margin-left: auto
+					margin-right: auto
+					display: block
+					background-color: transparent
+					border: none
+					@include reg
+					font-size: 14px
+					color: #008ee8
+					text-decoration: underline
+					margin-bottom: 10px
+					img
+						margin-left: 10px
+				.btn-apply
+					position: relative
+					width: 270px
+					@include med
+					color: $light
+					background-color: #008ee8
+					font-size: 18px
+					max-height: 42px
+					min-height: 42px
+					border: 1px solid transparent
+					overflow: hidden
+					transition: all 0.3s ease-in-out
+					&::before, &::after
+						content: ''
+						width: 100%
+						position: absolute
+						top: 0
+						height: 100%
+						z-index: 0
+						transition: all 0.3s ease-in-out
+					&::before
+						left: 0
+						transform: translateX(-100%)
+						border-right: 10px solid transparent
+						border-bottom: 42px solid $light
+					&::after
+						right: 0
+						transform: translateX(100%)
+						border-left: 10px solid transparent
+						border-top: 42px solid $light
+					&:hover
+						color: #008ee8
+						border: 1px solid #008ee8
+						&::before
+							transform: translateX(-39%)
+						&::after
+							transform: translateX(39%)
+					span
+						z-index: 2
+	&-content
+		.container
+			.row
+				.col-xl-3
+					margin-bottom: 30px
+		.slide
+			position: relative
+			display: block
+			min-height: 450px
+			height: 100%
+			margin-bottom: 30px
+			padding-bottom: 70px
+			box-shadow: -5.196px 3px 16.92px 1.08px rgba(34, 34, 36, 0.26)
+			background-color: $light
+			color: $dark
+			&:hover > .projects-slide-btn
+				color: $light
+				&::before
+					transform: translateX(-39%)
+				&::after
+					transform: translateX(39%)
+			&:hover > .projects-slide-btn span
+				content: url(../img/main-projects-btn-hover.png)
+			&:hover > .projects-slide-btn .text
+				content: ''
+			&:hover > .img-block
+				height: 135px
+			.img-block
+				height: 150px
+				width: 100%
+				margin-bottom: 20px
+				box-shadow: -5.196px 3px 16.92px 1.08px rgba(34, 34, 36, 0.26)
+				transition: all 0.2s ease
+				img
+					height: 100%
+					width: 100%
+					object-fit: cover
+			.title
+				padding-left: 20px
+				padding-right: 20px
+				margin-bottom: 18px
+				@include bold
+			ul
+				margin: 0
+				li
+					@include reg
+					font-size: 14px
+			.projects-slide-btn
+				position: absolute
+				bottom: 0
+				display: block
+				width: 100%
+				padding: 24px
+				text-align: center
+				background-color: transparent
+				@include med
+				font-size: 18px
+				color: #008ee8
+				overflow: hidden
+				transition: all 0.2s ease
+				&::before, &::after
+					content: ''
+					width: 100%
+					position: absolute
+					top: 0
+					height: 100%
+					z-index: 0
+					transition: all 0.3s ease-in-out
+				&::before
+					left: 0
+					transform: translateX(-100%)
+					border-right: 10px solid transparent
+					border-bottom: 68px solid #008ee8
+				&::after
+					right: 0
+					transform: translateX(100%)
+					border-left: 10px solid transparent
+					border-top: 68px solid #008ee8
+				span
+					content: url(../img/main-projects-btn.png)
+					margin-left: 20px
+					z-index: 2
+				.text
+					content: ''
+	&-seo
+		h2
+			margin-top: 50px
+			margin-bottom: 30px
+		.text
+			@include reg
+			font-size: 14px
+			margin-bottom: 50px
+
+@media(max-width: 991px)
+	.project-page
+		&-header
+			.menu
+				justify-content: space-between
+				.item
+					margin-right: 0
+					text-align: center
+					width: 220px
+					.btn-apply
+						width: 220px
+
+@media(max-width: 767px)
+	.project-page
+		&-header
+			.nav
+				text-align: center
+			.menu
+				flex-direction: column
+				align-items: center
+				.item
+					margin-bottom: 20px
+				.item:last-child
+					margin-top: 0
+
+@media(max-width: 575px)
+	.project-page
+		&-header
+			padding-top: 280px
+		&-content
+			.slide
+				max-width: 290px
+				margin-left: auto
+				margin-right: auto

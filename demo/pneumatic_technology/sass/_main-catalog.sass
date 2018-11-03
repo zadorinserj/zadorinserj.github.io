@@ -1,0 +1,73 @@
+.main-catalog
+	padding-top: 114px
+	padding-bottom: 20px
+	background-color: #e4e4e4
+	h2
+		margin-bottom: 40px
+	&-blocks
+		width: 100%
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		&-link
+			position: relative
+			width: 370px
+			height: 180px
+			margin-bottom: 30px
+			box-shadow: -5.196px 3px 16.92px 1.08px rgba(34, 34, 36, 0.26)
+			background-color: $light
+			overflow: hidden
+			transition: all 0.2s ease
+			&::before
+				content: ''
+				position: absolute
+				left: 0
+				top: 100%
+				width: 100%
+				height: 100%
+				background: linear-gradient(to bottom, rgba(72,76,97,0) 0%, rgba(228,228,228,0.9) 75%)
+				z-index: 2
+				transition: all 0.3s ease
+			&:hover
+				box-shadow: -6px 6px 20px 0px rgba(72, 70, 109, 0.65)
+				&::before
+					top: 0
+			&:hover > .title
+				color: #008ee8
+				z-index: 3
+			.title
+				position: absolute
+				margin-top: 40px
+				padding-left: 30px
+				width: 170px
+				@include bold
+				color: $dark
+				transition: all 0.2s ease
+			.img-block
+				float: right
+				height: 100%
+				img
+					height: 100%
+
+@media(max-width: 1199px)
+	.main-catalog
+		&-blocks
+			justify-content: space-around
+
+@media(max-width: 992px)
+	.main-catalog
+		&-blocks
+			&-link
+				width: 330px
+				height: 150px
+				margin-bottom: 15px
+
+@media(max-width: 576px)
+	.main-catalog
+		padding-top: 40px
+		&-blocks
+			&-link
+				height: 130px
+				.title
+					padding-left: 15px
+					font-size: 15px

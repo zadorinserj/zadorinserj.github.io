@@ -1,0 +1,152 @@
+.footer
+	position: relative
+	color: $light
+	background: url(../img/footer-bg.png) center no-repeat
+	background-size: cover
+	padding-top: 230px
+	padding-bottom: 100px
+	margin-top: -150px
+	.menu-item
+		display: block
+		color: $light
+		@include ibook
+		font-size: 18px
+		margin-bottom: 30px
+		transition: all 0.2s ease
+		&:hover
+			color: #a7dfff
+	.vk
+		background: url(../img/vk.png) center no-repeat
+		width: 20px
+		height: 25px
+		display: inline-block
+		transition: all 0.2s ease
+		&:hover
+			background: url(../img/vk-hover.png) center no-repeat
+	.fb
+		background: url(../img/facebook.png) center no-repeat
+		width: 20px
+		height: 25px
+		display: inline-block
+		transition: all 0.2s ease
+		&:hover
+			background: url(../img/facebook-hover.png) center no-repeat
+	.od
+		background: url(../img/od.png) center no-repeat
+		width: 20px
+		height: 25px
+		display: inline-block
+		transition: all 0.2s ease
+		&:hover
+			background: url(../img/od-hover.png) center no-repeat
+	.mm
+		background: url(../img/mm.png) center no-repeat
+		width: 20px
+		height: 25px
+		display: inline-block
+		transition: all 0.2s ease
+		&:hover
+			background: url(../img/mm-hover.png) center no-repeat
+	.tw
+		background: url(../img/twitter.png) center no-repeat
+		width: 20px
+		height: 25px
+		display: inline-block
+		transition: all 0.2s ease
+		&:hover
+			background: url(../img/twitter-hover.png) center no-repeat
+	.item-2
+		@include ilight
+	.contacts
+		@include ilight
+		font-size: 18px
+		padding-left: 35px
+		a
+			transition: all 0.2s ease
+			&:hover
+				color: #9ddbff
+		.phone
+			@include ilight
+			font-size: 18px
+			color: $light
+			display: block
+			margin-bottom: 30px
+			&::before
+				content: url(../img/footer-phone.png)
+				position: absolute
+				margin-left: -32px
+		.mail
+			@include ilight
+			font-size: 18px
+			color: $light
+			display: block
+			margin-bottom: 30px
+			&::before
+				content: url(../img/footer-mail.png)
+				position: absolute
+				margin-left: -35px
+		.time
+			&::before
+				content: url(../img/footer-time.png)
+				position: absolute
+				margin-left: -35px
+	.socials
+		position: absolute
+		left: 50%
+		transform: translateX(-570px)
+		bottom: 5px
+		margin-top: 60px
+		a
+			margin-right: 10px
+	.dev
+		position: absolute
+		@include ilight
+		font-size: 13px
+		color: $light
+		bottom: 10px
+		left: 50%
+		transform: translateX(300px)
+		img
+			margin-top: -6px
+
+@media(max-width: 1199px)
+	.footer
+		.socials
+			transform: translateX(-465px)
+		.dev
+			transform: translateX(215px)
+@media(max-width: 992px)
+	.footer
+		margin-top: -180px
+		.socials
+			transform: translateX(-345px)
+		.dev
+			transform: translateX(100px)	
+@media(max-width: 768px)
+	.footer
+		margin-top: -190px
+		.socials
+			transform: translateX(-255px)
+		.dev
+			transform: translateX(5px)
+@media(max-width: 576px)
+	.footer
+		padding-top: 30px
+		padding-bottom: 20px
+		text-align: center
+		background-color: #1a2324
+		.socials
+			position: static
+			margin-left: auto
+			margin-right: auto
+			margin-bottom: 10px
+			transform: translateX(0)
+			display: block
+		.dev
+			position: static
+			margin-left: auto
+			margin-right: auto
+			transform: translateX(0)
+			display: block
+			width: 100%
+			text-align: center

@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="dist/img/main/favicon.ico">
+
+  <title>Restoration of driving skills</title>
+
+  <style>
+    @font-face{font-family:'OpenSans_bold';src:url('dist/fonts/OpenSans-Bold.eot');src:url('dist/fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),url('dist/fonts/OpenSans-Bold.woff2') format('woff2'),url('dist/fonts/OpenSans-Bold.woff') format('woff'),url('dist/fonts/OpenSans-Bold.ttf') format('truetype'),url('dist/fonts/OpenSans-Bold.svg#OpenSans-Bold') format('svg');font-weight:bold;font-style:normal}@font-face{font-family:'OpenSans_reg';src:url('dist/fonts/OpenSans-Regular.eot');src:url('dist/fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),url('dist/fonts/OpenSans-Regular.woff2') format('woff2'),url('dist/fonts/OpenSans-Regular.woff') format('woff'),url('dist/fonts/OpenSans-Regular.ttf') format('truetype'),url('dist/fonts/OpenSans-Regular.svg#OpenSans-Regular') format('svg');font-weight:bold;font-style:normal}*{-webkit-box-sizing:border-box;box-sizing:border-box}html{font-size:10px}body{height:100%}a:hover{text-decoration:none}button:focus,input:focus,a:focus,text-area:focus{outline:none}.button{display:block;background:-webkit-gradient(linear, left bottom, left top, color-stop(0, #d48f0b), color-stop(4%, #d48f0b), color-stop(5%, #f6bd0e), to(#fbdd35));background:linear-gradient(0deg, #d48f0b 0, #d48f0b 4%, #f6bd0e 5%, #fbdd35 100%);-webkit-box-shadow:0 2px 8px 0 rgba(0,3,1,0.2);box-shadow:0 2px 8px 0 rgba(0,3,1,0.2);border:none;border-radius:5px;text-align:center;color:#000;padding:1.5rem 4rem;font-family:'OpenSans_bold',sans-serif}main{background:url(dist/img/main/main-bg.jpg) center no-repeat;background-size:cover;color:#fff}main .navbar{border:none}main .navbar ul{list-style:none;margin:0;padding-left:0}main .navbar ul li{text-align:center;margin:0;width:19.7%;display:inline-block;padding:1.5rem 0}main .navbar ul a{text-decoration:none;text-transform:uppercase;color:#fff;font-family:'OpenSans_bold',sans-serif;font-size:1.6rem}main .navbar .navbar-line{display:block;margin-left:auto;margin-right:auto;margin-bottom:4rem;height:1px;background-color:#fff}main .main-header{margin-bottom:15rem}main .main-header .header-contacts{text-align:right}main .main-header .header-contacts img{margin-right:1.5rem;margin-top:-0.27rem}main .main-header .header-contacts span{font-family:'OpenSans_reg',sans-serif;font-size:1.4rem}main .main-header .header-contacts p{font-family:'OpenSans_bold',sans-serif;font-size:4rem}main .main-header .header-contacts .header-btn{margin-left:auto;padding:1.5rem 5rem;font-family:'OpenSans_bold',sans-serif;font-size:1.5rem}main .title{text-align:center;margin-bottom:13rem}main .title h1{font-family:'OpenSans_bold',sans-serif;font-size:4.5rem;text-transform:uppercase;margin-top:0}main .title h2{font-family:'OpenSans_reg',sans-serif;font-size:4rem;text-transform:uppercase}main .title h4{font-family:'OpenSans_reg',sans-serif;font-size:2.4rem;margin-top:4rem}main .main-capture{margin-bottom:5rem;padding:2rem 2rem 2rem 4.8rem;background-color:#fff;color:#000;-webkit-box-shadow:0 0 40px 0 rgba(0,3,1,0.24);box-shadow:0 0 40px 0 rgba(0,3,1,0.24)}main .main-capture h2{font-family:'OpenSans_bold',sans-serif;font-size:2.4rem;text-transform:uppercase}main .main-capture p{margin-bottom:2rem;font-family:'OpenSans_reg',sans-serif;font-size:1.6rem}main .main-capture .timer-line{margin-right:auto;margin-top:2rem;margin-bottom:3rem;border-width:3px;border-color:#ffc309;border-style:solid;width:54px}main .main-capture .timer .text-timer{display:block;margin-bottom:2rem;font-family:'OpenSans_reg',sans-serif;font-size:1.4rem}main .main-capture .timer .div-timer{background:url(dist/img/main/time-bg.png) left top no-repeat}main .main-capture .timer .div-timer .day,main .main-capture .timer .div-timer .hour,main .main-capture .timer .div-timer .min,main .main-capture .timer .div-timer .sec{display:inline-block;text-align:center;width:7rem;margin-right:1.6rem;margin-top:.4rem}main .main-capture .timer .div-timer .day span,main .main-capture .timer .div-timer .hour span,main .main-capture .timer .div-timer .min span,main .main-capture .timer .div-timer .sec span{font-family:'OpenSans_bold',sans-serif;font-size:4.2rem}main .main-capture .timer .div-timer .d,main .main-capture .timer .div-timer .h,main .main-capture .timer .div-timer .m,main .main-capture .timer .div-timer .s{margin-bottom:0;margin-top:1rem}main .main-capture .main-form{display:block;margin-left:auto;width:39rem;height:30rem;text-align:center;padding-top:4rem;border:5px solid #f2f2f2}main .main-capture .main-form input{display:block;height:5rem;width:30rem;padding-left:2.5rem;margin-left:auto;margin-right:auto;margin-bottom:1rem;border:none;border-radius:5px;background-color:#f8f8f8}main .main-capture .main-form-btn{width:30rem;margin-left:auto;margin-right:auto;margin-top:2rem;padding:1.7rem 4rem;text-transform:uppercase;font-size:1.8rem}main .main-capture .main-form img{margin-left:5rem;margin-top:-1.9rem}main .main-capture .main-form .text-form{display:inline-block;width:27rem;margin-top:1.7rem;margin-left:2rem;text-align:left;font-family:'OpenSans_reg',sans-serif;font-size:1.2rem}@media (max-width:1199px){main .navbar ul li{width:19.6%}}@media (max-width:991px){main .navbar ul li{width:19.5%}main .title h1{font-size:3.7rem}main .title h2{font-size:3rem}main .title h4{font-size:2.3rem}main .main-capture{padding:2rem}main .main-capture h2{text-align:center}main .main-capture p{text-align:center}main .main-capture .timer-line{margin-left:auto}main .main-capture .timer .text-timer{text-align:center}main .main-capture .timer .div-timer{background:none;background:url(dist/img/main/time-bg.png) center top no-repeat;width:36rem;margin-bottom:3rem;margin-left:auto;margin-right:auto}main .main-capture .timer .div-timer .day,main .main-capture .timer .div-timer .hour,main .main-capture .timer .div-timer .min,main .main-capture .timer .div-timer .sec{margin-right:.7rem;margin-left:.9rem}main .main-capture .main-form{margin-right:auto}}@media (max-width:767px){main .navbar ul li{width:100%}main .navbar .navbar-line{margin-bottom:0}main .main-header{margin-bottom:7rem}main .main-header .logo img{display:block;margin-left:auto;margin-right:auto}main .main-header .header-contacts{text-align:center;margin-top:2rem}main .main-header .header-contacts p{font-size:3.5rem}main .main-header .header-contacts .header-btn{margin-right:auto}main .title{margin-bottom:7rem}main .title h1{font-size:2.5rem}main .title h2{font-size:2.2rem}main .title h4{font-size:2rem}main .main-capture{padding:1rem}main .main-capture h2{font-size:1.6rem}main .main-capture .timer .div-timer{width:27rem;background-size:94%}main .main-capture .timer .div-timer .day,main .main-capture .timer .div-timer .hour,main .main-capture .timer .div-timer .min,main .main-capture .timer .div-timer .sec{width:4.8rem;margin-right:.8rem;margin-left:.8rem;margin-top:1rem}main .main-capture .timer .div-timer .day span,main .main-capture .timer .div-timer .hour span,main .main-capture .timer .div-timer .min span,main .main-capture .timer .div-timer .sec span{font-size:2.2rem}main .main-capture .timer .div-timer .day p,main .main-capture .timer .div-timer .hour p,main .main-capture .timer .div-timer .min p,main .main-capture .timer .div-timer .sec p{margin-top:2rem}main .main-capture .main-form{width:27rem}main .main-capture .main-form input{width:24rem}main .main-capture .main-form-btn{width:24rem;padding:1.7rem 3rem}main .main-capture .main-form img{margin-left:1rem}main .main-capture .main-form .text-form{width:20rem;font-size:1rem;margin-left:1rem}}
+  </style>
+  
+</head>
+
+<body>
+
+  <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter46778553 = new Ya.Metrika({ id:46778553, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/46778553" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
+	<main id="general">
+    <div class="container">
+      <div class="navbar" id="menu-top">
+        <ul>
+          <li><a href="#general">главная</a></li>
+          <li><a href="#advant">преимущества</a></li>
+          <li><a href="#cour">курсы</a></li>
+          <li><a href="#feedb">отзывы</a></li>
+          <li><a href="#cont">контакты</a></li>
+        </ul>
+        <div class="navbar-line"></div>
+      </div>
+      <div class="main-header">
+        <div class="row">
+          <div class="col-md-6 col-sm-6">
+            <div class="logo">
+              <img src="dist/img/main/logo.png" alt="logo">
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <div class="header-contacts">
+              <div class="time">
+                <img src="dist/img/main/time.png" alt="time"><span>Пн-вс: 09,00-02,00</span>
+              </div>
+              <p>8 911 086-74-44</p>
+              <button class="button header-btn">Заказать звонок</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="title">
+        <h2>курсы восстановления</h2>
+        <h1>навыков вождения для женщин</h1>
+        <h4>Все инструкторы это женщины с большим опытом вождения.<br>Цены на 20% ниже чем у конкурентов</h4>
+      </div>
+      <div class="row">
+        <div class="col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2">
+          <div class="main-capture">
+            <div class="row">
+              <div class="col-lg-6 col-md-6">
+                <h2>первое занятие бесплатно!</h2>
+                <div class="timer-line"></div>
+                <p>Оставьте ваши контактные данные и мы запишем<br>вас на первое бесплатное занятие.</p>
+
+                <div class="timer">
+                  <span class="text-timer">До окончания акции осталось:</span>
+                  <div class="div-timer" id="clockdiv">
+                  	<div class="day">
+    	                <div class="first-d">
+    	                  <span class="days"></span>
+    	                </div>
+    	                <p class="d">Дней</p>
+    	              </div>           
+    	              <div class="hour">
+    	                <div class="second-h">
+    	                  <span class="hours"></span>
+    	                </div>
+    	                <p class="h">Часов</p>              
+    	              </div>
+    	              <div class="min">
+    	                <div class="third-m">
+    	                  <span class="minutes"></span>
+    	                </div>
+    	                <p class="m">Минут</p>
+    	              </div>
+    	              <div class="sec">
+    	                <div class="fourth-s">
+    	                  <span class="seconds"></span>
+    	                </div>
+    	                <p class="s">Секунд</p>
+    	              </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <form class="main-form" action="dist/mailer/smart.php">
+                  <input type="text" name="user_name" placeholder="Введите ваше имя" required>
+                  <input type="text" class="user-phone" name="user_phone" placeholder="Введите ваш телефон" required>
+                  <button class="button main-form-btn">оставить заявку</button>
+                  <img src="dist/img/main/lock.png" alt="lock">
+                  <span class="text-form">Ваши данные надежно защищены<br> и не будут переданы третьим лицам</span>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section class="questions">
+    <div class="container">
+      <h2>Вопросы</h2>
+      <div class="row">
+        <div class="col-sm-4 wow fadeInLeft">
+          <div class="questions-block">
+            <img src="dist/img/questions/1.png" alt="1">
+            <p><span>Вы устали</span><br>от волнения за рулем?</p>
+          </div>
+        </div>
+        <div class="col-sm-4 wow fadeInUp">
+          <div class="questions-block">
+            <img src="dist/img/questions/2.png" alt="2">
+            <p><span>Плохо обучили</span><br>в автошколе?</p>
+          </div>
+        </div>
+        <div class="col-sm-4 wow fadeInRight">
+          <div class="questions-block">
+            <img src="dist/img/questions/3.png" alt="3">
+            <p><span>Неудачный опыт</span><br>с инструктором?</p>
+          </div>
+        </div>
+        <div class="col-sm-4 wow fadeInLeft" data-wow-delay="0.1s">
+          <div class="questions-block">
+            <img src="dist/img/questions/4.png" alt="4">
+            <p><span>Не чувствуете</span><br>габариты машины?</p>
+          </div>
+        </div>
+        <div class="col-sm-4 wow fadeInUp" data-wow-delay="0.1s">
+          <div class="questions-block">
+            <img src="dist/img/questions/5.png" alt="5">
+            <p><span>Вам предстоит</span><br>ездить с ребенком?</p>
+          </div>
+        </div>
+        <div class="col-sm-4 wow fadeInRight" data-wow-delay="0.1s">
+          <div class="questions-block">
+            <img src="dist/img/questions/6.png" alt="6">
+            <p><span>Сложности</span><br>с перестроением?</p>
+          </div>
+        </div>
+        <div class="col-sm-4 wow fadeInLeft" data-wow-delay="0.2s">
+          <div class="questions-block">
+            <img src="dist/img/questions/7.png" alt="7">
+            <p><span>Утратили навыки</span><br>вождения?</p>
+          </div>
+        </div>
+        <div class="col-sm-4 wow fadeInUp" data-wow-delay="0.2s">
+          <div class="questions-block">
+            <img src="dist/img/questions/8.png" alt="8">
+            <p><span>Тратите много</span><br>времени на парковку?</p>
+          </div>
+        </div>
+        <div class="col-sm-4 wow fadeInRight" data-wow-delay="0.2s">
+          <div class="questions-block">
+            <img src="dist/img/questions/9.png" alt="9">
+            <p><span>Вы переживаете</span><br>за новый автомобиль?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="advantages" id="advant">
+    <div class="container">
+      <h2 class="wow fadeInUp">наши преимущества</h2>
+      <div class="line-bold"></div>
+      <div class="row">
+        <div class="col-md-6 wow fadeInLeft">
+          <div class="advantages-block">
+            <img src="dist/img/advantages/1.png" alt="1">
+            <p><span>Женщина инструктор</span><br>
+              Мы предлагаем вам выбрать в качестве<br>своего инструктора женщину для того, чтобы<br>Вы чувстовали себя еще более уверенно.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 wow fadeInRight">
+          <div class="advantages-block">
+            <img src="dist/img/advantages/2.png" alt="2">
+            <p><span>Обширный выбор курсов</span><br>
+              Вы можете выбрать любой из представленых<br>курсов и программ для обучения
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 wow fadeInLeft" data-wow-delay="0.1s">
+          <div class="advantages-block block-height">
+            <img src="dist/img/advantages/3.png" alt="3">
+            <p><span>Индивидуальные программы</span><br>
+              КУРСЫ разработаны и составлены<br>специалистами и профессиональными<br>гонщиками. Они индивидуальны и<br>мобильные по своей структуре для каждого<br>клиента, так чтобы вам удобно было вписать<br>время для обучения в ваш график.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 wow fadeInRight" data-wow-delay="0.1s">
+          <div class="advantages-block advantages-block-height">
+            <img src="dist/img/advantages/4.png" alt="4">
+            <p><span>100% нацеленность на результат</span><br>
+              Принцип персональных занятий 1х1<br>позволяет Вашему инструктору<br>максимально сконцентрироваться на вас,<br>что дает полноценный результат
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 wow fadeInLeft" data-wow-delay="0.2s">
+          <div class="advantages-block">
+            <img src="dist/img/advantages/5.png" alt="5">
+            <p><span>Обучение без стресса</span><br>
+              Забудьте про вечно раздраженного<br>инструктора и страх что-то сделать не так<br>при нем.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 wow fadeInRight" data-wow-delay="0.2s">
+          <div class="advantages-block">
+            <img src="dist/img/advantages/6.png" alt="6">
+            <p><span>Возможность выбора</span><br>
+              автоинструктора, автомобиля (МКПП,<br>АКПП), времени, места, графика<br>проведения занятий
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="courses" id="cour">
+    <div class="container">
+      <h2>курсы</h2>
+      <div class="line-bold"></div>
+      <div class="row">
+
+        <div class=" course course-1 wow fadeInUp">
+          <div class="col-md-5 col-sm-5 col-xs-12">
+            <img src="dist/img/courses/course-first.png" alt="first">
+            <span class="price">6 000 рублей</span>
+            <button class="button course-one course-btn course-btn-left">подробнее</button>
+            <button class="button course-one course-btn course-btn-right">записаться</button>
+          </div>
+          <div class="col-md-7 col-sm-7 col-xs-12">
+            <h3>Курс "Парковка - это просто!"</h3>
+            <div class="small-line"></div>
+            <p>Уникальный индивидуальный курс, посвященный исключительно габаритному маневрированию задним ходом и всем видам парковок.
+            <br><br>
+            Курс рекомендован водителям с небольшим стажем, испытывающим
+            проблемы с парковками и движением задним ходом.
+            <br><br>
+            Парковка это такой же прием управления автомобилем, как и любой маневр.
+            Но когда для парковки ограничено пространство, когда начинаешь нервничать, а сзади уже сигналят и наблюдают за твоими неуверенными действиями, надо просто знать правильный алгоритм этого маневра.</p>
+            <span>Этот курс вам подойдет если вы:</span><br><br>
+            <ul>
+              <li><div class="li-text">Не умеете парковаться</div></li>
+              <li><div class="li-text">Не чувствуете габариты собственного автомобиля</div></li>
+              <li><div class="li-text">Не осознаете действительного расстояния в зеркалах</div></li>
+              <li><div class="li-text">Не понимаете куда крутить руль при движении задним ходом</div></li>
+              <li><div class="li-text">Не получается остановиться вдоль бровки на расстоянии 20-30 см от бордюрного камня.</div></li>
+            </ul>
+            <p>После нашего курса – припарковаться там где надо, а не там, где много<br> места - это реально.</p>
+          </div>
+        </div>
+
+        <div class=" course course-2 wow fadeInUp">
+          <div class="col-md-5 col-sm-5 col-xs-12">
+            <img src="dist/img/courses/course-second.png" alt="second">
+            <span class="price">12 000 рублей</span>
+            <button class="button course-two course-btn course-btn-left">подробнее</button>
+            <button class="button course-two course-btn course-btn-right">записаться</button>
+          </div>
+          <div class="col-md-7 col-sm-7 col-xs-12">
+            <h3>Курс «Начинающий водитель»</h3>
+            <div class="small-line"></div>
+            <span>Это курс подойдет:</span><br>
+            <p>Для водителей с минимальным стажем или для восстановления навыков <br><br>Данная программа позволяет освоить и отработать все необходимые для начинающего водителя навыки, получить теоретические знания, которые вы сразу можете применять на практике.<br><br>
+              <span>1-ый этап</span> - подготовка на специально подготовленных, зарегистрированных как специальное транспортное средство автомобилях . Всё происходит на учебном автомобиле.<br>
+              Вы узнаете много полезного материала, который сможете применить сразу после первого занятия.<br>
+              <span>2-ой этап</span> - на вашем автомобиле. Занятия проходят каждый день по 2,5 часа. Вам необходимо наработать чувство «габаритов» собственного автомобиля, освоить маневрирование, в ограниченом пространстве, маневрирование задним ходом и что архиважно для начинающего водителя – варианты парковок.<br>
+              <span>3-ий этап</span> - город. Задача научить начинающего водителя спокойно маневрировать в городском трафике. Здесь необходимо сложить полученную теоретическую информацию и навыки управления автомобилем на площадке в алгоритм ваших действий на дороге. <br><br>Четыре дня по 2,5 часа (на специально подготовленом автомобиле) + 5 дней по 2 часа( на вашем автомобиле.   
+            </p>
+          </div>
+        </div>
+
+        <div class=" course course-3 wow fadeInUp">
+          <div class="col-md-5 col-sm-5 col-xs-12">
+            <img src="dist/img/courses/course-third.png" alt="third">
+            <span class="price">10 000 рублей</span>
+            <button class="button course-three course-btn course-btn-left">подробнее</button>
+            <button class="button course-three course-btn course-btn-right">записаться</button>
+          </div>
+          <div class="col-md-7 col-sm-7 col-xs-12">
+            <h3>Программа "Город"</h3>
+            <div class="small-line"></div>
+            <p>Практические занятия в городе.<br><br>
+            <span>1-ый этап</span> проходит на учебном автомобиле. Задача – сформировать необходимый набор навыков в городе. Приемы стабилизации и удержания автомобиля на дороге. Проезд перекрёстков и маневрирования в городском трафике.<br>
+            <span>2-ой этап</span> (на вашем автомобиле). Задача научить начинающего водителя спокойно маневрировать в городском трафике. Здесь необходимо сложить полученную теоретическую информацию и навык управления на площадке в алгоритм ваших действий на дороге.<br>Автоинструктор подъезжает к месту расположения Вашего автомобиля по согласованному заранее расписанию. Вместе с ним Вы отрабатываете основные ваши маршруты движения необходимые вам на первых этапах. Курс проводится в индивидуальном порядке.<br><br>По времени: 2 дня по 2,5 часа + 5 дней по 2 часа
+            </p>
+          </div>
+        </div>
+
+        <div class=" course course-4 wow fadeInUp">
+          <div class="col-md-5 col-sm-5 col-xs-12">
+            <img src="dist/img/courses/course-fourth.png" alt="fourth">
+            <span class="price">15 000 рублей</span>
+            <button class="button course-four course-btn course-btn-left">подробнее</button>
+            <button class="button course-four course-btn course-btn-right">записаться</button>
+          </div>
+          <div class="col-md-7 col-sm-7 col-xs-12">
+            <h3>Курс безопасного вождения и эффективная контраварийная подготовка.</h3>
+            <div class="small-line"></div>
+            <p>Мы взяли самое лучшее из различных курсов экстремального вождения, адаптировали их под наше дорожное движение, добавили собственный многолетний опыт работы в профессиональном автомобильном спорте, и предлагаем Вам лучшую методику обучения для начинающих и профессиональных водителей.</p>
+            <span>Вы освоите</span><br><br>
+            <ul>
+              <li><div class="li-text">техники эффективного контраварийного руления,</div></li>
+              <li><div class="li-text">варианты поведения в случае заноса или сноса автомобиля,</div></li>
+              <li><div class="li-text">особенности движения при ограниченной видимости, в ночное время суток, в тумане или в непогоду,</div></li>
+              <li><div class="li-text">технику экстренного торможения,</div></li>
+              <li><div class="li-text">эффективное вхождение в повороты,</div></li>
+              <li><div class="li-text">объезд внезапновозникших препятствий ("лежачий полицейский" яма, люк),</div></li>
+              <li><div class="li-text">технику ухода от столкновения,</div></li>
+              <li><div class="li-text">управление автомобилем на мокрой или скользкой дороге,</div></li>
+              <li><div class="li-text">технику перемещения на автомобиле в условиях интенсивного транспортного потока на различных скоростях,</div></li>
+              <li><div class="li-text">умение рассчитывать дистанцию, планировать маневры, прогнозируя поведение других участников движения.</div></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="textography parallax-window" data-parallax="scroll" data-image-src="dist/img/textography/textography-bg.jpg">
+    <div class="container">
+      <h2>«энергия движения» это</h2>
+      <div class="line-bold"></div>
+      <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-sm-offset-1 wow fadeInLeft">
+          <span class="line-one">2759</span>
+          <p>довольных клиентов</p>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 wow fadeInLeft">
+          <span class="line-two">158</span>
+          <p>лет общий стаж<br>вождения наших<br>инструкторов</p>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 wow fadeInUp">
+          <span class="line-three">7</span>
+          <p>Работаем<br>7 дней<br>в неделю</p>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 wow fadeInRight">
+          <span class="line-four">74%</span>
+          <p>клиентов<br>приходят по<br>рекомендациям</p>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 wow fadeInRight">
+          <span class="line-five">37 596</span>
+          <p>учебных часов</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="feedback" id="feedb">
+    <div class="container">
+      <h2>отзывы</h2>
+      <div class="line-bold"></div>
+      <div class="feedback-slider">
+        <div class="feedback-block">
+          <img src="dist/img/feedback/face.png" alt="face">
+          <p class="feedback-text">Пошла на курсы, так как<br>боялась выезжать на улицы.<br>Предыдущий инструктор был очень плохим<br>А на этих курсах за 2 недели<br>будто заново научилась водить<br>Очень рекомендую!<br><br></p>
+          <div class="author">
+            <p><span>Ангелина Иванова</span><br>Не водила машину с 2009 года</p>
+          </div>
+        </div>
+
+        <div class="feedback-block">
+          <img src="dist/img/feedback/face-2.png" alt="face">
+          <p class="feedback-text">Отправил Жену на курсы.<br>Ей очень понравилось, инструкторы<br>профессиональные, программа<br> быстро усваивается,<br>автомобили современные и новые<br><br><br><br></p>
+          <div class="author">
+            <p><span>Джон Малкович</span><br></p>
+          </div>
+        </div>
+
+        <div class="feedback-block">
+          <img src="dist/img/feedback/face-3.png" alt="face">
+          <p class="feedback-text">Lorem Ipsum - это текст-"рыба", часто<br>используемый в печати и вэб-дизайне.<br>Lorem Ipsum является стандартной<br>"рыбой" для текстов на латинице с начала<br>XVI века. В то время некий безымянный<br>печатник создал большую коллекцию<br>размеров и форм шрифтов, используя<br>Lorem Ipsum для распечатки образцов.</p>
+          <div class="author">
+            <p><span>Пётр Лысенко</span><br></p>
+          </div>
+        </div>
+
+        <div class="feedback-block">
+          <img src="dist/img/feedback/face-4.png" alt="face">
+          <p class="feedback-text">Lorem Ipsum - это текст-"рыба", часто<br>используемый в печати и вэб-дизайне.<br>Lorem Ipsum является стандартной<br>"рыбой" для текстов на латинице с начала<br>XVI века. В то время некий безымянный<br>печатник создал большую коллекцию<br>размеров и форм шрифтов, используя<br>Lorem Ipsum для распечатки образцов.</p>
+          <div class="author">
+            <p><span>Магомед Власов</span><br></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="capture parallax-window" data-parallax="scroll" data-image-src="dist/img/capture/capture-bg.jpg">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2">
+          <div class="main-capture wow fadeInUp">
+            <div class="row">
+              <div class="col-lg-6 col-md-6">
+                <h2>первое занятие бесплатно!</h2>
+                <div class="timer-line"></div>
+                <p>Оставьте ваши контактные данные и мы запишем<br>вас на первое бесплатное занятие.</p>
+                <div class="timer">
+                  <span class="text-timer">До окончания акции осталось:</span>
+
+                  <div class="div-timer" id="clockdiv-two">
+                    <div class="day">
+                      <div class="first-d">
+                        <span class="days"></span>
+                      </div>
+                      <p class="d">Дней</p>
+                    </div>           
+                    <div class="hour">
+                      <div class="second-h">
+                        <span class="hours"></span>
+                      </div>
+                      <p class="h">Часов</p>              
+                    </div>
+                    <div class="min">
+                      <div class="third-m">
+                        <span class="minutes"></span>
+                      </div>
+                      <p class="m">Минут</p>
+                    </div>
+                    <div class="sec">
+                      <div class="fourth-s">
+                        <span class="seconds"></span>
+                      </div>
+                      <p class="s">Секунд</p>
+                    </div>
+                  </div>
+                           
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <form class="main-form" action="dist/mailer/smart.php">
+                  <input type="text" name="user_name" placeholder="Введите ваше имя" required>
+                  <input type="text" class="user-phone" name="user_phone" placeholder="Введите ваш телефон" required>
+                  <button class="button main-form-btn">оставить заявку</button>
+                  <img src="dist/img/main/lock.png" alt="lock">
+                  <span class="text-form">Ваши данные надежно защищены<br> и не будут переданы третьим лицам</span>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacts" id="cont">
+    <div class="container">
+      <h2>остались вопросы? позвоните нам</h2>
+      <div class="number"><img class="phone-img" src="dist/img/contacts/phone.png" alt="phone">8 911 086-74-44</div>
+      <p class="description">Мы расскажем, как Вам улучшить свои навыки вождения в короткие сроки!</p>
+
+      <div class="contacts-window">
+        <h3>наши контакты</h3>
+        <div class="line-bold line-contacts"></div>
+        <p><span>Санкт-Петербург, Московский пр-т 212</span><br><br class="contacts-br">Мы работаем с 09.00 до 02.00<br>без выходных и праздников</p>
+        <a href="https://vk.com/id97168760"><img class="networks" src="dist/img/contacts/vk.png" alt="vk"></a>
+        <a href="https://www.instagram.com/bradobreyu/"><img class="networks" src="dist/img/contacts/ig.png" alt="ig"></a>
+      </div>
+
+    </div>
+    <div id="map"></div>
+  </section>
+	
+	<footer>
+   <div class="container">
+     <div class="row">
+       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+         <div class="logo">
+           <img src="dist/img/contacts/logo.png" alt="logo">
+         </div>
+       </div>
+       <div class="col-lg-4 col-md-4 col-sm-4">
+         <div class="developer">
+           <p class="developer-text">Разработчик</p>
+           <a class="developer-link" href="https://vk.me/id97168760">Сергей Задорин</a>
+         </div>
+       </div>
+       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+         <div class="footer-img" id="menu">
+           <a href="#general"><img src="dist/img/contacts/footer-btn.png" alt="btn"></a>
+         </div>
+       </div>
+     </div>
+   </div> 
+  </footer>
+
+	<!-- Всплывающие окна -->
+  <div class="popup popup_call">
+    <div class="popup-content">
+      <button class="popup-close">&times;</button>
+      
+      <form class="main-form" action="dist/mailer/smart.php">
+        <h2>Заказать звонок</h2>
+        <h4>Оставьте заявку и мы свяжемся<br>с вами в ближайшее время</h4>
+        <input type="text" name="user_name" placeholder="Введите ваше имя" required>
+        <input type="text" class="user-phone" name="user_phone" placeholder="Введите ваш телефон" required>
+        <button class="button popup-button" type="submit" onclick="yaCounter46778553.reachGoal('call'); return true;">заказать звонок</button>
+        <img src="dist/img/main/lock.png" alt="lock">
+        <span class="text-form">Ваши данные надежно защищены<br> и не будут переданы третьим лицам</span>
+      </form>
+    </div>
+  </div>
+
+  <div class="popup course-one-window">
+    <div class="popup-content">
+      <button class="popup-close">&times;</button>
+      <form class="main-form" action="dist/mailer/smart.php">
+        <h2>Курс "Парковка - это просто!"</h2>
+        <h4>Оставьте заявку и мы расскажем вам<br>об этом курсе более подробно<br>и ответим на все ваши вопросы</h4>
+        <input type="text" name="user_name" placeholder="Введите ваше имя" required>
+        <input type="text" class="user-phone" name="user_phone" placeholder="Введите ваш телефон" required>
+        <button class="button popup-button" type="submit" onclick="yaCounter46778553.reachGoal('call'); return true;">заказать звонок</button>
+        <img src="dist/img/main/lock.png" alt="lock">
+        <span class="text-form">Ваши данные надежно защищены<br> и не будут переданы третьим лицам</span>
+      </form>
+    </div>
+  </div>
+  <div class="popup course-two-window">
+    <div class="popup-content">
+      <button class="popup-close">&times;</button>
+      <form class="main-form" action="dist/mailer/smart.php">
+        <h2>Курс "Начинающий водитель"</h2>
+        <h4>Оставьте заявку и мы расскажем вам<br>об этом курсе более подробно<br>и ответим на все ваши вопросы</h4>
+        <input type="text" name="user_name" placeholder="Введите ваше имя" required>
+        <input type="text" class="user-phone" name="user_phone" placeholder="Введите ваш телефон" required>
+        <button class="button popup-button" type="submit" onclick="yaCounter46778553.reachGoal('call'); return true;">заказать звонок</button>
+        <img src="dist/img/main/lock.png" alt="lock">
+        <span class="text-form">Ваши данные надежно защищены<br> и не будут переданы третьим лицам</span>
+      </form>
+    </div>
+  </div>
+  <div class="popup course-three-window">
+    <div class="popup-content">
+      <button class="popup-close">&times;</button>
+      <form class="main-form" action="dist/mailer/smart.php">
+        <h2>Программа "Город"</h2>
+        <h4>Оставьте заявку и мы расскажем вам<br>об этом курсе более подробно<br>и ответим на все ваши вопросы</h4>
+        <input type="text" name="user_name" placeholder="Введите ваше имя" required>
+        <input type="text" class="user-phone" name="user_phone" placeholder="Введите ваш телефон" required>
+        <button class="button popup-button" type="submit" onclick="yaCounter46778553.reachGoal('call'); return true;">заказать звонок</button>
+        <img src="dist/img/main/lock.png" alt="lock">
+        <span class="text-form">Ваши данные надежно защищены<br> и не будут переданы третьим лицам</span>
+      </form>
+    </div>
+  </div>
+  <div class="popup course-four-window">
+    <div class="popup-content">
+      <button class="popup-close">&times;</button>
+      <form class="main-form" action="dist/mailer/smart.php">
+        <h2>Курс безопасного вождения</h2>
+        <h4>Оставьте заявку и мы расскажем вам<br>об этом курсе более подробно<br>и ответим на все ваши вопросы</h4>
+        <input type="text" name="user_name" placeholder="Введите ваше имя" required>
+        <input type="text" class="user-phone" name="user_phone" placeholder="Введите ваш телефон" required>
+        <button class="button popup-button" type="submit" onclick="yaCounter46778553.reachGoal('call'); return true;">заказать звонок</button>
+        <img src="dist/img/main/lock.png" alt="lock">
+        <span class="text-form">Ваши данные надежно защищены<br> и не будут переданы третьим лицам</span>
+      </form>
+    </div>
+  </div>
+
+  <!-- Стиили -->
+  <!-- Bootstrap core CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="dist/css/questions.css">
+  <link rel="stylesheet" href="dist/css/advantages.css">
+  <link rel="stylesheet" href="dist/css/courses.css">
+  <link rel="stylesheet" href="dist/css/textography.css">
+  <link rel="stylesheet" href="dist/css/feedback.css">
+  <link rel="stylesheet" href="dist/css/capture.css">
+  <link rel="stylesheet" href="dist/css/contacts.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+  <!-- Скрипты -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="dist/js/jquery.maskedinput.min.js"></script>
+  <script src="dist/js/parallax.min.js"></script>
+  <script src="dist/js/wow.min.js"></script>
+  <link rel="stylesheet" href="dist/slick/slick.css">
+  <link rel="stylesheet" href="dist/slick/slick-theme.min.css">
+  <script src="dist/slick/slick.min.js"></script>
+
+  <!-- Анимация -->
+  <script>
+    new WOW().init();
+  </script>
+
+	<!-- Первый таймер -->
+	<script>
+    var deadline = '2017-12-22';
+    function getTimeRemaining(endtime){
+      var t = Date.parse(endtime) - Date.parse(new Date());
+      var seconds = Math.floor( (t/1000) % 60 );
+      var minutes = Math.floor( (t/1000/60) % 60 );
+      var hours = Math.floor( (t/(1000*60*60)) % 24 );
+      var days = Math.floor( t/(1000*60*60*24) );
+      return {
+       'total': t,
+       'days': days,
+       'hours': hours,
+       'minutes': minutes,
+       'seconds': seconds
+      };
+    }
+    function initializeClock(id, endtime){
+      var clock = document.getElementById(id);
+      var daysSpan = clock.querySelector('.days');
+      var hoursSpan = clock.querySelector('.hours');
+      var minutesSpan = clock.querySelector('.minutes');
+      var secondsSpan = clock.querySelector('.seconds');
+      function updateClock(){
+        var t = getTimeRemaining(endtime);
+        daysSpan.innerHTML = t.days;
+        hoursSpan.innerHTML = t.hours;
+        minutesSpan.innerHTML = t.minutes;
+        secondsSpan.innerHTML = t.seconds;
+        if(t.total<=0){
+         clearInterval(timeinterval);
+        }
+      }
+      updateClock(); // запустите функцию один раз, чтобы избежать задержки
+      var timeinterval = setInterval(updateClock,1000);
+    }
+    initializeClock('clockdiv', deadline);
+  </script>
+  <!-- Второй таймер -->
+  <script>
+    var deadline = '2017-12-22';
+    function getTimeRemaining(endtime){
+      var t = Date.parse(endtime) - Date.parse(new Date());
+      var seconds = Math.floor( (t/1000) % 60 );
+      var minutes = Math.floor( (t/1000/60) % 60 );
+      var hours = Math.floor( (t/(1000*60*60)) % 24 );
+      var days = Math.floor( t/(1000*60*60*24) );
+      return {
+       'total': t,
+       'days': days,
+       'hours': hours,
+       'minutes': minutes,
+       'seconds': seconds
+      };
+    }
+    function initializeClock(id, endtime){
+      var clock = document.getElementById(id);
+      var daysSpan = clock.querySelector('.days');
+      var hoursSpan = clock.querySelector('.hours');
+      var minutesSpan = clock.querySelector('.minutes');
+      var secondsSpan = clock.querySelector('.seconds');
+      function updateClock(){
+        var t = getTimeRemaining(endtime);
+        daysSpan.innerHTML = t.days;
+        hoursSpan.innerHTML = t.hours;
+        minutesSpan.innerHTML = t.minutes;
+        secondsSpan.innerHTML = t.seconds;
+        if(t.total<=0){
+         clearInterval(timeinterval);
+        }
+      }
+      updateClock(); // запустите функцию один раз, чтобы избежать задержки
+      var timeinterval = setInterval(updateClock,1000);
+    }
+    initializeClock('clockdiv-two', deadline);
+  </script>
+
+	<!-- Всплывающие окна -->
+  <script>
+    $(document).ready(function(){
+      // Окно звонка
+      $('.header-btn').on('click', function(event) {
+        event.preventDefault();
+        $('.popup_call').fadeIn(); 
+      });
+      $('.popup-close').on('click', function(event) {
+        event.preventDefault();
+        $('.popup_call').fadeOut(); 
+      });
+      // Окно 1 курса
+      $('.course-one').on('click', function(event) {
+        event.preventDefault();
+        $('.course-one-window').fadeIn(); 
+      });
+      $('.popup-close').on('click', function(event) {
+        event.preventDefault();
+        $('.course-one-window').fadeOut(); 
+      });
+      // Окно 2 курса
+      $('.course-two').on('click', function(event) {
+        event.preventDefault();
+        $('.course-two-window').fadeIn(); 
+      });
+      $('.popup-close').on('click', function(event) {
+        event.preventDefault();
+        $('.course-two-window').fadeOut(); 
+      });
+      // Окно 3 курса
+      $('.course-three').on('click', function(event) {
+        event.preventDefault();
+        $('.course-three-window').fadeIn(); 
+      });
+      $('.popup-close').on('click', function(event) {
+        event.preventDefault();
+        $('.course-three-window').fadeOut(); 
+      });
+      // Окно 4 курса
+      $('.course-four').on('click', function(event) {
+        event.preventDefault();
+        $('.course-four-window').fadeIn(); 
+      });
+      $('.popup-close').on('click', function(event) {
+        event.preventDefault();
+        $('.course-four-window').fadeOut(); 
+      });
+    });
+  </script>
+
+	<!-- Меню навигации -->
+  <script type="text/javascript">
+   $(document).ready(function(){
+      $("#menu-top").on("click","a", function (event) {
+          event.preventDefault();
+          var id  = $(this).attr('href'),
+              top = $(id).offset().top;
+          $('body,html').animate({scrollTop: top}, 1000);
+      });
+    });
+  </script>
+
+	<!-- Карты Google -->
+  <script>
+    function initMap() {
+      var uluru = {lat: 59.855712, lng: 30.3286799};
+      var centre = {lat: 59.8521842, lng: 30.3271896};
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 14,
+        center: uluru
+      });
+      var marker = new google.maps.Marker({
+        position: centre,
+        map: map,
+        title:"Hello World!"
+      });
+    }
+  </script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBS7RVK3qT2SU3yUIZYczfRjG5eH2q2ZPw&callback=initMap">
+  </script>
+
+	<!-- Слайдер -->
+  <script>
+    $(document).ready(function() {
+      $('.feedback-slider').slick({
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        prevArrow: '<button type="button" class="feedback-slider-btn feedback-prev-btn"><div class="arr-prev-top"></div><div class="arr-prev-bot"></div></button>',
+        nextArrow: '<button type="button" class="feedback-slider-btn feedback-next-btn"><div class="arr-next-top"></div><div class="arr-next-bot"></div></button>',
+        responsive: [
+          {
+            breakpoint: 991,
+            settings: {
+              infinite: true,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            }
+          }
+        ]
+      });
+    });   
+  </script>
+
+  <!-- Маска -->
+  <script>
+    jQuery(function($){
+       $(".user-phone").mask("+7 (999) 999-9999");
+    });
+  </script>
+
+</body>
+</html>

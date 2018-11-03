@@ -1,0 +1,405 @@
+.company-page
+	&-header
+		padding-top: 210px
+		padding-bottom: 45px
+		.nav
+			@include reg
+			font-size: 14px
+			margin-bottom: 40px
+			a
+				color: #88a6b2
+			p
+				color: #354146
+				display: inline-block
+				margin-left: 40px
+				&::before
+					content: ''
+					position: absolute
+					width: 16px
+					height: 1px
+					background-color: #5e6669
+					bottom: 0
+					margin-left: -30px
+		.wrapper
+			margin-bottom: 50px
+			display: flex
+			justify-content: space-between
+			align-items: center
+			h2
+				width: max-content
+			a
+				@include reg
+				padding: 15px 15px 15px 60px
+				color: $dark
+				transition: all 0.2s ease
+				border-bottom: 1px solid #48466d
+				margin-left: 30px
+				&:hover
+					background-color: #e4e4e4
+					border-bottom-color: transparent
+			.projects-link
+				&::before
+					content: url(../img/main-projects-all.png)
+					position: absolute
+					left: 20px
+					top: 50%
+					transform: translateY(-45%)
+			.feedback-link
+				&::before
+					content: url(../img/company-header-hand.png)
+					position: absolute
+					left: 20px
+					top: 50%
+					transform: translateY(-45%)
+		.description
+			@include reg
+			font-size: 14px
+			line-height: 1.3
+	&-mission
+		padding-top: 37px
+		padding-bottom: 35px
+		background-color: #e4e4e4
+		.section-title
+			@include bold
+			font-size: 24px
+			margin-bottom: 30px
+		.img-block
+			height: 140px
+			display: block
+			position: relative
+			&::before
+				content: url(../img/company-mission-pattern.png)
+				position: absolute
+				bottom: 0
+			img
+				margin-left: 20px
+		.descr
+			@include reg
+			font-size: 14px
+			line-height: 1.3
+	&-benefit
+		padding-top: 55px
+		padding-bottom: 60px
+		.section-title
+			text-align: center
+			@include bold
+			font-size: 24px
+			margin-bottom: 45px
+		.block
+			display: flex
+			text-align: center
+			justify-content: space-between
+			line-height: 1.3
+			.item
+				.img-block
+					margin-bottom: 20px
+				.title
+					@include bold
+				.descr
+					@include reg
+					font-size: 14px
+	&-supplier
+		padding-top: 50px
+		padding-bottom: 80px
+		background-color: #e4e4e4
+		.title
+			@include bold
+			font-size: 24px
+			margin-bottom: 35px
+		.descr
+			@include reg
+			font-size: 14px
+		.brands-slider
+			margin-top: 70px
+			width: 100%
+			height: 100px
+			.brands-btn
+				position: absolute
+				right: 0
+				top: -60px
+				width: 50px
+				height: 50px
+				border: none
+				border-radius: 50%
+				transition: all 0.2s ease
+				&-prev
+					right: 60px
+					background: url(../img/main-projects-prev.png) center no-repeat
+					&:hover
+						box-shadow: -5.196px 3px 16.92px 1.08px rgba(0, 142, 232, 0.26)
+						background: url(../img/main-brands-prev-hover.png) center no-repeat
+				&-next
+					background: url(../img/main-projects-next.png) center no-repeat
+					&:hover
+						box-shadow: -5.196px 3px 16.92px 1.08px rgba(0, 142, 232, 0.26)
+						background: url(../img/main-brands-next-hover.png) center no-repeat
+			.slick-dots
+				justify-content: flex-end
+				bottom: -70px
+				li
+					button
+						font-size: 0
+						background: none
+						border: 1px solid #545277
+						transition: background-color 0.3s ease
+					&::before
+						content: ''
+						position: absolute
+						left: 50%
+						top: 50%
+						transform: translate(-50%, -50%)
+						width: 6px
+						height: 6px
+						border: 1px solid #545277
+						border-radius: 50%
+						opacity: 0
+						transition: all 0.3s ease
+				li.slick-active
+					&::before
+						width: 30px
+						height: 30px
+						opacity: 1
+					button
+						background-color: $dark
+			.slick-track
+				display: flex
+				align-items: center
+				.slide
+					img
+						margin-left: auto
+						margin-right: auto
+	&-service
+		padding-top: 65px
+		padding-bottom: 70px
+		background-color: #48466d
+		color: $light
+		.title
+			@include bold
+			font-size: 24px
+			margin-bottom: 35px
+		.descr
+			@include reg
+			font-size: 14px
+		.wrapper
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+			margin-top: 25px
+			margin-bottom: 20px
+			.item-wrapper
+				position: relative
+				color: $light
+				@include bold
+				text-transform: uppercase
+				width: 370px
+				border-bottom: 1px solid $light	
+				height: 75px
+				display: flex
+				align-items: center
+				padding-left: 20px
+				padding-right: 50px
+				transition: all 0.2s ease 
+				margin-bottom: 25px
+				&::after
+					content: url(../img/company-service-after.png)
+					position: absolute
+					top: 50%
+					transform: translateY(-45%)
+					right: 20px
+					transition: all 0.2s ease 
+				&:hover
+					background-color: $light
+					color: $dark
+				&:hover::after
+					content: url(../img/company-service-after-hover.png)
+	&-advantages
+		padding-top: 75px
+		padding-bottom: 85px
+		.block
+			box-shadow: -6.5px 11.258px 78.96px 5.04px rgba(72, 70, 109, 0.35)
+			h2
+				text-align: center
+				color: $dark
+				margin-bottom: 15px
+			.descr
+				@include reg
+				text-align: center
+			.top
+				overflow: hidden
+				height: 330px
+				background-color: #e4e4e4
+				display: flex
+				align-items: center
+				justify-content: flex-end
+				.header
+					width: 45%
+					margin-right: 30px
+				.img-block
+					align-self: flex-end
+					width: 50%
+			.bottom
+				height: 330px
+				display: flex
+				.left
+					width: 470px
+					height: 100%
+					display: flex
+					align-items: center
+					text-align: center
+					background: url(../img/company-advantages.jpg) center no-repeat
+					background-size: cover
+					&::before
+						transform: translate(-50%, -50%)
+						filter: blur(17px)
+						opacity: 0.55
+						background-color: #fff
+						border-radius: 40%
+						top: 61%
+						left: 50%
+						height: 60%
+						width: 80%
+						position: absolute
+						content: ''
+					.header
+						width: 100%
+						h2
+							text-shadow: 0px 0px 40.8px rgba(255, 255, 255, 0.9)
+						.descr
+							text-shadow: 0px 0px 40.8px rgba(255, 255, 255, 0.9)
+							padding-left: 40px
+							padding-right: 40px
+				.right
+					width: 700px
+					display: flex
+					align-items: center
+					text-align: center
+					.header
+						width: 100%
+					.descr
+						padding-left: 24px
+						padding-right: 24px
+
+@media(max-width: 1199px)
+	.company-page
+		&-benefit
+			.block
+				.item
+					padding-left: 5px
+					padding-right: 5px
+					br
+						display: none
+					.title
+						font-size: 15px
+		&-service
+			.wrapper
+				.item-wrapper
+					width: 300px
+
+@media(max-width: 991px)
+	.company-page
+		&-header
+			.wrapper
+				a
+					padding: 15px 0px 15px 40px
+				.projects-link, .feedback-link
+					&::before
+						left: 0
+		&-mission
+			.descr
+				font-size: 13px
+				line-height: 1.2
+		&-benefit
+			.block
+				flex-wrap: wrap
+				justify-content: space-around
+				.item
+					width: 33%
+					margin-bottom: 20px
+		&-service
+			.wrapper
+				justify-content: space-around
+		&-advantages
+			.block
+				.descr
+					font-size: 15px
+					line-height: 1
+					padding: 0 !important
+					br
+						display: none
+
+@media(max-width: 767px)
+	.company-page
+		&-header
+			.nav
+				text-align: center
+			.wrapper
+				flex-wrap: wrap
+				h2
+					text-align: center
+					margin-bottom: 20px
+					width: 100%
+				.company-menu
+					width: 100%
+					display: flex
+					justify-content: space-around
+					a
+						margin-left: 0
+		&-mission
+			text-align: center
+			.descr
+				margin-bottom: 30px
+		&-benefit
+			.section-title
+				font-size: 20px
+			.block
+				.item
+					width: 100%
+		&-supplier
+			.title
+				text-align: center
+			.brands-slider
+				.slick-dots
+					justify-content: center
+				.brands-btn-prev
+					left: 0
+		&-service
+			.title
+				text-align: center
+			.descr
+				text-align: center
+		&-advantages
+			.block
+				.top
+					height: 100%
+					padding-top: 30px
+					padding-bottom: 30px
+					padding-left: 10px
+					padding-right: 10px
+					.header
+						width: 100%
+						margin-right: 0
+					.img-block
+						display: none
+				.bottom
+					flex-wrap: wrap
+					height: 100%
+					.left, .right
+						width: 100%
+						height: 100%
+						padding-top: 30px
+						padding-bottom: 30px
+						padding-left: 10px
+						padding-right: 10px
+
+@media(max-width: 575px)
+	.company-page
+		&-header
+			padding-top: 280px
+			.wrapper
+				.company-menu
+					flex-wrap: wrap
+			.description
+				text-align: center
+		&-supplier
+			.descr
+				text-align: center

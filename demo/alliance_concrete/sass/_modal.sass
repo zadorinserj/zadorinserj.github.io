@@ -1,0 +1,241 @@
+.modal
+	position: fixed
+	left: -100vw
+	top: 0
+	// transform: translateX(-100%)
+	width: 100vw
+	height: 100%
+	max-height: 100vh
+	background: #293339 url(../img/modal-bg.jpg) center no-repeat
+	background-size: cover
+	transition: all 0.5s ease
+	.content
+		width: 570px
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		.form
+			color: $light
+			.block
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				justify-content: space-between
+				input 
+					width: 270px
+					height: 30px
+					border: none
+					margin-bottom: 20px
+					@include ibook
+					font-size: 18px
+					background-color: transparent
+					color: $light
+					&::-webkit-input-placeholder
+						color: $light
+			textarea
+				border: none
+				@include ibook
+				font-size: 18px
+				background-color: transparent
+				color: $light
+				resize: none
+				width: 100%
+				&::-webkit-input-placeholder
+					color: $light
+			.small
+				display: block
+				@include ilight
+				font-size: 14px
+				a
+					color: $light
+					text-decoration: underline
+			.form-btn
+				position: relative
+				display: block
+				margin-left: auto
+				margin-right: auto
+				width: 100%
+				background-color: transparent
+				border: 3px solid #a7dfff
+				@include bold
+				font-size: 18px
+				text-transform: uppercase
+				color: #a7dfff
+				padding: 36px
+				padding-right: 100px
+				border-radius: 8px
+				margin-top: 28px
+				overflow: hidden
+				svg
+					position: absolute
+					width: 35px
+					height: 35px
+					top: 50%
+					left: 50%
+					margin-top: -20px
+					margin-left: 70px
+					z-index: 1
+					transition: all 0.5s ease
+					polygon
+						fill: #a7dfff
+			.form-btn:hover svg 
+				animation: submit-button 2s ease both 
+
+				@keyframes submit-button
+					0%  
+						transform: translate3d(0, 0, 0) 
+						opacity: 1 
+					50%  
+						transform: translate3d(250px, -56px, 0) 
+						opacity: 0 
+					51%  
+						transform: translate3d(-250px, 56px, 0) 
+						opacity: 0 
+					100%  
+						transform: translate3d(0, 0, 0) 
+						opacity: 1 
+
+
+.input 
+	position: relative
+	display: inline-block
+	vertical-align: top
+	
+
+.input__field 
+	display: block
+	float: right
+	padding: 10px
+
+.input__label 
+	display: inline-block
+	padding: 0 1em
+
+.input__label-content 
+	display: block
+	padding: 20px 0
+	width: 100%
+
+
+/* Hoshi */
+.input--hoshi 
+	overflow: hidden
+
+.input__field--hoshi 
+	margin-top: 30px
+	padding: 0.85em 0.15em
+	width: 100%
+
+.input__label--hoshi 
+	position: absolute
+	bottom: 0
+	left: 0
+	padding: 0 0.25em
+	width: 100%
+	height: calc(100% - 1em)
+	pointer-events: none
+
+.input__label-content--hoshi 
+	position: absolute
+	@include ibook
+	font-size: 18px
+
+.input__label--hoshi::before,
+.input__label--hoshi::after 
+	content: ''
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: calc(100% - 10px)
+	border-bottom: 1px solid #a7dfff
+
+
+.input__label--hoshi::after 
+	margin-top: 2px
+	border-bottom: 4px solid #a7dfff
+	transform: translate3d(-100%, 0, 0)
+	transition: transform 0.3s
+
+.input__field--hoshi:focus + .input__label--hoshi::after,
+.input--filled .input__label--hoshi::after 
+	transform: translate3d(0, 0, 0)
+
+
+.input__field--hoshi:focus + .input__label--hoshi .input__label-content--hoshi,
+.input--filled .input__label-content--hoshi 
+	animation: anim-1 0.3s forwards
+
+
+@-webkit-keyframes anim-1 
+	50% 
+		opacity: 0
+		transform: translate3d(1em, 0, 0)
+	51% 
+		opacity: 0
+		transform: translate3d(-1em, -40%, 0)
+	100% 
+		opacity: 1
+		transform: translate3d(0, -40%, 0)
+	
+@keyframes anim-1 
+	50% 
+		opacity: 0
+		transform: translate3d(1em, 0, 0)
+	51% 
+		opacity: 0
+		transform: translate3d(-1em, -40%, 0)
+	100% 
+		opacity: 1
+		transform: translate3d(0, -40%, 0)
+					
+
+.input
+	width: 100%
+	textarea
+		width: 100%
+		resize: none
+
+.input-top
+	width: 270px
+
+.modal-active
+	left: 0
+	z-index: 10
+
+body
+	overflow-x: hidden
+
+.site
+	overflow-x: hidden
+	transition: transform 0.5s
+
+.site-modal-open
+	transform: translateX(30%)
+
+@media(max-width: 768px)
+	.modal
+		.content
+			width: 400px
+			transform: translate(-50%, -50%)
+			.block
+				flex-wrap: wrap
+				.input
+					display: block
+					width: 100%
+					.input__field--hoshi
+						width: 100%
+				textarea
+					height: 150px
+			.form
+				.form-btn
+					padding: 16px
+@media(max-width: 576px)
+	.modal
+		.content
+			width: 100%
+			padding-left: 10px
+			padding-right: 10px

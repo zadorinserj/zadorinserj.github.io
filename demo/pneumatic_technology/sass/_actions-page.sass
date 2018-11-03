@@ -1,0 +1,179 @@
+.actions-page
+	&-header
+		padding-top: 220px
+		.nav
+			@include reg
+			font-size: 14px
+			margin-bottom: 40px
+			a
+				color: #88a6b2
+				transition: color 0.2s ease
+				&:hover
+					color: #008ee8
+			p
+				color: #354146
+				display: inline-block
+				margin-left: 40px
+				&::before
+					content: ''
+					position: absolute
+					width: 16px
+					height: 1px
+					background-color: #5e6669
+					bottom: 0
+					margin-left: -30px
+		h2
+			margin-bottom: 40px
+		.item-wrapper
+			display: flex
+			margin-bottom: 30px
+			.title-block
+				.img-block
+					width: 270px
+					box-shadow: -9px 4px 30.08px 7px rgba(34, 34, 36, 0.19)
+				.title
+					position: absolute
+					bottom: 15px
+					left: -15px
+					@include bold
+					box-shadow: -5.196px 3px 30.08px 1.92px rgba(34, 34, 36, 0.09)
+					background-color: $light
+					max-width: 270px
+					padding: 15px
+			.descr-block
+				padding-left: 30px
+				padding-top: 35px
+				.descr
+					@include reg
+					font-size: 14px
+					margin-bottom: 10px
+				.actions-btn
+					display: block
+					@include med
+					color: #008ee8
+					padding-top: 15px
+					padding-bottom: 15px
+					transition: all 0.3s ease
+					&::after
+						content: url(../img/main-projects-btn.png)
+						position: absolute
+						top: 50%
+						transform: translateY(-50%)
+						margin-left: 20px
+						transition: all 0.3s ease
+					&:hover
+						background-color: #008ee8
+						color: $light
+						padding-left: 70px
+						&::after
+							content: url(../img/main-projects-btn-hover.png)
+		.pagination-block
+			display: flex
+			align-items: center
+			justify-content: flex-end
+			.pagination
+				margin: 0
+				padding: 0
+				list-style: none
+				display: flex
+				li
+					a
+						@include med
+						font-size: 18px
+						padding: 5px 9px
+						margin-right: 7px
+						color: #354146
+						transition: color 0.2s ease
+						&:hover
+							color: #008ee8
+				.active
+					a
+						background-color: #e4e4e4
+						&:hover
+							color: $dark
+			.btn-next
+				width: 50px
+				height: 50px
+				margin-left: 70px
+				border: none
+				border-radius: 50%
+				&-1
+					opacity: 1
+					transition: all 0.2s ease
+				&-2
+					position: absolute
+					left: 0
+					top: 0
+					opacity: 0
+					transition: all 0.2s ease
+					border-radius: 50%
+					background-color: $light
+				&:hover
+					.btn-next-1
+						opacity: 0
+					.btn-next-2
+						opacity: 1
+						box-shadow: -5.196px 3px 16.92px 1.08px rgba(0, 142, 232, 0.26)
+	&-text
+		h2
+			margin-top: 50px
+			margin-bottom: 40px
+		.text
+			@include reg
+			font-size: 14px
+			margin-bottom: 75px
+
+@media(max-width: 1199px)
+	.actions-page
+		&-header
+			.item-wrapper
+				.title-block
+					.img-block
+						width: 200px
+					.title
+						max-width: 200px
+						font-size: 15px
+				.descr-block
+					.actions-btn:hover
+						padding-left: 45px
+
+@media(max-width: 991px)
+	.actions-page
+		&-header
+			.item-wrapper
+				.title-block
+					.img-block
+						width: 250px
+				.descr-block
+					.actions-btn:hover
+						max-width: 220px
+
+@media(max-width: 575px)
+	.actions-page
+		&-header
+			padding-top: 280px
+			.nav
+				text-align: center
+			.item-wrapper
+				flex-wrap: wrap
+				justify-content: center
+				.title-block
+					.title
+						max-width: 100%
+						left: 0
+				.descr-block
+					padding: 10px
+					text-align: center
+					.actions-btn
+						width: 220px
+						margin-left: auto
+						margin-right: auto
+						&:hover
+							padding-left: 0
+			.pagination-block
+				flex-wrap: wrap
+				.btn-next
+					margin-left: 10px
+		&-text
+			.text
+				text-align: center

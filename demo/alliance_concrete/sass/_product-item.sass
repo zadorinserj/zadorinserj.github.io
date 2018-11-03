@@ -1,0 +1,683 @@
+.product-item
+	.product-item-bg-sheben
+		background: url(../img/sheben-bg.jpg) center no-repeat
+		background-size: cover
+	.news-main
+		&::after
+			content: url(../img/sheben-text.png)
+
+.product-page
+	position: relative
+	padding-bottom: 190px
+	padding-top: 70px
+	.title
+		.bg-element-3
+			position: absolute
+			z-index: -1
+			margin-top: 270px
+			margin-left: -70px
+		.img-block
+			&::before
+				content: url(../img/product-1-1-before.png)
+				position: absolute
+				z-index: -1
+				margin-top: -50px
+		.text-block
+			padding-left: 70px
+			.header
+				margin-bottom: 45px
+				@include ireg
+				font-size: 30px
+				text-transform: uppercase
+			.descr
+				position: relative
+				margin-bottom: 85px
+				@include ibook
+				font-size: 18px
+				&::after
+					content: ''
+					position: absolute
+					width: 100px
+					height: 2px
+					background-color: $dark
+					left: 0
+					bottom: -42px
+				.descr-link
+					text-decoration: underline
+					color: #00456f
+					transition: all 0.2s ease
+					&:hover
+						color: #73a5c3
+			.action
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				justify-content: space-between
+				.number
+					@include ireg
+					font-size: 30px
+					a
+						@include bold
+						color: $dark
+						transition: all 0.2s ease
+						&:hover
+							color: #00456f
+				.or
+					width: 150px
+					@include ibook
+					font-size: 18px
+					line-height: 1
+				.btn
+					height: 70px
+					color: $light
+					font-size: 18px
+					padding: 12px 30px
+					padding-right: 80px
+					border-radius: 35px
+					overflow: hidden
+					position: relative
+					box-shadow: 0px 0px 27px 0px rgba(26, 35, 36, 0.4)
+					background-image: linear-gradient(300deg, white 0%, #f2ffff 2%, #94cef1 25%, #4d90b4 50%, #2e597b 75%, #131818 98%, #030303 100%)
+					&::before, &::after
+						content: ''
+						position: absolute
+						top: -5px
+						left: -10px
+						width: 110%
+						height: 100%
+						z-index: 1
+						transition: all 0.5s
+						opacity: 1
+						transform: translate(-13%,-190%) rotate(-30deg)
+						border-bottom-width: 1px
+						border-bottom-style: solid
+						border-bottom-color: rgba(255,255,255,1)
+						background-color: rgba(255,255,255,0.25)
+					&::after
+						transition-delay: 0.2s
+					&:hover::before, &:hover::after
+						opacity: 0
+						transform: translate(0,0)
+					svg
+						width: 40px
+						position: absolute 
+						top: 50% 
+						left: 50% 
+						margin-top: -10px 
+						margin-left: 70px 
+						z-index: 1 
+						transition: all 0.5s ease
+						polygon
+							fill: $light
+				.btn-call:hover > svg  
+					animation: submit-button 1.5s ease both 
+
+		.bg-element-4
+			position: absolute
+			z-index: -1 !important
+			margin-left: 350px
+			margin-top: 330px
+	.content
+		padding-top: 30px
+		.content-title
+			margin-bottom: 45px
+			@include bold
+			font-size: 30px
+			text-transform: uppercase
+		.descr
+			@include bold
+			font-size: 18px
+
+	.product-item-table
+		table
+			width: 100%
+			margin-top: 50px
+			background-color: rgba($light, 0.8)
+			box-shadow: 0px 0px 27px 0px rgba(26, 35, 36, 0.4)
+			border-spacing: 0
+			border-radius: 5px
+			border-color: #255c7e
+			border-style: solid
+			border-left: none
+			border-right: none
+			border-bottom-color: rgba(#b9e5ff, 0.8)
+			thead
+				background-color: rgba(#255c7e, 0.98)
+				color: $light
+				@include ilight
+				font-size: 18px
+				text-align: left
+				tr
+					border-spacing: 0
+					th
+						&:first-child
+							padding-left: 30px
+						padding-left: 10px
+						padding-top: 15px
+						padding-bottom: 15px
+			tbody
+				@include ibook
+				font-size: 18px
+				tr
+					&:nth-child(even)
+						background-color: rgba(#b9e5ff, 0.8)
+					td
+						padding-left: 30px
+						padding-bottom: 20px
+						padding-top: 10px
+						border-right: 1px solid #30678a
+						&:last-child
+							border-right: none
+				.non-active
+					height: 74px
+
+	.product-form
+		width: 970px
+		height: 170px
+		margin-top: 70px
+		background-color: $light
+		box-shadow: 0px 0px 27px 0px rgba(26, 35, 36, 0.4)
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		border-radius: 8px
+		.form
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			.small
+				display: block
+				padding-left: 30px
+				@include ilight 
+				font-size: 14px
+				a
+					color: $dark
+					text-decoration: underline
+			.title
+				width: 270px
+				padding-left: 70px
+				@include bold
+				font-size: 30px
+			.block
+				width: 400px
+				margin-left: auto
+				.input
+					width: 170px
+					margin-left: 28px
+					vertical-align: middle
+				/* Hoshi */
+				.input--hoshi 
+					overflow: hidden
+					margin-top: -30px
+
+				.input__field--hoshi 
+					margin-top: 30px
+					padding: 1em 0.15em
+					width: 100%
+					border: none
+
+				.input__label--hoshi 
+					position: absolute
+					bottom: 0
+					left: 0
+					padding: 0 0.25em
+					width: 100%
+					height: calc(100% - 1em)
+					pointer-events: none
+
+				.input__label-content--hoshi 
+					position: absolute
+					@include ibook
+					font-size: 18px
+
+				.input__label--hoshi::before,
+				.input__label--hoshi::after 
+					content: ''
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: calc(100% - 10px)
+					border-bottom: 1px solid #00456f
+
+
+				.input__label--hoshi::after 
+					margin-top: 2px
+					border-bottom: 4px solid #94cef1
+					transform: translate3d(-100%, 0, 0)
+					transition: transform 0.3s
+
+				.input__field--hoshi:focus + .input__label--hoshi::after,
+				.input--filled .input__label--hoshi::after 
+					transform: translate3d(0, 0, 0)
+
+
+				.input__field--hoshi:focus + .input__label--hoshi .input__label-content--hoshi,
+				.input--filled .input__label-content--hoshi 
+					animation: anim-1 0.3s forwards
+
+
+				@-webkit-keyframes anim-1 
+					50% 
+						opacity: 0
+						transform: translate3d(1em, 0, 0)
+					51% 
+						opacity: 0
+						transform: translate3d(-1em, -40%, 0)
+					100% 
+						opacity: 1
+						transform: translate3d(0, -40%, 0)
+					
+				@keyframes anim-1 
+					50% 
+						opacity: 0
+						transform: translate3d(1em, 0, 0)
+					51% 
+						opacity: 0
+						transform: translate3d(-1em, -40%, 0)
+					100% 
+						opacity: 1
+						transform: translate3d(0, -40%, 0)
+									
+			.product-form-btn
+				position: relative
+				width: 170px
+				height: 170px
+				margin-left: auto
+				padding-top: 40px
+				overflow: hidden
+				@include ibook
+				font-size: 18px
+				color: $light
+				border-top-right-radius: 8px
+				border-bottom-right-radius: 8px
+				background-image: linear-gradient(360deg, #b6d9f3 0%, #c9f0fd 2%, #94cef1 25%, #4d90b4 50%, #2e597b 75%, #1a2a3e 98%)
+				svg
+					width: 50px
+					position: absolute 
+					top: 50% 
+					left: 50% 
+					margin-top: -25px 
+					margin-left: -25px 
+					z-index: 1 
+					transition: all 0.5s ease
+					polygon
+						fill: $light
+			.product-form-btn:hover > svg  
+				animation: submit-button 1.5s ease both 
+					 
+@keyframes submit-button
+	0%  
+		transform: translate3d(0, 0, 0) 
+		opacity: 1 
+	50%  
+		transform: translate3d(100px, -26px, 0) 
+		opacity: 0 
+	51%  
+		transform: translate3d(-100px, 26px, 0) 
+		opacity: 0 
+	100%  
+		transform: translate3d(0, 0, 0) 
+		opacity: 1 
+.product-description
+	padding-top: 125px
+	padding-bottom: 75px
+	color: $light
+	background: url(../img/product-blue-bg.jpg) center no-repeat
+	background-size: cover
+	.title
+		margin-bottom: 40px
+		@include bold
+		font-size: 30px
+		text-transform: uppercase
+	.text
+		@include ibook
+		font-size: 18px
+		.description-link
+			text-decoration: underline
+			color: #a7dfff
+			transition: all 0.2s ease
+			&:hover
+				color: #00456f
+.product-description-2
+	position: relative
+	padding-top: 80px
+	padding-bottom: 40px
+	.bg-element-2
+		position: absolute
+		margin-top: -20px
+		margin-left: 57%
+	.title
+		margin-bottom: 50px
+		@include ireg
+		font-size: 30px
+		text-transform: uppercase
+	.bg-element-1
+		position: absolute
+		margin-left: 60%
+		margin-top: 360px
+	.right
+		float: right
+		margin-top: 30px
+		margin-right: 150px
+		&::before
+			content: url(../img/product-stone-before.png)
+			position: absolute
+			z-index: -1
+			margin-top: -70px
+			margin-left: 50px
+	.text
+		margin-bottom: 30px
+		margin-top: 30px
+		@include ibook
+		font-size: 18px
+		a
+			color: #00456f
+			text-decoration: underline
+.bottom-form
+	padding-bottom: 180px
+	padding-top: 40px
+	.bottom-form-wrapper
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		align-items: center
+		.text
+			width: 470px
+			.title
+				margin-bottom: 45px
+				@include ireg
+				font-size: 30px
+				text-transform: uppercase
+			.descr
+				@include ibook
+				font-size: 18px
+		.form
+			width: 600px
+			box-shadow: 0px 0px 27px 0px rgba(26, 35, 36, 0.4)
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			padding-bottom: 40px
+			padding-top: 20px
+			position: relative
+			border-radius: 8px
+			.form-wrapper
+				padding-left: 70px
+				padding-right: 150px
+				.input--hoshi
+					.input__label--hoshi
+						&::before
+							border-bottom: 1px solid #00456f
+			.block
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				justify-content: space-between
+				.input
+					width: 170px
+					.input__field--hoshi
+						padding: 1em 0.15em
+						border: none
+			.small
+				@include ilight
+				font-size: 14px
+				a
+					color: $dark
+					text-decoration: underline
+			.form-btn
+				height: 340.66px
+				width: 100px
+				position: absolute
+				overflow: hidden
+				right: 0
+				top: 0
+				border-top-right-radius: 8px
+				border-bottom-right-radius: 8px
+				background-image: linear-gradient(360deg, #d2e6f5 0%, #c9f0fd 2%, #94cef1 25%, #4d90b4 50%, #2e597b 75%, #1a2a3e 98%)
+				svg
+					width: 50px
+					position: absolute 
+					top: 50% 
+					left: 50% 
+					margin-top: -10px 
+					margin-left: -25px 
+					z-index: 1 
+					transition: all 0.5s ease
+					polygon
+						fill: $light
+			.form-btn:hover > svg  
+				animation: submit-button 1.5s ease both 
+					 
+@keyframes submit-button
+	0%  
+		transform: translate3d(0, 0, 0) 
+		opacity: 1 
+	50%  
+		transform: translate3d(90px, -26px, 0) 
+		opacity: 0 
+	51%  
+		transform: translate3d(-90px, 26px, 0) 
+		opacity: 0 
+	100%  
+		transform: translate3d(0, 0, 0) 
+		opacity: 1 
+					 
+					
+
+@media(max-width: 1199px)
+	.product-page
+		.title
+			.bg-element-3
+				margin-left: 0
+			.bg-element-4
+				margin-left: 20px
+				margin-top: -105px
+			.text-block
+				.action
+					flex-wrap: wrap
+					justify-content: space-around
+					.btn
+						margin-top: 30px
+		.product-form
+			width: 900px
+	.product-description-2
+		.bg-element-2
+			margin-top: -180px
+		.right
+			margin-top: 50px
+			margin-bottom: 30px
+		.bg-element-1
+			margin-left: 0
+			right: 0
+	.bottom-form
+		.bottom-form-wrapper
+			.text
+				.title
+					font-size: 25px
+
+@media(max-width: 992px)
+	.product-page
+		.product-item-table
+			table
+				border-bottom-color: #30678a
+				border-left: 1px solid #30678a 
+				border-right: 1px solid #30678a 
+				thead
+					display: none
+				td::before
+					content: attr(data-label)
+				tbody
+					tr
+						td
+							padding-right: 10px
+							position: relative
+							display: block
+							text-align: right
+							border-bottom: 1px solid #30678a
+							border-right: none
+							&::before
+								position: absolute
+								left: 10px	
+								top: 50%
+								transform: translateY(-50%)
+		.title
+			padding-bottom: 150px
+			.text-block
+				padding-left: 0
+				.descr
+					font-size: 16px
+					line-height: 1
+					margin-bottom: 40px
+					&::after
+						bottom: -20px
+				.action
+					position: absolute
+					width: 720px
+					margin-top: 30px
+					left: 0
+					transform: translateX(-50%)
+					align-items: center
+					.number, .or, .btn-call
+						margin: 0
+			.bg-element-4
+				margin-left: -32px
+		.product-form
+			width: 90%
+			.product-form-btn
+				border-top-right-radius: 8px
+				border-bottom-right-radius: 8px
+	.product-description-2
+		.right
+			margin-bottom: 50px
+	.bottom-form
+		.bottom-form-wrapper
+			flex-wrap: wrap
+			.text
+				text-align: center
+				width: 100%
+			.form
+				margin-left: auto
+				margin-right: auto
+				margin-top: 30px
+
+@media(max-width: 768px)
+	.product-page
+		.product-item-table
+			table
+				thead
+					display: none
+				td::before
+					content: attr(data-label)
+		.title
+			padding-bottom: 0
+			.img-block
+				text-align: center
+				margin-bottom: 50px
+			.bg-element-3
+				display: none
+			.bg-element-4
+				display: none
+			.text-block
+				.action
+					position: static
+					width: 100%
+					flex-wrap: wrap
+					transform: translateX(0)
+					.btn-call
+						margin-top: 30px
+		.product-form
+			.form
+				.title
+					padding-left: 40px
+	.product-description-2
+		.bg-element-2
+			display: none
+		.right
+			float: none
+			width: 100%
+			text-align: center
+			&::before
+				display: none
+		.bg-element-1
+			display: none
+	.bottom-form
+		padding-bottom: 40px
+		.bottom-form-wrapper
+			.form
+				width: 100%
+	.product-item
+		.footer
+			margin-top: 0
+
+@media(max-width: 576px)
+	.product-page
+		text-align: center
+		padding-bottom: 30px
+		.title
+			.img-block
+				&::before
+					display: none
+		.product-form
+			display: none
+		.product-item-table
+			table
+				tbody
+					tr
+						td
+							padding: 15px
+							padding-left: 42%
+							font-size: 15px
+							&::before
+								width: 50%
+								text-align: left
+	.product-description, .product-description-2
+		text-align: center
+		padding-top: 30px
+		padding-bottom: 30px
+	.bottom-form
+		.bottom-form-wrapper
+			.form
+				flex-wrap: wrap
+				padding-bottom: 0
+				.form-wrapper
+					padding-left: 10px
+					padding-right: 10px
+				.form-btn
+					width: 100%
+					height: 100%
+					margin-top: 30px
+					padding-top: 30px
+					padding-bottom: 30px
+					position: static
+				.block
+					flex-wrap: wrap
+					.input
+						width: 100%
+
+
+@keyframes submit-button
+	0%  
+		transform: translate3d(0, 0, 0) 
+		opacity: 1 
+	50%  
+		transform: translate3d(100px, -26px, 0) 
+		opacity: 0 
+	51%  
+		transform: translate3d(-100px, 26px, 0) 
+		opacity: 0 
+	100%  
+		transform: translate3d(0, 0, 0) 
+		opacity: 1 

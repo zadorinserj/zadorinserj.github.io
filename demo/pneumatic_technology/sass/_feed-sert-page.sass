@@ -1,0 +1,202 @@
+.page-feed-sert
+	&-header
+		padding-top: 220px
+		.nav
+			@include reg
+			font-size: 14px
+			margin-bottom: 40px
+			a
+				color: #88a6b2
+				transition: color 0.2s ease
+				&:hover
+					color: #008ee8
+			.nav-link
+				margin-left: 40px
+				&::before
+					content: ''
+					position: absolute
+					width: 16px
+					height: 1px
+					background-color: #5e6669
+					bottom: 0
+					margin-left: -30px
+			p
+				color: #354146
+				display: inline-block
+				margin-left: 40px
+				&::before
+					content: ''
+					position: absolute
+					width: 16px
+					height: 1px
+					background-color: #5e6669
+					bottom: 0
+					margin-left: -30px
+		h2
+			margin-bottom: 40px
+		.list-block
+			display: flex
+			margin-bottom: 30px
+			.list-block-btn
+				transition: all 0.2s ease
+				@include bold
+				color: #a3a3a3
+				font-size: 18px
+				background-color: transparent
+				border: none
+				width: 170px
+				text-align: left
+				padding-bottom: 16px
+				overflow: hidden
+				&::after
+					content: ''
+					position: absolute
+					bottom: 1px
+					left: 50%
+					transform: translateX(-50%)
+					width: 100%
+					height: 2px
+					background-color: #9aa0a2
+					transition: all 0.2s ease
+				&:hover
+					color: #008ee8
+			.btn-active
+				color: $dark
+				&::after
+					content: ''
+					position: absolute
+					bottom: 0
+					left: 50%
+					transform: translateX(-50%)
+					height: 4px
+					background-color: #008ee8
+				&:hover
+					color: $dark
+	&-content
+		opacity: 0
+		pointer-events: none
+		.descr
+			margin-bottom: 30px
+			@include reg
+			font-size: 14px
+		.item
+			margin-bottom: 30px
+			transition: all 0.3s ease
+			.img-block
+				width: 100%
+				box-shadow: -5.196px 3px 16.92px 1.08px rgba(34, 34, 36, 0.26)
+				margin-bottom: 20px
+				overflow: hidden
+				transition: all 0.4s ease
+				cursor: pointer
+				padding-left: 0
+				&::before
+					content: ''
+					position: absolute
+					left: 0
+					top: 100%
+					width: 100%
+					height: 100%
+					background: linear-gradient(to bottom, rgba(72,76,97,0) 0%, rgba(228,228,228,0.9) 75%)
+					z-index: 2
+					transition: all 0.4s ease
+				&::after
+					opacity: 0
+					transition: all 0.4s ease
+					content: url(../img/sert-loop.png)
+					position: absolute
+					left: 50%
+					top: 70%
+					transform: translate(-50%, -50%)
+					z-index: 3
+				&:hover
+					box-shadow: -6px 6px 20px 0px rgba(72, 70, 109, 0.65)
+					&::after
+						top: 50%
+						opacity: 1
+					&::before
+						top: 0
+			.title
+				@include bold
+				padding-left: 15px
+				margin-bottom: 10px
+			a
+				display: block
+				padding-left: 15px
+				@include reg
+				font-size: 14px
+				text-decoration: underline
+				color: #008ee8
+				margin-bottom: 10px
+	&-seo
+		h2
+			margin-top: 50px
+			margin-bottom: 30px
+		.text
+			@include reg
+			font-size: 14px
+			margin-bottom: 50px
+
+.content-feed, .content-sert
+	transition: all 1s ease
+	.container
+		.row
+			.vert-block, .gor-block
+				transition: all 1s ease
+				transform: scale3d(0.01, 0.01, 1)
+.content-sert
+	position: absolute
+	width: 100%
+	left: 50%
+	transform: translateX(-50%)
+	top: 433px
+.sert-active, .feed-active
+	opacity: 1
+	pointer-events: auto
+	.container
+		.row
+			.vert-block, .gor-block
+				transform: scale3d(1, 1, 1)
+
+@media(max-width: 991px)
+	.content-sert
+		top: 420px
+
+
+@media(max-width: 575px)
+	.page-feed-sert
+		&-header
+			padding-top: 280px
+			.nav
+				text-align: center
+				p
+					margin: 0
+					text-align: center
+					&::before
+						display: none
+			h2
+				font-size: 30px
+			.list-block
+				justify-content: center
+				.list-block-btn
+					font-size: 16px
+		&-content
+			.descr
+				width: 290px
+				margin-left: auto
+				margin-right: auto
+				text-align: center
+			.item
+				max-width: 290px
+				margin-left: auto
+				margin-right: auto
+				.img-block
+					display: flex
+					align-items: center
+					justify-content: center
+					overflow: hidden
+					img
+						min-width: 100%
+						min-height: 100%
+	.content-sert
+		top: 471px

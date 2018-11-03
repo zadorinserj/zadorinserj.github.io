@@ -1,0 +1,1735 @@
+/* Fonts family */
+@font-face {
+  font-family: 'HelveticaNeueCyr_bold';
+  src: url('../fonts/HelveticaNeueCyr-Bold.eot');
+  src: url('../fonts/HelveticaNeueCyr-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/HelveticaNeueCyr-Bold.woff2') format('woff2'), url('../fonts/HelveticaNeueCyr-Bold.woff') format('woff'), url('../fonts/HelveticaNeueCyr-Bold.ttf') format('truetype'), url('../fonts/HelveticaNeueCyr-Bold.svg#HelveticaNeueCyr-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeueCyr_med';
+  src: url('../fonts/HelveticaNeueCyr-Medium.eot');
+  src: url('../fonts/HelveticaNeueCyr-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/HelveticaNeueCyr-Medium.woff2') format('woff2'), url('../fonts/HelveticaNeueCyr-Medium.woff') format('woff'), url('../fonts/HelveticaNeueCyr-Medium.ttf') format('truetype'), url('../fonts/HelveticaNeueCyr-Medium.svg#HelveticaNeueCyr-Medium') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeueCyr_rom';
+  src: url('../fonts/HelveticaNeueCyr-Roman.eot');
+  src: url('../fonts/HelveticaNeueCyr-Roman.eot?#iefix') format('embedded-opentype'), url('../fonts/HelveticaNeueCyr-Roman.woff2') format('woff2'), url('../fonts/HelveticaNeueCyr-Roman.woff') format('woff'), url('../fonts/HelveticaNeueCyr-Roman.ttf') format('truetype'), url('../fonts/HelveticaNeueCyr-Roman.svg#HelveticaNeueCyr-Roman') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeueCyr_black';
+  src: url('../fonts/HelveticaNeueCyr-Black.eot');
+  src: url('../fonts/HelveticaNeueCyr-Black.eot?#iefix') format('embedded-opentype'), url('../fonts/HelveticaNeueCyr-Black.woff2') format('woff2'), url('../fonts/HelveticaNeueCyr-Black.woff') format('woff'), url('../fonts/HelveticaNeueCyr-Black.ttf') format('truetype'), url('../fonts/HelveticaNeueCyr-Black.svg#HelveticaNeueCyr-Black') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+/* Colors */
+/* Basic settings */
+html {
+  font-size: 10px;
+}
+hr {
+  margin-top: 0;
+  margin-bottom: 0;
+  border: 0;
+  border-top: 3px solid #eee;
+}
+a:hover {
+  text-decoration: none;
+}
+button:focus,
+input:focus,
+a:focus,
+text-area:focus {
+  outline: none;
+}
+.button {
+  padding: 2rem 4rem;
+  border-radius: 4px;
+  font-size: 1.8rem;
+  background-color: #94ca2d;
+  color: #ffffff;
+  text-transform: uppercase;
+  border: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  font-family: 'HelveticaNeueCyr_bold', sans-serif;
+}
+.button:hover {
+  cursor: pointer;
+  background-color: #85b528;
+}
+.line {
+  margin: auto;
+  display: block;
+  height: 4px;
+  width: 5.5rem;
+  background-color: #18a7d0;
+}
+/* Typography */
+.main {
+  color: #ffffff;
+}
+/* Главный экран */
+.main .header {
+  font-family: 'HelveticaNeueCyr_med', sans-serif;
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  padding-top: 1rem;
+}
+.main .header .logo img {
+  margin-top: -3rem;
+  display: inline-block;
+}
+.main .header .logo p {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  display: inline-block;
+}
+.main .header .contacts {
+  margin-top: 0rem;
+  text-align: right;
+}
+.main .header .contacts p {
+  font-size: 2.5rem;
+  margin-bottom: 0rem;
+}
+.main .header .contacts a {
+  color: #94ca2d;
+}
+.main .shadow {
+  position: absolute;
+  width: 100%;
+  height: 9rem;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.main-content {
+  font-family: 'HelveticaNeueCyr_bold', sans-serif;
+}
+.main-content h1 {
+  margin-top: 13rem;
+  line-height: 1.5;
+}
+.main-content h2 {
+  margin-top: 2rem;
+}
+.main-content .button {
+  margin-top: 3rem;
+}
+.main-content .glasses-img {
+  display: block;
+  margin-top: 3.5rem;
+  margin-bottom: 3rem;
+  margin-left: -2.5rem;
+}
+.main-content .dino-img {
+  margin-left: -15rem;
+  margin-top: 25rem;
+}
+/* Что такое VR Box 2 */
+.what {
+  padding: 10rem 0 6.5rem 0;
+  background-color: #f8f8f0;
+}
+.what span {
+  font-family: 'HelveticaNeueCyr_med', sans-serif;
+  font-size: 2rem;
+}
+.what img {
+  position: absolute;
+  margin-top: 2rem;
+  margin-left: -8rem;
+}
+.what .what-title h2 {
+  font-family: 'HelveticaNeueCyr_black', sans-serif;
+  font-size: 3.5rem;
+}
+.what .what-title p {
+  line-height: 1.7;
+}
+.what .red-price {
+  font-family: 'HelveticaNeueCyr_med', sans-serif;
+  color: #ff0000;
+  font-size: 2.5rem;
+}
+.what .equipment {
+  min-height: 15.5rem;
+}
+.what .equipment h3 {
+  font-family: 'HelveticaNeueCyr_med', sans-serif;
+  font-size: 2rem;
+}
+.what .equipment p {
+  min-height: 13rem;
+  font-size: 1.7rem;
+}
+.what .btn-what {
+  margin-top: 3.5rem;
+}
+/* Возможности */
+.capabilities {
+  padding: 4rem 0 8rem 0;
+  background-color: #fcfcf6;
+}
+.capabilities .text-block-right {
+  font-size: 1.7rem;
+  margin-top: 10rem;
+}
+.capabilities .text-block-right h3::before {
+  content: '';
+  position: absolute;
+  margin-left: -5.5rem;
+  width: 4rem;
+  height: 4.5rem;
+  display: inline-block;
+  background: url(../img/capabilities/cinema.png) no-repeat center;
+  background-size: 100%;
+}
+.capabilities .text-block-left {
+  margin-left: -2rem;
+  margin-top: 8rem;
+  font-size: 1.7rem;
+}
+.capabilities .text-block-left h3::before {
+  content: '';
+  position: absolute;
+  margin-left: -5.5rem;
+  margin-top: 0.5rem;
+  width: 4rem;
+  height: 4rem;
+  display: inline-block;
+  background: url(../img/capabilities/earth.png) no-repeat center;
+  background-size: 100%;
+}
+.capabilities .iron-man {
+  margin-left: -9.5rem;
+  margin-top: 4rem;
+}
+.capabilities .car {
+  margin-top: 10rem;
+  margin-left: 2rem;
+}
+.capabilities .vector_cap-right {
+  position: absolute;
+  margin-top: 100rem;
+}
+.capabilities .vector_cap-left {
+  position: absolute;
+  margin-top: 60rem;
+  margin-left: -10rem;
+}
+/* Форма захвата */
+.capture {
+  color: #ffffff;
+}
+.capture-title {
+  margin-top: 9rem;
+}
+.capture-title h2 {
+  font-family: 'HelveticaNeueCyr_black', sans-serif;
+  font-size: 3.5rem;
+}
+.capture-title h2 span {
+  text-transform: uppercase;
+}
+.capture-title .box {
+  background: url(../img/capture-form/block.png) center no-repeat;
+  background-size: 100% 100%;
+  font-family: 'HelveticaNeueCyr_med', sans-serif;
+  font-size: 1.8rem;
+  width: 50.7rem;
+  height: 5.9rem;
+  padding-top: 0.5rem;
+  padding-left: 1rem;
+  margin-bottom: 4rem;
+  margin-top: 2rem;
+}
+.capture-title .box p {
+  font-family: 'HelveticaNeueCyr_med', sans-serif;
+  font-size: 1.8rem;
+}
+.capture-title .time {
+  font-family: 'HelveticaNeueCyr_med', sans-serif;
+  font-size: 1.6rem;
+  margin-left: 4rem;
+}
+.capture-title .time p::before {
+  content: '';
+  position: absolute;
+  margin-left: -4rem;
+  margin-top: -0.2rem;
+  width: 3.3rem;
+  height: 3.8rem;
+  display: inline-block;
+  background: url(../img/capture-form/watch.png) no-repeat center;
+  background-size: 100%;
+}
+.capture-title .price {
+  font-family: 'HelveticaNeueCyr_med', sans-serif;
+  font-size: 1.6rem;
+  margin-left: 4rem;
+}
+.capture-title .price p::before {
+  content: '';
+  position: absolute;
+  margin-left: -4.3rem;
+  margin-top: -0.2rem;
+  width: 3.3rem;
+  height: 3.8rem;
+  display: inline-block;
+  background: url(../img/capture-form/bag.png) no-repeat center;
+  background-size: 100%;
+}
+.capture-form {
+  background-color: #000000;
+  margin: 2.5rem 0 2.5rem 0;
+  padding-top: 4rem;
+  border: 4px solid #21a3af;
+  border-radius: 3px;
+}
+.capture-form h3 {
+  display: block;
+  margin-bottom: 3.5rem;
+  font-family: 'HelveticaNeueCyr_med', sans-serif;
+  font-size: 2.2rem;
+}
+.capture-form input {
+  display: block;
+  height: 5rem;
+  width: 27rem;
+  margin: 1rem auto 0 auto;
+  padding-left: 3rem;
+  border: 2px solid #ffffff;
+  border-radius: 3px;
+  background-color: #000000;
+}
+.capture-form input::-webkit-input-placeholder {
+  color: #ffffff;
+  font-size: 1.6rem;
+}
+.capture-form-btn {
+  width: 27rem;
+  margin-top: 1.5rem;
+}
+.capture-form p {
+  margin: 2rem 0 3rem 0;
+  font-size: 1.5rem;
+}
+/* Вторые возможности */
+.capabilities_two {
+  padding: 4rem 0 8rem 0;
+  background-color: #fcfcf6;
+}
+.capabilities_two .text-block-right {
+  font-size: 1.7rem;
+  margin-top: 10rem;
+  margin-left: 3rem;
+}
+.capabilities_two .text-block-right h3::before {
+  content: '';
+  position: absolute;
+  margin-left: -5rem;
+  margin-top: 0.5rem;
+  width: 4rem;
+  height: 4rem;
+  display: inline-block;
+  background: url(../img/capabilities_two/ball.png) no-repeat center;
+  background-size: 100%;
+}
+.capabilities_two .text-block-left {
+  margin-left: 2rem;
+  font-size: 1.7rem;
+}
+.capabilities_two .text-block-left h3::before {
+  content: '';
+  position: absolute;
+  margin-left: -5rem;
+  margin-top: 0.5rem;
+  width: 4rem;
+  height: 4rem;
+  display: inline-block;
+  background: url(../img/capabilities_two/joystick.png) no-repeat center;
+  background-size: 100%;
+}
+.capabilities_two .extreme-img {
+  margin-left: -9rem;
+  margin-top: 3rem;
+  margin-bottom: 14rem;
+}
+.capabilities_two .game-img {
+  margin-top: 8rem;
+  margin-left: 2rem;
+}
+.capabilities_two .vector-one {
+  position: absolute;
+  padding-left: 37rem;
+  margin-top: 80rem;
+}
+.capabilities_two .vector-two {
+  position: absolute;
+  margin-top: 65rem;
+}
+/* Как это работает */
+.how-work {
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+  background: #fcfcf6 url(../img/how-work/how-work-bg.png) center no-repeat;
+  background-size: cover;
+}
+.how-work h2 {
+  text-align: center;
+  font-family: 'HelveticaNeueCyr_black', sans-serif;
+  font-size: 3.5rem;
+}
+.how-work .line {
+  margin-bottom: 8rem;
+}
+.how-work .vector {
+  position: absolute;
+  right: 0rem;
+  margin-top: 50rem;
+}
+.how-work .wrapper {
+  display: block;
+  text-align: center;
+  height: 30rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.how-work .wrapper p {
+  width: 90%;
+  display: block;
+  font-family: 'HelveticaNeueCyr-rom', sans-serif;
+  font-size: 1.6rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.how-work .wrapper img {
+  display: block;
+  margin-bottom: 5rem;
+  width: 100%;
+}
+.how-work .circle {
+  display: inline-block;
+  background-color: #18a7d0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.how-work .circle-border {
+  display: inline-block;
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  padding: 0.4rem;
+  border: 2px solid #18a7d0;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 4rem;
+  background-color: #ffffff;
+  color: #ffffff;
+  font-family: 'HelveticaNeueCyr_bold', sans-serif;
+  font-size: 3rem;
+  margin-left: -2.5rem;
+  margin-top: -5rem;
+}
+/* Совместимость */
+.compatibility {
+  padding-bottom: 5rem;
+  background-color: #fcfcf6;
+}
+.compatibility h2 {
+  font-family: 'HelveticaNeueCyr_black', sans-serif;
+  margin-bottom: 8rem;
+  font-size: 3.5rem;
+}
+.compatibility .img-box img {
+  min-height: 19rem;
+  min-width: 8rem;
+  margin: auto;
+}
+.compatibility .img-box p {
+  display: block;
+  text-align: center;
+  min-height: 3rem;
+  font-family: 'HelveticaNeueCyr_med', sans-serif;
+  font-size: 2rem;
+}
+.compatibility .glasses-box img {
+  margin-top: 10rem;
+}
+.compatibility .glasses-box p {
+  margin: 2rem 0 8rem 1rem;
+  font-family: 'HelveticaNeueCyr_med', sans-serif;
+  font-size: 2rem;
+}
+/* Блок с видео */
+.video-block {
+  background: url(../img/video-block/video-bg-2.jpg) center no-repeat;
+  background-size: cover;
+  color: #ffffff;
+}
+.video-block h2 {
+  font-family: 'HelveticaNeueCyr_black', sans-serif;
+  margin-top: 9rem;
+  margin-bottom: 1rem;
+  font-size: 3.5rem;
+  line-height: 1.3;
+}
+.video-block a {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 10rem;
+  color: #ffffff;
+  font-family: 'HelveticaNeueCyr_med', sans-serif;
+  font-size: 2rem;
+}
+/* Игры и приложения */
+.application {
+  padding-top: 10rem;
+  background-color: #fcfcf6;
+}
+.application h2 {
+  font-family: 'HelveticaNeueCyr_black', sans-serif;
+  text-align: center;
+  font-size: 3.5rem;
+}
+.application p {
+  margin-top: 2rem;
+  font-family: 'HelveticaNeueCyr_med', sans-serif;
+  font-size: 2.2rem;
+}
+.application span {
+  display: block;
+  font-size: 1.7rem;
+  margin-bottom: 5rem;
+}
+.application .icons {
+  display: block;
+  margin: 3.5rem auto 4rem auto;
+}
+.application .img-box {
+  min-height: 18rem;
+}
+.application .img-box .two {
+  padding-top: 3rem;
+}
+.application .app-btn {
+  display: block;
+  margin: 0 auto 8rem auto;
+}
+/* Отзывы */
+.reviews {
+  padding-bottom: 5rem;
+  background-color: #f8f8f0;
+}
+.reviews h2 {
+  font-family: 'HelveticaNeueCyr_black', sans-serif;
+  margin-top: 10rem;
+  font-size: 3.5rem;
+}
+.reviews .vector {
+  position: absolute;
+  z-index: 10;
+  margin-left: 108rem;
+  margin-top: -10rem;
+}
+.reviews .line {
+  margin-bottom: 7rem;
+}
+.reviews-block {
+  margin: 0.5rem -1.2rem 0 -1.2rem;
+  padding: 3rem 3rem 3rem 3rem;
+  border: 1px solid #18a7d0;
+  background-color: #ffffff;
+}
+.reviews-block img {
+  display: inline-block;
+}
+.reviews-block h4 {
+  display: inline-block;
+  margin-left: 2rem;
+  vertical-align: middle;
+  font-family: 'HelveticaNeueCyr_med', sans-serif;
+  font-size: 1.8rem;
+}
+.reviews-block p {
+  margin-top: 3rem;
+  font-family: 'HelveticaNeueCyr-rom', sans-serif;
+  font-size: 1.6rem;
+}
+/* Как мы работаем */
+.we-working {
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+  background-color: #fcfcf6;
+}
+.we-working h2 {
+  font-family: 'HelveticaNeueCyr_black', sans-serif;
+  font-size: 3.5rem;
+}
+.we-working p {
+  font-family: 'HelveticaNeueCyr-rom', sans-serif;
+  font-size: 1.6rem;
+}
+.we-working .vector {
+  position: absolute;
+  left: 0;
+  margin-top: 25rem;
+}
+.we-working .line {
+  margin-bottom: 10rem;
+}
+.we-working .img-box {
+  min-height: 15rem;
+}
+.we-working .img-box img {
+  min-height: 12rem;
+}
+/* Вторая форма захвата */
+.capture_two {
+  color: #ffffff;
+}
+/* Footer */
+footer {
+  padding-top: 6rem;
+  padding-bottom: 1rem;
+}
+footer h2 {
+  font-family: 'HelveticaNeueCyr_black', sans-serif;
+  font-size: 3.5rem;
+}
+footer .footer-link {
+  margin-bottom: 4rem;
+  font-family: 'HelveticaNeueCyr_med', sans-serif;
+  font-size: 1.7rem;
+  color: #000000;
+}
+footer .shadow {
+  position: absolute;
+  z-index: -99;
+  width: 100%;
+  height: 9rem;
+  margin-top: 16rem;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+footer .footer {
+  font-family: 'HelveticaNeueCyr_med', sans-serif;
+  margin-top: 6rem;
+  font-size: 2rem;
+  padding-top: 1rem;
+}
+footer .footer .logo img {
+  margin-top: -3rem;
+  display: inline-block;
+}
+footer .footer .logo p {
+  color: #ffffff;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  display: inline-block;
+  text-align: left;
+}
+footer .footer .contacts {
+  margin-top: 1rem;
+  text-align: right;
+}
+footer .footer .contacts p {
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin-bottom: 0rem;
+}
+footer .footer .contacts a {
+  color: #94ca2d;
+}
+/* Всплывающие окна */
+.popup {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.popup-form {
+  height: 37rem;
+  width: 40rem;
+  background-color: #000000;
+  padding-top: 4rem;
+  margin: 20vh auto 0 auto;
+  border: 4px solid #21a3af;
+  border-radius: 3px;
+}
+.popup-form h3 {
+  color: #ffffff;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 3rem;
+  font-family: 'HelveticaNeueCyr_med', sans-serif;
+  font-size: 2.1rem;
+}
+.popup-form input {
+  display: block;
+  height: 5rem;
+  width: 27rem;
+  margin: 1rem auto 0 auto;
+  padding-left: 3rem;
+  border: 2px solid #ffffff;
+  border-radius: 3px;
+  background-color: #000000;
+  color: #ffffff;
+}
+.popup-form input::-webkit-input-placeholder {
+  color: #ffffff;
+  font-size: 1.6rem;
+}
+.popup-form .check {
+  display: block;
+  margin-left: -20rem;
+  height: 2.5rem;
+}
+.popup-form p {
+  color: #ffffff;
+  margin: 2rem 0 3rem 0;
+  font-size: 1.5rem;
+}
+.popup .capture-form-btn {
+  width: 27rem;
+  margin-top: 1.5rem;
+}
+.popup .circle {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  padding: 0.3rem;
+  margin-top: -5.5rem;
+  margin-left: 18.3rem;
+  border: 3px solid #18a7d0;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 4rem;
+  color: #ffffff;
+  font-family: 'HelveticaNeueCyr_bold', sans-serif;
+  font-size: 1.9rem;
+  background-color: #000000;
+}
+.popup-close {
+  margin-top: -1.2rem;
+  margin-left: -1.4rem;
+  position: absolute;
+  width: 2rem;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  font-size: 3rem;
+  color: #18a7d0;
+}
+.popup-order {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.popup-order .popup-form {
+  height: 42rem;
+  width: 40rem;
+  background-color: #000000;
+  padding-top: 4rem;
+  margin: 20vh auto 0 auto;
+  border: 4px solid #21a3af;
+  border-radius: 3px;
+}
+.popup-order .popup-form h3 {
+  color: #ffffff;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 3rem;
+  font-family: 'HelveticaNeueCyr_med', sans-serif;
+  font-size: 2.1rem;
+}
+.popup-order .popup-form input {
+  display: block;
+  height: 5rem;
+  width: 27rem;
+  margin: 1rem auto 0 auto;
+  padding-left: 3rem;
+  border: 2px solid #ffffff;
+  border-radius: 3px;
+  background-color: #000000;
+  color: #ffffff;
+}
+.popup-order .popup-form input::-webkit-input-placeholder {
+  color: #ffffff;
+  font-size: 1.6rem;
+}
+.popup-order .popup-form p {
+  color: #ffffff;
+  margin: 1rem 0 0 0;
+  font-size: 1.5rem;
+}
+.popup-order .capture-form-btn {
+  width: 27rem;
+  margin-top: 1rem;
+}
+.popup-order .circle {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  padding: 0.3rem;
+  margin-top: -5.5rem;
+  margin-left: 18.3rem;
+  border: 3px solid #18a7d0;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 4rem;
+  color: #ffffff;
+  font-family: 'HelveticaNeueCyr_bold', sans-serif;
+  font-size: 1.9rem;
+  background-color: #000000;
+}
+.popup-order .order-close {
+  margin-top: -1.2rem;
+  margin-left: -1.4rem;
+  position: absolute;
+  width: 2rem;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  font-size: 3rem;
+  color: #18a7d0;
+}
+.popup-order .order-form {
+  margin: 1rem auto 0 auto;
+  padding-left: 2.8rem;
+  height: 5rem;
+  width: 27rem;
+  border: 2px solid #ffffff;
+  border-radius: 3px;
+  background-color: #000000;
+  color: #ffffff;
+}
+/* Окно с видео */
+.video-window {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.video-window .video-place {
+  max-width: 66rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.video-window .video-place iframe {
+  width: 65rem;
+  height: 41rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 17vh;
+  border: none;
+}
+.video-window .video-place .close {
+  text-transform: uppercase;
+  z-index: 99;
+  position: absolute;
+  display: block;
+  width: 12rem;
+  margin-top: -5rem;
+  margin-left: -6rem;
+  left: 50%;
+  padding: 1rem;
+  color: #000000;
+  background-color: #ffffff;
+  opacity: 1;
+}
+@media (max-width: 1400px) {
+  .main .dino-img {
+    margin-left: -11rem;
+  }
+  .reviews .vector {
+    margin-left: 99rem;
+  }
+}
+@media (max-width: 1199px) {
+  .main-content h1 {
+    margin-top: 5rem;
+    line-height: 1;
+    font-size: 3rem;
+  }
+  .main-content .dino-img {
+    margin-top: 18rem;
+    margin-bottom: 2rem;
+    margin-left: -17rem;
+  }
+  .main-content .glasses-img {
+    margin-top: 7rem;
+    margin-bottom: 0;
+  }
+  .what img {
+    width: 160%;
+    margin-left: -15rem;
+  }
+  .what .btn-what {
+    font-size: 1.6rem;
+  }
+  .capabilities .text-block-left {
+    margin-left: 4rem;
+    margin-top: 4rem;
+  }
+  .capabilities .text-block-right {
+    margin-left: 4rem;
+  }
+  .capabilities .iron-man {
+    margin-left: 2.5rem;
+    margin-top: 3rem;
+    width: 90%;
+  }
+  .capabilities .car {
+    margin-left: 4.5rem;
+    margin-top: 5rem;
+    width: 90%;
+  }
+  .capabilities .vector_cap-right {
+    display: none;
+  }
+  .capabilities .vector_cap-left {
+    display: none;
+  }
+  .capture .capture-form {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .capture .capture-form input {
+    width: 100%;
+  }
+  .capture .capture-form-btn {
+    width: 100%;
+    padding: 2rem 2rem;
+  }
+  .capture_two .capture-form {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .capture_two .capture-form input {
+    width: 100%;
+  }
+  .capture_two .capture-form-btn {
+    width: 100%;
+    padding: 2rem 2rem;
+  }
+  .how-work .vector {
+    display: none;
+  }
+  .how-work .wrapper img {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .how-work .circle-border {
+    width: 5rem;
+    height: 5rem;
+    line-height: 4rem;
+    font-size: 3.5rem;
+  }
+  .capabilities_two .game-img {
+    width: 90%;
+    margin-top: 4rem;
+  }
+  .capabilities_two .extreme-img {
+    margin-left: -5rem;
+    margin-bottom: 6rem;
+    width: 120%;
+  }
+  .capabilities_two .text-block-right {
+    display: block;
+    text-align: left;
+    margin-top: 7rem;
+  }
+  .capabilities_two .vector-one {
+    display: none;
+  }
+  .capabilities_two .vector-two {
+    display: none;
+  }
+  .compatibility .glasses-box img {
+    width: 100%;
+  }
+  .reviews .vector {
+    display: none;
+  }
+  .we-working .vector {
+    display: none;
+  }
+  footer .footer .logo {
+    text-align: left;
+  }
+}
+@media (max-width: 991px) {
+  .main .header {
+    font-size: 1.5rem;
+  }
+  .main .header .contacts p {
+    font-size: 2rem;
+  }
+  .main-content .glasses-img {
+    width: 80%;
+  }
+  .main-content .dino-img {
+    width: 170%;
+    margin-left: -14rem;
+    margin-top: 30rem;
+  }
+  .what img {
+    width: 70%;
+    margin-left: -67rem;
+    margin-top: 19rem;
+  }
+  .what .equipment {
+    margin-top: 40rem;
+  }
+  .what .btn-what {
+    display: block;
+    margin: 4rem auto 0 auto;
+  }
+  .capabilities {
+    font-size: 1.2rem;
+  }
+  .capabilities .text-block-right {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+  }
+  .capabilities .text-block-left {
+    margin-top: 2rem;
+    margin-left: 4rem;
+    font-size: 1.4rem;
+  }
+  .capabilities .iron-man {
+    margin-left: 3rem;
+  }
+  .capabilities .car {
+    margin-top: 9rem;
+  }
+  .capture-title {
+    padding-left: 10rem;
+  }
+  .capture-title .time {
+    font-size: 1.3rem;
+  }
+  .capture-title .price {
+    font-size: 1.3rem;
+  }
+  .capabilities_two .text-block .extreme-img {
+    margin: 0;
+    width: 70%;
+  }
+  .capabilities_two .text-block-left {
+    display: block;
+    margin-left: 7rem;
+    text-align: left;
+  }
+  .capabilities_two .text-block-right {
+    display: block;
+    text-align: left;
+  }
+  .how-work .wrapper img {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .how-work .circle-border {
+    width: 4rem;
+    height: 4rem;
+    line-height: 2.8rem;
+    font-size: 2.5rem;
+  }
+  .compatibility {
+    text-align: center;
+  }
+  .compatibility .img-box {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .compatibility .img-box img {
+    width: 9rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .compatibility .glasses-box {
+    width: 80%;
+    margin: auto;
+    margin-top: -10rem;
+  }
+  .we-working .img-box {
+    height: 30%;
+  }
+  .we-working .block {
+    min-height: 25rem;
+  }
+  .we-working p {
+    margin-bottom: 6rem;
+  }
+  .reviews-block img {
+    height: 100%;
+  }
+  footer .footer {
+    font-size: 1.5rem;
+  }
+  footer .footer .logo {
+    text-align: left;
+    margin-top: 1rem;
+  }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+   /* стили только для IE10 */
+   .popup .circle {
+     margin-left: 38rem;
+ }
+ .popup-close {
+     margin-left: -0.9rem;
+ }
+}
+@media (max-width: 767px) {
+    
+  .video-window .video-place iframe {
+    width: 32rem;
+    height: 20rem;
+  }
+  .main .header {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .main .header .contacts {
+    text-align: center;
+  }
+  .main .header .contacts p {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .main-content .glasses-img {
+    width: 35%;
+    margin-left: 4rem;
+  }
+  .main-content .dino-img {
+    width: 40%;
+    margin-left: 30rem;
+    margin-top: -30rem;
+  }
+  .main .shadow {
+    height: 13rem;
+  }
+  .what img {
+    display: none;
+  }
+  .what .equipment {
+    margin-top: 0;
+  }
+  .what .equipment .block {
+    padding-left: 20%;
+  }
+  .capabilities .iron-man {
+    display: block;
+    width: 80%;
+    margin: auto;
+  }
+  .capabilities .car {
+    display: block;
+    width: 80%;
+    margin: auto;
+  }
+  .capabilities .text-block-left {
+    text-align: left;
+    margin-left: 8rem;
+  }
+  .capabilities .text-block-right {
+    text-align: left;
+    margin-left: 8rem;
+  }
+  .capture-title {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+  .capture-title h2 {
+    font-size: 2.2rem;
+  }
+  .capture-title .box {
+    width: 100%;
+  }
+  .capture-title .box p {
+    font-size: 1.4rem;
+  }
+  .capture-title .time {
+    text-align: center;
+  }
+  .capture-title .price {
+    text-align: center;
+  }
+  .capture .xs-line {
+    height: 1rem;
+  }
+  .capture .xs-line .capture-title {
+    margin-top: 0;
+  }
+  .capture .xs-line .time p {
+    font-size: 0.8rem;
+  }
+  .capture .xs-line .price p {
+    font-size: 0.8rem;
+  }
+  .capture_two .xs-line {
+    height: 1rem;
+  }
+  .capture_two .xs-line .capture-title {
+    margin-top: 0;
+  }
+  .capture_two .xs-line .time p {
+    font-size: 0.8rem;
+  }
+  .capture_two .xs-line .price p {
+    font-size: 0.8rem;
+  }
+  .capabilities_two .extreme-img {
+    display: block;
+    width: 80%;
+    margin: auto;
+  }
+  .capabilities_two .game-img {
+    display: block;
+    width: 70%;
+    margin: auto;
+  }
+  .capabilities_two .text-block-left {
+    text-align: left;
+    margin-left: 8rem;
+  }
+  .capabilities_two .text-block-right {
+    text-align: left;
+    margin-left: 8rem;
+  }
+  .how-work .wrapper {
+    height: 25rem;
+  }
+  .how-work .wrapper img {
+    width: 75%;
+  }
+  .how-work .wrapper p {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+  .application img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .application h2 {
+    font-size: 2.5rem;
+  }
+  .compatibility .compatibility {
+    height: 80rem;
+  }
+  .compatibility .compatibility h2 {
+    font-size: 2.4rem;
+  }
+  .compatibility .compatibility .glasses-box {
+    margin-top: -4rem;
+  }
+  .compatibility .compatibility .img-box {
+    min-height: 19rem;
+  }
+  .compatibility .compatibility .img-box img {
+    width: 50%;
+  }
+  .reviews-block img {
+    height: 7rem;
+  }
+  .reviews-block h4 {
+    font-size: 1.4rem;
+  }
+  footer .shadow {
+    height: 13rem;
+  }
+  footer .footer {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  footer .footer .logo {
+    text-align: center;
+  }
+  footer .footer .logo p {
+    text-align: left;
+  }
+  footer .footer .contacts {
+    text-align: center;
+  }
+  footer .footer .contacts p {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .popup-form {
+    height: 30rem;
+    width: 28rem;
+    padding-top: 2rem;
+  }
+  .popup-form h3 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-size: 1.7rem;
+  }
+  .popup-form input {
+    height: 4rem;
+    width: 23rem;
+    margin: 1rem auto 0 auto;
+    padding-left: 3rem;
+    border: 2px solid #ffffff;
+    border-radius: 3px;
+    background-color: #000000;
+    color: #ffffff;
+  }
+  .popup-form input::-webkit-input-placeholder {
+    color: #ffffff;
+    font-size: 1.6rem;
+  }
+  .popup-form p {
+    color: #ffffff;
+    margin: 2rem 0 3rem 0;
+    font-size: 1.5rem;
+  }
+  .popup .capture-form-btn {
+    width: 23rem;
+    padding: 1.5rem 2rem;
+    font-size: 1.4rem;
+  }
+  .popup .circle {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: -3.5rem;
+    margin-left: 12.5rem;
+    line-height: 3rem;
+    font-size: 1.9rem;
+  }
+  .popup .popup-close {
+    margin-top: -0.9rem;
+    margin-left: -1.4rem;
+    position: absolute;
+    width: 2rem;
+    font-size: 3rem;
+  }
+  .popup-order .popup-form {
+    height: 33rem;
+    width: 30rem;
+    padding-top: 2rem;
+  }
+  .popup-order .popup-form h3 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-size: 1.7rem;
+  }
+  .popup-order .popup-form input {
+    display: block;
+    height: 4rem;
+    width: 23rem;
+    margin: 0.5rem auto 0 auto;
+    padding-left: 3rem;
+    border: 2px solid #ffffff;
+    border-radius: 3px;
+    background-color: #000000;
+    color: #ffffff;
+  }
+  .popup-order .popup-form input::-webkit-input-placeholder {
+    color: #ffffff;
+    font-size: 1.4rem;
+  }
+  .popup-order .popup-form p {
+    color: #ffffff;
+    margin: 1rem 0 0 0;
+    font-size: 1.5rem;
+  }
+  .popup-order .capture-form-btn {
+    width: 23rem;
+    padding: 1.5rem 2rem;
+    font-size: 1.4rem;
+  }
+  .popup-order .circle {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    padding: 0.3rem;
+    margin-top: -3.5rem;
+    margin-left: 12.5rem;
+    border: 3px solid #18a7d0;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 4rem;
+    color: #ffffff;
+    font-family: 'HelveticaNeueCyr_bold', sans-serif;
+    font-size: 1.9rem;
+    background-color: #000000;
+  }
+  .popup-order-close {
+    margin-top: -1.1rem;
+    margin-left: -1.4rem;
+    position: absolute;
+    width: 2rem;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    font-size: 3rem;
+    color: #18a7d0;
+  }
+  .popup-order .order-form {
+    margin: 0.5rem auto 0 auto;
+    padding-left: 2.8rem;
+    height: 4rem;
+    width: 23rem;
+  }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (max-width : 767px){
+ /* IE10 IE11 до 768px по ширине*/
+ .popup .circle {
+     margin-left: 26rem;
+ }
+ .popup .popup-close {
+     margin-left: -0.9rem;
+ }
+}
+@media (max-width: 570px) {
+  .main .header {
+    font-size: 1.1rem;
+  }
+  .main .header img {
+    width: 20%;
+  }
+  .main .dino-img {
+    display: block;
+    margin-left: 18rem;
+    margin-top: -10rem;
+  }
+  .main .glasses-img {
+    display: block;
+    margin-left: 3rem;
+  }
+  .capture-title {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .capture-title .box p {
+    font-size: 1.3rem;
+  }
+  .capture-form {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .capture-form input {
+    width: 100%;
+  }
+  .capture-form-btn {
+    width: 100%;
+  }
+  .application .icons {
+    width: 50%;
+  }
+  footer h2 {
+    font-size: 2.5rem;
+  }
+  footer .shadow {
+    height: 14rem;
+    margin-top: 14rem;
+  }
+  footer .logo img {
+    height: 3rem;
+  }
+  footer .logo p {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 320px) {
+  .what .equipment p {
+    font-size: 1.4rem;
+  }
+  .what .equipment span {
+    font-size: 1.7rem;
+  }
+  .what .btn-what {
+    padding: 1.5rem 1.7rem;
+    font-size: 1rem;
+  }
+  .capture-title .time {
+    font-size: 1.1rem;
+  }
+  .capture-title .price {
+    font-size: 1.1rem;
+  }
+  .capture .box {
+    height: 9rem;
+    background-size: 100% 100%;
+  }
+  .capture .box p {
+    font-size: 1.4rem;
+  }
+  .capture-form {
+    padding-top: 0.5rem;
+    padding-bottom: 0rem;
+  }
+  .capture-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .capture-form input::-webkit-input-placeholder {
+    font-size: 1.2rem;
+  }
+  .capture-form-btn {
+    padding: 2rem 2rem;
+    font-size: 1.2rem;
+  }
+  .capture-form p {
+    font-size: 1.2rem;
+  }
+  .capture_two-title .time {
+    font-size: 1.1rem;
+  }
+  .capture_two-title .price {
+    font-size: 1.1rem;
+  }
+  .capture_two .box {
+    height: 9rem;
+    background-size: 100% 100%;
+  }
+  .capture_two .box p {
+    font-size: 1.4rem;
+  }
+  .capture_two-form {
+    padding-top: 0.5rem;
+    padding-bottom: 0rem;
+  }
+  .capture_two-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .capture_two-form input::-webkit-input-placeholder {
+    font-size: 1.2rem;
+  }
+  .capture_two-form-btn {
+    padding: 2rem 2rem;
+    font-size: 1.2rem;
+  }
+  .capture_two-form p {
+    font-size: 1.2rem;
+  }
+  .how-work h2 {
+    font-size: 2.5rem;
+  }
+  .how-work .line {
+    margin-bottom: 4rem;
+  }
+  .how-work .wrapper {
+    height: 20rem;
+  }
+  .how-work .wrapper img {
+    width: 90%;
+  }
+  .how-work .wrapper p {
+    font-size: 1.15rem;
+  }
+  .how-work .wrapper .circle-border {
+    margin-left: -2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    line-height: 2.4rem;
+    font-size: 2rem;
+  }
+  .compatibility {
+    height: 80rem;
+  }
+  .compatibility .block-top {
+    left: 0.5rem;
+    position: absolute;
+    display: block;
+    margin-top: 30rem;
+  }
+  .compatibility .block-bottom {
+    position: absolute;
+    display: block;
+    margin-bottom: -100rem;
+  }
+  .compatibility .block-bottom .glasses-box img {
+    margin-top: 0;
+  }
+  .compatibility h2 {
+    font-size: 2.4rem;
+  }
+  .compatibility .img-box {
+    min-height: 19rem;
+  }
+  .compatibility .img-box img {
+    width: 80%;
+  }
+  .application .icons {
+    width: 50%;
+  }
+  .application img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+  .reviews h2 {
+    font-size: 3rem;
+  }
+  .reviews-block img {
+    height: 6rem;
+  }
+  .reviews-block h4 {
+    font-size: 1.4rem;
+  }
+  .reviews-block p {
+    font-size: 1.3rem;
+  }
+  .we-working h2 {
+    font-size: 3rem;
+  }
+  footer h2 {
+    font-size: 2.5rem;
+  }
+  footer .shadow {
+    height: 14rem;
+    margin-top: 14rem;
+  }
+  footer .logo {
+    margin-top: 1rem;
+  }
+  footer .logo img {
+    height: 3rem;
+  }
+  footer .logo p {
+    font-size: 1rem;
+  }
+  .popup-form {
+    height: 20rem;
+    width: 22.5rem;
+    padding-top: 2rem;
+  }
+  .popup-form h3 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-family: 'HelveticaNeueCyr_med', sans-serif;
+    font-size: 1.2rem;
+  }
+  .popup-form input {
+    height: 3rem;
+    width: 15rem;
+    margin: 0.3rem auto 0 auto;
+    padding-left: 2rem;
+  }
+  .popup-form input::-webkit-input-placeholder {
+    font-size: 1.1rem;
+  }
+  .popup-form p {
+    margin: 0.3rem 0 3rem 0;
+    font-size: 1rem;
+  }
+  .popup .capture-form-btn {
+    width: 15rem;
+    height: 3.5rem;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    padding-top: 1.1rem;
+  }
+  .popup .circle {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: -3.5rem;
+    margin-left: 10rem;
+    line-height: 3rem;
+    font-size: 1.9rem;
+  }
+  .popup-close {
+    margin-top: -0.9rem;
+    margin-left: -1.45rem;
+    position: absolute;
+    width: 2rem;
+    font-size: 3rem;
+  }
+  .popup-order .popup-form {
+    height: 24rem;
+    width: 22rem;
+    padding-top: 2rem;
+  }
+  .popup-order .popup-form h3 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+  }
+  .popup-order .popup-form input {
+    height: 3rem;
+    width: 15rem;
+    margin: 0.3rem auto 0 auto;
+    padding-left: 1.4rem;
+  }
+  .popup-order .popup-form input::-webkit-input-placeholder {
+    font-size: 1.1rem;
+  }
+  .popup-order .popup-form p {
+    margin: 1rem 0 3rem 0;
+    font-size: 1rem;
+  }
+  .popup-order .capture-form-btn {
+    width: 15rem;
+    height: 3.5rem;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    padding-top: 1.1rem;
+  }
+  .popup-order .circle {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: -3.5rem;
+    margin-left: 9.5rem;
+    line-height: 3rem;
+    font-size: 1.9rem;
+  }
+  .popup-order .order-close {
+    margin-top: -0.9rem;
+    margin-left: -1.45rem;
+    position: absolute;
+    width: 2rem;
+    font-size: 3rem;
+  }
+  .popup-order .order-form {
+    margin: 0.3rem auto 0 auto;
+    padding-left: 1.1rem;
+    height: 3rem;
+    width: 15rem;
+    font-size: 1.1rem;
+  }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (max-width : 320px){
+ /* IE10 IE11 до 768px по ширине*/
+ .popup .circle {
+     margin-left: 20.5rem;
+ }
+ .popup .popup-close {
+     margin-left: -1rem;
+ }
+}

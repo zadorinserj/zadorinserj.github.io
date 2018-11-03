@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Virtual Reality с VR Box 2</title>
+
+	<style>
+		@font-face{font-family:'HelveticaNeueCyr_bold';src:url('src/fonts/HelveticaNeueCyr-Bold.eot');src:url('src/fonts/HelveticaNeueCyr-Bold.eot?#iefix') format('embedded-opentype'),url('src/fonts/HelveticaNeueCyr-Bold.woff2') format('woff2'),url('src/fonts/HelveticaNeueCyr-Bold.woff') format('woff'),url('src/fonts/HelveticaNeueCyr-Bold.ttf') format('truetype'),url('src/fonts/HelveticaNeueCyr-Bold.svg#HelveticaNeueCyr-Bold') format('svg');font-weight:bold;font-style:normal}@font-face{font-family:'HelveticaNeueCyr_med';src:url('src/fonts/HelveticaNeueCyr-Medium.eot');src:url('src/fonts/HelveticaNeueCyr-Medium.eot?#iefix') format('embedded-opentype'),url('src/fonts/HelveticaNeueCyr-Medium.woff2') format('woff2'),url('src/fonts/HelveticaNeueCyr-Medium.woff') format('woff'),url('src/fonts/HelveticaNeueCyr-Medium.ttf') format('truetype'),url('src/fonts/HelveticaNeueCyr-Medium.svg#HelveticaNeueCyr-Medium') format('svg');font-weight:bold;font-style:normal}@font-face{font-family:'HelveticaNeueCyr_rom';src:url('src/fonts/HelveticaNeueCyr-Roman.eot');src:url('src/fonts/HelveticaNeueCyr-Roman.eot?#iefix') format('embedded-opentype'),url('src/fonts/HelveticaNeueCyr-Roman.woff2') format('woff2'),url('src/fonts/HelveticaNeueCyr-Roman.woff') format('woff'),url('src/fonts/HelveticaNeueCyr-Roman.ttf') format('truetype'),url('src/fonts/HelveticaNeueCyr-Roman.svg#HelveticaNeueCyr-Roman') format('svg');font-weight:bold;font-style:normal}@font-face{font-family:'HelveticaNeueCyr_black';src:url('src/fonts/HelveticaNeueCyr-Black.eot');src:url('src/fonts/HelveticaNeueCyr-Black.eot?#iefix') format('embedded-opentype'),url('src/fonts/HelveticaNeueCyr-Black.woff2') format('woff2'),url('src/fonts/HelveticaNeueCyr-Black.woff') format('woff'),url('src/fonts/HelveticaNeueCyr-Black.ttf') format('truetype'),url('src/fonts/HelveticaNeueCyr-Black.svg#HelveticaNeueCyr-Black') format('svg');font-weight:bold;font-style:normal}html{font-size:10px}hr{margin-top:0;margin-bottom:0;border:0;border-top:3px solid #eee}a:hover{text-decoration:none}button:focus,input:focus,a:focus,text-area:focus{outline:none}.button{padding:2rem 4rem;border-radius:4px;font-size:1.8rem;background-color:#94ca2d;color:#fff;text-transform:uppercase;border:none;-webkit-transition:all .2s;transition:all .2s;font-family:'HelveticaNeueCyr_bold',sans-serif}.button:hover{cursor:pointer;background-color:#85b528}.line{margin:auto;display:block;height:4px;width:5.5rem;background-color:#18a7d0}.main{color:#fff; background: url(src/img/main/main-bg.jpg) center no-repeat;background-size: cover;}.main .header{font-family:'HelveticaNeueCyr_med',sans-serif;margin-top:.5rem;font-size:2rem;padding-top:1rem}.main .header .logo img{margin-top:-3rem;display:inline-block}.main .header .logo p{margin-top:.5rem;margin-left:1rem;display:inline-block}.main .header .contacts{margin-top:0;text-align:right}.main .header .contacts p{font-size:2.5rem;margin-bottom:0}.main .header .contacts a{color:#94ca2d}.main .shadow{position:absolute;width:100%;height:9rem;background-color:rgba(0,0,0,0.6)}.main-content{font-family:'HelveticaNeueCyr_bold',sans-serif}.main-content h1{margin-top:13rem;line-height:1.5}.main-content h2{margin-top:2rem}.main-content .button{margin-top:3rem}.main-content .glasses-img{display:block;margin-top:3.5rem;margin-bottom:3rem;margin-left:-2.5rem}.main-content .dino-img{margin-left:-15rem;margin-top:25rem}.line{margin:auto;display:block;height:4px;width:5.5rem;background-color:@block-color;
+}
+	</style>
+
+    <style>
+        .expand::-ms-expand {
+        color: #fff; /* Цвет текста */
+   }
+    </style>
+
+
+
+</head>
+<body>
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript" >
+	    (function (d, w, c) {
+	        (w[c] = w[c] || []).push(function() {
+	            try {
+	                w.yaCounter46462875 = new Ya.Metrika({
+	                    id:46462875,
+	                    clickmap:true,
+	                    trackLinks:true,
+	                    accurateTrackBounce:true,
+	                    webvisor:true
+	                });
+	            } catch(e) { }
+	        });
+
+	        var n = d.getElementsByTagName("script")[0],
+	            s = d.createElement("script"),
+	            f = function () { n.parentNode.insertBefore(s, n); };
+	        s.type = "text/javascript";
+	        s.async = true;
+	        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+	        if (w.opera == "[object Opera]") {
+	            d.addEventListener("DOMContentLoaded", f, false);
+	        } else { f(); }
+	    })(document, window, "yandex_metrika_callbacks");
+	</script>
+	<noscript><div><img src="https://mc.yandex.ru/watch/46462875" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter -->
+	
+	<section class="main">
+		<div class="shadow"></div>
+		<div class="container">
+				
+			<div class="header">
+				<div class="row">
+					<div class="col-lg-5 col-md-8 col-sm-9 col-xs-12">
+						<div class="logo">
+							<img src="src/img/main/logo.png" alt="VR">
+							<p>Производство и продажа VR очков.<br>Доставка по всей России</p>
+						</div>
+					</div>
+					<div class="contacts">
+						<div class="col-lg-2 col-lg-offset-5 col-md-4 col-sm-3 col-xs-12">
+							<p>+79104551703</p>
+							<a class="popup-one" href="#">Заказать звонок</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="main-content">
+				<div class="row">
+					<div class="col-md-8 col-sm-8 col-xs-12">
+						<h1>Очки виртуальной реальности<br>VR Box II от производителя за 2390 р!</h1>
+						<h2>Бесплатная доставка по Москве!</h2>
+						<button class="button btn-header btn-box">заказать vr box 2</button>
+						<img class="glasses-img" src="src/img/main/glasses.png" alt="VR2">
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-12">
+						<img class="dino-img" src="src/img/main/dino.png" alt="Dino">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="what">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7 col-md-9 col-sm-12">
+					<div class="what-title">
+						<div class="row">
+							<div class="col-md-10 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+								<h2>Что такое VR Box 2</h2>
+								<p>Это специальное устройство, в которое вставляется смартфон. Очки одеваются на голову и крепко фиксируются. С их помощью вы можете целиком погрузиться в мир виртуальной реальности в любом удобном для вас месте. С очками можно: смотреть 3D фильмы, играть в игры, Смотреть любые видео с YouTube и многое другое!</p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<div class="equipment">
+								
+								<div class="block">
+									<h3><strong>Комплектация 1</strong></h3>
+									<p>
+										- Очки VR Box 2	<br> - Ремешок для крепления на голову <br> - Ткань для очистки линз <br> - Инструкция
+									</p>
+									<span><strong>Цена без пульта: <span class="red-price">2390 руб.</span></strong></span>
+								</div>
+							</div>
+							
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<div class="equipment">
+								
+								<div class="block">
+									<h3><strong>Комплектация 2</strong></h3>
+									<p>
+										- Очки VR Box 2	<br> - Ремешок для крепления на голову <br> - Ткань для очистки линз <br> - Инструкция <br> <strong>- Пульт дистанционного управления</strong>
+									</p>
+									<span><strong>Цена с пультом: <span class="red-price">2990 руб.</span></strong></span>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					<button class="button btn-what">выбрать комплектацию и заказать vr box 2</button>
+				</div>
+				<div class="col-lg-5 col-md-3">
+					<img src="src/img/what/vr_box.png" alt="vr_box">
+				</div>
+			</div>
+		</div>
+	</section>
+	<hr>
+  <section class="capabilities">
+  	<div class="container">
+  		<div class="row">
+  			<div class="col-lg-5 col-lg-offset-1 col-md-6 col-sm-6">
+  				<img class="vector_cap-left rellax" data-rellax-speed="3" src="src/img/capabilities/vector-object-2.png" alt="vector">
+  				<img class="iron-man" src="src/img/capabilities/iron-man.png" alt="iron-man">
+  				<div class="text-block-left">
+  					<h3><strong>Путешествия по миру с помощью панорамного изображения!</strong></h3>
+  					<p>А также текст драйв автомобилей,<br>погружение на дно океана, полеты в космос, виртуальный секс и многое другое</p>
+  				</div>
+  			</div>
+  			<div class="col-lg-5 col-md-6 col-sm-6">
+  				<div class="text-block-right">
+  					<h3><strong>Просмотр фильмов, сериалов и видео на Youtube</strong></h3>
+  					<p>В совершенно новом формате 3D, как перед<br>6-ти метровым экраном! Также просмотр любых фильмов в формате 2D!</p>
+  				</div>
+  				<img class="car" src="src/img/capabilities/reflection.png" alt="reflection">
+  			</div>
+  			<!-- <div class="col-lg-1 col-sm-0"> -->
+  				<img class="vector_cap-right rellax" data-rellax-speed="5" src="src/img/capabilities/vector-object-1.png" alt="vector">
+  			<!-- </div> -->
+  		</div>
+  	</div>
+  </section>
+	
+	<section class="capture parallax-window" data-parallax="scroll" data-image-src="src/img/capture-form/capture-bg.jpg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
+					<div class="capture-title">
+						<h2>Закажите <span>vr box 2</span><br>прямо сейчас</h2>
+						<div class="box">
+							<p>Только мы сотрудничаем с производителем<br>и осуществляем прямые поставки с производства</p>
+						</div>
+						<div class="row hidden-xs">
+							<div class="col-md-6 col-sm-4 col-xs-6">
+								<div class="time">
+									<p>Принимаем заявки<br>24 часа в сутки!<br>7 дней в неделю</p>
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-4 col-xs-6">
+								<div class="price">
+									<p>Быстрая доставка и<br>оплата при получении</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-lg-offset-3 col-md-4 col-md-offset-2 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+					<form class="capture-form text-center" action="src/mailer/smart.php" method="POST">
+						<h3>Введите ваши данные<br>и нажмите заказать</h3>
+						<input type="text" name="user_name" required placeholder="Введите имя">
+						<input type="text" name="user_phone" required class="phone-user" placeholder="Введите телефон">
+						<button class="button capture-form-btn" onclick="yaCounter46462875.reachGoal('application'); return true;" name="submit" type="submit">заказать vr box 2</button>
+						<p>Перезвоним в течение 10 минут</p>
+					</form>
+				</div>
+			</div>
+			<div class="xs-line">
+				<div class="row hidden-lg hidden-md hidden-sm">
+					<div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
+						<div class="capture-title">
+							<div class="row">
+								<div class="col-md-6 col-sm-4 col-xs-6">
+									<div class="time">
+										<p>Принимаем заявки<br>24 часа в сутки!<br>7 дней в неделю</p>
+									</div>
+								</div>
+								<div class="col-md-6 col-sm-4 col-xs-6">
+									<div class="price">
+										<p>Быстрая доставка и<br>оплата при получении</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="capabilities_two hidden-xs">
+		<div class="container">
+			<img class="vector-two rellax" data-rellax-speed="2" src="src/img/capabilities_two/vector-2.png" alt="vector">
+			<div class="row">
+				<div class="col-md-5 col-md-offset-1 col-sm-6 col-xs-12">
+					<img class="extreme-img" src="src/img/capabilities_two/extreme.png" alt="extreme">
+
+						<div class="text-block-left">
+							<h3><strong>Играйте в игры с эффектом<br>полного погружения!</strong></h3>
+							<p>Полное погружение в игры на смартфоне,<br>а так же на ПК через программу TRINUS.</p>
+						</div>
+
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-12">
+					<div class="text-block-right">
+						<h3><strong>Симуляция экстремальных<br>видов спорта</strong></h3>
+						<p>Почувствуйте на себе эмоции от прыжка<br>с парашютом или спуска на сноуборде<br>со склона горы.</p>
+						<img class="vector-one rellax" data-rellax-speed="2" src="src/img/capabilities_two/vector-1.png" alt="vector">
+					</div>
+					<img class="game-img" src="src/img/capabilities_two/game.png" alt="game">
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<hr>
+	<section class="how-work">
+		<div class="container">
+			<div class="row">
+				<h2>Как это работает</h2>
+				<span class="line"></span>
+
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+					<div class="wrapper">
+
+						<img src="src/img/how-work/1.png" alt="1">
+
+						<span class="circle-border">
+				    	<span class="circle">
+				    		1
+				    	</span>
+				    </span>
+
+						<p>Скачай на смартфон <br> приложения, игры, фильмы.</p>
+					</div>
+				</div>
+				
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+					<div class="wrapper">
+
+						<img src="src/img/how-work/2.png" alt="2">
+
+						<span class="circle-border">
+				    	<span class="circle">
+				    		2
+				    	</span>
+				    </span>
+
+						<p>Вставь смартфон в очки <br> виртуальной реальности.</p>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+					<div class="wrapper">
+
+						<img src="src/img/how-work/3.png" alt="3">
+
+						<span class="circle-border">
+				    	<span class="circle">
+				    		3
+				    	</span>
+				    </span>
+
+						<p>Наслаждайся абсолютно <br> непередаваемыми эмоциями.</p>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+					<div class="wrapper">
+
+						<img src="src/img/how-work/4.png" alt="4">
+
+						<span class="circle-border">
+				    	<span class="circle">
+				    		4
+				    	</span>
+				    </span>
+
+						<p>Управляй виртуальной <br> реальностью bluetooth-пультом.</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<img class="vector rellax" data-rellax-speed="2" src="src/img/how-work/vector.png" alt="vector">
+	</section>
+
+	<section class="compatibility">
+		<div class="container">
+			<div class="row">
+				<h2 class="header hidden-md hidden-lg"><strong>Совместимость очков</strong></h2>
+
+				<div class="col-lg-6 col-md-5 col-sm-12 hidden-md hidden-lg">
+					<div class="glasses-box">
+						<img src="src/img/compatibility/glasses.png" alt="glasses">
+						<p>VR BOX-2 подойдёт для любой модели смартфона<br>с диагональю экрана от 3.5 до 6 дюймов.</p>
+					</div>
+				</div>
+
+				<div class="col-lg-6 col-md-7 col-sm-12">
+					<h2 class="hidden-xs hidden-sm"><strong>Совместимость очков</strong></h2>
+						<div class="row">
+							<div class="col-sm-4 col-xs-4 text-center">
+								<div class="img-box">
+									<img src="src/img/compatibility/ios.png" alt="ios">
+									<p>ios</p>
+								</div>
+							</div>
+							<div class="col-sm-4 col-xs-4 text-center">
+								<div class="img-box">
+									<img src="src/img/compatibility/android.png" alt="android">
+									<p>android</p>
+								</div>
+							</div>
+							<div class="col-sm-4 col-xs-4 text-center">
+								<div class="img-box">
+									<img src="src/img/compatibility/windows.png" alt="windows">
+									<p>windows</p>
+								</div>
+							</div>
+						</div>
+				</div>
+
+				<div class="col-lg-6 col-md-5 col-sm-12 hidden-xs hidden-sm">
+					<div class="glasses-box">
+						<img src="src/img/compatibility/glasses.png" alt="glasses">
+						<p>VR BOX-2 подойдёт для любой модели смартфона<br>с диагональю экрана от 3.5 до 6 дюймов.</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<section class="video-block">
+		<div class="container text-center">
+			<h2>Виртуальная реальность<br>в очках vr box</h2>
+			<img src="src/img/video-block/link-image.png" alt="video">
+			<a class="video" href="#">Смотреть видео</a>
+		</div>
+	</section>
+
+	<section class="application">
+		<div class="container">
+			<div class="row">
+				<h2>Более 100 игр и приложений для VR BOX II</h2>
+				<span class="line"></span>
+				<img class="icons" src="src/img/application/icons.png" alt="icons">
+				<div class="col-md-4">
+					<div class="img-box">
+						<img src="src/img/application/1.png" alt="1">
+					</div>
+					<p>Titans of Space</p>
+					<span>Бесплатное приложение «Titans of Space» позволит вам совершить виртуальную поездку по нашей солнечной системе. <br>При этом вы получите много интересной информации о небесных телах.</span>
+				</div>
+				<div class="col-md-4">
+					<div class="img-box">
+						<img class="two" src="src/img/application/2.png" alt="2">
+					</div>
+					<p>Zombie Shooter</p>
+					<span>Одна из популярных игр «Zombie Shooter VR» В ней вы истребляете полчища зомби, исследуете темные пещеры и заброшенные шахты.</span>
+				</div>
+				<div class="col-md-4">
+					<div class="img-box">
+						<img src="src/img/application/3.png" alt="3">
+					</div>
+					<p>Sisters</p>
+					<span>Игра «Sisters» имеет форму интерактивного фильма ужасов для Android-устройств: <br>вы находитесь в гостиной, где можете осмотреться. При этом вокруг вас происходят странные вещи.</span> 
+				</div>
+				<button class="button app-btn btn-box">заказать vr box 2</button>
+			</div>
+		</div>
+	</section>
+	<hr>
+	<section class="reviews">
+		<div class="container">
+			<div class="row">
+				<h2 class="text-center">Отзывы довольных клиентов</h2>
+				<span class="line"></span>
+				<img class="vector" src="src/img/reviews/vector.png" alt="vector">
+				<div class="col-lg-6 col-md-6">
+					<div class="reviews-block">
+						<img src="src/img/reviews/face.png" alt="face">
+						<h4>Дмитрий Фомин. 30 лет<br>г.Санкт-Петербург</h4>
+						<p>Пришло очень быстро! Сами очки отличного качества, сразу же опробывал на Самсунг С6 эдж. Всё отлично работает, смарт тянет хорошо. В ПлэйМаркет просто ищешь приложения с VR и всё. Джойстик подключил по блютус. Качество отличное на мой взгляд! Виртуальная реальность это круто!!!</p>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6">
+					<div class="reviews-block">
+						<img src="src/img/reviews/face.png" alt="face">
+						<h4>Дмитрий Фомин. 30 лет<br>г.Санкт-Петербург</h4>
+						<p>Пришло очень быстро! Сами очки отличного качества, сразу же опробывал на Самсунг С6 эдж. Всё отлично работает, смарт тянет хорошо. В ПлэйМаркет просто ищешь приложения с VR и всё. Джойстик подключил по блютус. Качество отличное на мой взгляд! Виртуальная реальность это круто!!!</p>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6">
+					<div class="reviews-block">
+						<img src="src/img/reviews/face.png" alt="face">
+						<h4>Дмитрий Фомин. 30 лет<br>г.Санкт-Петербург</h4>
+						<p>Пришло очень быстро! Сами очки отличного качества, сразу же опробывал на Самсунг С6 эдж. Всё отлично работает, смарт тянет хорошо. В ПлэйМаркет просто ищешь приложения с VR и всё. Джойстик подключил по блютус. Качество отличное на мой взгляд! Виртуальная реальность это круто!!!</p>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6">
+					<div class="reviews-block">
+						<img src="src/img/reviews/face.png" alt="face">
+						<h4>Дмитрий Фомин. 30 лет<br>г.Санкт-Петербург</h4>
+						<p>Пришло очень быстро! Сами очки отличного качества, сразу же опробывал на Самсунг С6 эдж. Всё отлично работает, смарт тянет хорошо. В ПлэйМаркет просто ищешь приложения с VR и всё. Джойстик подключил по блютус. Качество отличное на мой взгляд! Виртуальная реальность это круто!!!</p>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+	<hr>
+	<section class="we-working">
+		<div class="container">
+			<div class="row text-center">
+				<h2>Как мы работаем</h2>
+				<span class="line"></span>
+				<img class="vector" src="src/img/we-are-working/vector.png" alt="vector">
+				<div class="col-lg-3 col-md-3 col-sm-6">
+					<div class="block">
+						<div class="img-box">
+							<img src="src/img/we-are-working/1.png" alt="1">
+						</div>
+						<p>Вы оставляете заявку <br> на нашем сайте либо <br> по телефону:<br>+79104551703</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6">
+					<div class="block">
+						<div class="img-box">
+							<img src="src/img/we-are-working/2.png" alt="2">
+						</div>
+						<p>Мы связываемся с вами, <br> подтверждаем ваш заказ</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6">
+					<div class="block">
+						<div class="img-box">
+							<img src="src/img/we-are-working/3.png" alt="3">
+						</div>
+						<p>Мы огранизовываем доставку <br> по всей России либо вы <br> забираете самовывозом. <br> (возможно только в Москве)</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6">
+					<div class="block">
+						<div class="img-box">
+							<img src="src/img/we-are-working/4.png" alt="4">
+						</div>
+						<p>Вы оплачиваете заказ <br> при получении</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="capture_two parallax-window" data-parallax="scroll" data-image-src="src/img/capture-form-two/capture-bg.jpg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
+					<div class="capture-title">
+						<h2>Закажите <span>vr box 2</span><br>прямо сейчас</h2>
+						<div class="box">
+							<p>Только мы сотрудничаем с производителем<br>и осуществляем прямые поставки с производства</p>
+						</div>
+						<div class="row hidden-xs">
+							<div class="col-md-6 col-sm-4 col-xs-6">
+								<div class="time">
+									<p>Принимаем заявки<br>24 часа в сутки!<br>7 дней в неделю</p>
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-4 col-xs-6">
+								<div class="price">
+									<p>Быстрая доставка и<br>оплата при получении</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-lg-offset-3 col-md-4 col-md-offset-2 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+					<form id="contact" class="capture-form text-center" action="src/mailer/smart.php" method="POST">
+						<h3>Введите ваши данные<br>и нажмите заказать</h3>
+						<input type="text" name="user_name" required placeholder="Введите имя">
+						<input type="text" name="user_phone" required class="phone-user" placeholder="Введите телефон">
+						<button class="button capture-form-btn" onclick="yaCounter46462875.reachGoal('application'); return true;" name="submit" type="submit">заказать vr box 2</button>
+						<p>Перезвоним в течение 10 минут</p>
+					</form>
+				</div>
+			</div>
+			<div class="xs-line">
+				<div class="row hidden-lg hidden-md hidden-sm">
+					<div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
+						<div class="capture-title">
+							<div class="row">
+								<div class="col-md-6 col-sm-4 col-xs-6">
+									<div class="time">
+										<p>Принимаем заявки<br>24 часа в сутки!<br>7 дней в неделю</p>
+									</div>
+								</div>
+								<div class="col-md-6 col-sm-4 col-xs-6">
+									<div class="price">
+										<p>Быстрая доставка и<br>оплата при получении</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<div class="shadow"></div>
+		<div class="container text-center">
+			<h2>Остались вопросы?</h2>
+			<a class="footer-link" href="#">Задайте их нашему менеджеру</a>
+			<div class="footer">
+				<div class="row">
+					<div class="col-lg-5 col-md-8 col-sm-9 col-xs-12">
+						<div class="logo">
+							<img class="hidden-xs" src="src/img/main/logo.png" alt="VR">
+							<img class="hidden-sm hidden-md hidden-lg " src="src/img/footer/logo.png" alt="VR">
+							<p>Производство и продажа VR очков.<br>Доставка по всей России</p>
+						</div>
+					</div>
+					<div class="contacts">
+						<div class="col-lg-2 col-lg-offset-5 col-md-4 col-sm-3 col-xs-12">
+							<p>+79104551703</p>
+							<a class="popup-one" href="#">Заказать звонок</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Модальные окна -->
+	<!-- Заказать звонок -->
+	<div class="popup-call popup">
+		<div class="popup-dialog">
+			<div class="popup-content">
+				<!-- <div class="popup-form"> -->
+					<form class="popup-form text-center" action="src/mailer/smart.php" method="POST">
+						<span class="circle" ><button class="popup-close" >&times;</button></span>
+						<h3>Введите ваши данные<br>и нажмите заказать звонок</h3>
+						<input type="text" name="user_name" required placeholder="Введите имя">
+						<input type="text" class="phone-user" name="user_phone" required placeholder="Введите телефон">
+						<button class="button modal-button capture-form-btn" onclick="yaCounter46462875.reachGoal('call'); return true;" name="submit" type="submit">заказать звонок</button>
+						<p>Перезвоним в течение 10 минут</p>
+					</form>
+				<!-- </div> -->
+			</div>
+		</div>
+	</div>
+
+	<!-- Задать вопрос -->
+	<div class="popup-question popup">
+		<div class="popup-dialog">
+			<div class="popup-content">
+				<!-- <div class="popup-form"> -->
+					<form class="popup-form text-center" action="src/mailer/smart.php" method="POST">
+						<span class="circle" ><button class="popup-close" >&times;</button></span>
+						<h3>Оставьте заявку<br>мы свяжемся с вами и <br>ответим на все вопросы</h3>
+						<input type="text" name="user_name" required placeholder="Введите имя">
+						<input type="text" class="phone-user" name="user_phone" required placeholder="Введите телефон">
+						<button class="button capture-form-btn" onclick="yaCounter46462875.reachGoal('call'); return true;" name="submit" type="submit">оставить заявку</button>
+						<p style="margin-top: 0">Перезвоним в течение 10 минут</p>
+					</form>
+				<!-- </div> -->
+			</div>
+		</div>
+	</div>
+
+	<!-- Выбрать комплектацию и заказать -->
+	<div class="popup-complect popup-order">
+		<div class="popup-dialog">
+			<div class="popup-content">
+				<!-- <div class="popup-form"> -->
+					<form id="form-order" class="popup-form text-center" action="src/mailer/smart.php" method="POST">
+						<span class="circle" ><button class="order-close" >&times;</button></span>
+						<h3>Введите ваши данные <br>и нажмите заказать</h3>
+						<input type="text" name="user_name" required placeholder="Введите имя">
+						<input type="text" class="phone-user" name="user_phone" required placeholder="Введите телефон">
+						<select class="form-control order-form expand" form="form-order" required>
+						  <option>С Bluetooth пультом</option>
+						  <option>Без Bluetooth пульта</option>
+						</select>
+						<button class="button capture-form-btn" onclick="yaCounter46462875.reachGoal('application'); return true;" name="submit" type="submit">заказать vr box 2</button>
+						<p>Перезвоним в течение 10 минут</p>
+					</form>
+				<!-- </div> -->
+			</div>
+		</div>
+	</div>
+	
+	<!-- Заказать VR Box -->
+	<div class="popup-box popup">
+		<div class="popup-dialog">
+			<div class="popup-content">
+				<!-- <div class="popup-form"> -->
+					<form class="popup-form text-center" action="src/mailer/smart.php" method="POST">
+						<span class="circle" ><button class="popup-close" >&times;</button></span>
+						<h3>Введите ваши данные <br>и нажмите заказать</h3>
+						<input type="text" name="user_name" required placeholder="Введите имя">
+						<input type="text" class="phone-user" name="user_phone" required placeholder="Введите телефон">
+						<button class="button capture-form-btn" onclick="yaCounter46462875.reachGoal('application'); return true;" name="submit" type="submit">заказать vr box 2</button>
+						<p>Перезвоним в течение 10 минут</p>
+					</form>
+				<!-- </div> -->
+			</div>
+		</div>
+	</div>
+
+	<!-- Окно с видео -->
+	<div class="video-window">
+		<div class="video-place">
+			<button type="button" class="btn btn-danger close">закрыть</button>
+			<iframe src="https://www.youtube.com/embed/xc2TsRwqjds">
+			</iframe>
+		</div>
+	</div>
+
+	<!-- Стили -->
+	<link rel="stylesheet" href="src/css/bootstrap.min.css">
+  <link rel="stylesheet" href="src/css/main.css">
+
+
+  <!-- Скрипты -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="src/js/parallax.min.js"></script>
+  <script src="src/js/jquery.maskedinput.js"></script>
+	<script src="src/js/rellax.min.js"></script>
+    
+
+
+	<script>
+		var rellax = new Rellax('.rellax');
+	</script>
+
+	<script>
+		$(document).ready(function(){
+    		$('.popup-one').on('click', function(event) {
+    			event.preventDefault();
+    			$('.popup-call').fadeIn(); 
+    		});
+    		$('.popup-close').on('click', function(event) {
+    			event.preventDefault();
+    			$('.popup-call').fadeOut(); 
+    		});
+
+    		$('.footer-link').on('click', function(event) {
+    			event.preventDefault();
+    			$('.popup-question').fadeIn(); 
+    		});
+    		$('.popup-close').on('click', function(event) {
+    			event.preventDefault();
+    			$('.popup-question').fadeOut(); 
+    		});
+
+    		$('.btn-what').on('click', function(event) {
+    			event.preventDefault();
+    			$('.popup-complect').fadeIn(); 
+    		});
+    		$('.order-close').on('click', function(event) {
+    			event.preventDefault();
+    			$('.popup-complect').fadeOut(); 
+    		});
+
+    		$('.btn-box').on('click', function(event) {
+    			event.preventDefault();
+    			$('.popup-box').fadeIn(); 
+    		});
+    		$('.popup-close').on('click', function(event) {
+    			event.preventDefault();
+    			$('.popup-box').fadeOut(); 
+    		});
+
+    		$('.video').on('click', function(event) {
+    			event.preventDefault();
+    			$('.video-window').fadeIn(); 
+    		});
+    		$('.close').on('click', function(event) {
+    			event.preventDefault();
+    			$('.video-window').fadeOut(); 
+    		});
+    });
+	</script>
+
+
+	<!-- Скрипт отправки на почту -->
+	<!-- <script>
+	    $('form').submit(function(event) {
+	      event.preventDefault();
+	      $.ajax({
+	        type: "post",
+	        url: "mailer/smart.php",
+	        data: $(this).serialize()
+	      }).done(function() {
+	        $(this).find("input").val("");
+	        alert("Сообщение успешно отправлено");
+	        $("form").trigger("reset");
+	      });
+	      return false;
+	    });
+	  </script> -->
+
+	<!-- Маска для набора телефона -->
+	<script>
+		jQuery(function($){
+		   $(".phone-user").mask("+7 (999) 999-9999");
+		});
+	</script>
+
+</body>
+</html>

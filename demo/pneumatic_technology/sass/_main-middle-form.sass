@@ -1,0 +1,182 @@
+.main-middle-form
+	background: url(../img/main-middle-form-bg.jpg) right no-repeat
+	background-size: 70% 100%
+	color: $light
+	padding-top: 50px
+	padding-bottom: 50px
+	.container
+		display: flex
+		flex-wrap: wrap
+		justify-content: flex-end
+		.block-before
+			position: absolute
+			width: 420px
+			height: 300px
+			left: 50%
+			z-index: 2
+			transform: translateX(-700px)
+			background-color: $light
+			box-shadow: -30.311px 17.5px 37.6px 2.4px rgba(34, 34, 36, 0.26)
+			border-left: 10px solid  #48466d
+			img
+				position: absolute
+				bottom: -11px
+				left: 50%
+				transform: translateX(-50%)
+		.title
+			width: 770px
+			margin-bottom: 30px
+			display: flex
+			align-items: center
+			&::before
+				content: url(../img/main-middle-form-pattern1.png)
+				position: absolute
+				left: -400px
+				margin-top: -10px
+				z-index: -1
+			&::after
+				content: url(../img/main-middle-form-pattern1.png)
+				position: absolute
+				left: -30px
+				margin-top: 240px
+				z-index: -1
+			h2
+				color: $light
+				width: max-content
+				img
+					margin-top: -10px
+					margin-right: 30px
+			.subtitle
+				@include light
+				margin-left: 20px
+		.middle-form
+			display: flex
+			margin-left: 30px
+			.inputs
+				input
+					display: block
+					width: 270px
+					font-size: 18px
+					padding: 7.5px
+					padding-left: 20px
+					margin-bottom: 10px
+			.action
+				margin-left: 30px
+				textarea
+					width: 470px
+					height: 90px
+					margin-bottom: 3px
+				.wrapper
+					display: flex
+					justify-content: space-between
+					.text
+						@include light
+						font-size: 14px
+						line-height: 1
+					.footer-btn
+						width: 170px
+						@include med
+						color: $light
+						background-color: #008ee8
+						font-size: 18px
+						max-height: 42px
+						min-height: 42px
+						overflow: hidden
+						transition: all 0.3s ease-in-out
+						&::before, &::after
+							content: ''
+							width: 100%
+							position: absolute
+							top: 0
+							height: 100%
+							z-index: 0
+							transition: all 0.3s ease-in-out
+						&::before
+							left: 0
+							transform: translateX(-100%)
+							border-right: 10px solid transparent
+							border-bottom: 42px solid $light
+						&::after
+							right: 0
+							transform: translateX(100%)
+							border-left: 10px solid transparent
+							border-top: 42px solid $light
+						&:hover
+							color: #008ee8
+							&::before
+								transform: translateX(-39%)
+							&::after
+								transform: translateX(39%)
+						span
+							z-index: 2
+
+@media(max-width: 1500px)
+	.main-middle-form
+		background-size: 75% 100%
+		.container
+			.block-before
+				transform: translateX(-640px)
+
+@media(max-width: 1199px)
+	.main-middle-form
+		background-size: 80% 100%
+		h2
+			font-size: 40px
+		.container
+			.block-before
+				transform: translateX(-680px)
+				img
+					transform: translateX(-30%)
+			.title
+				width: 700px
+				.subtitle
+					font-size: 16px
+			.middle-form
+				.action
+					textarea
+						width: 400px
+					.wrapper
+						.text
+							font-size: 11px
+							line-height: 1.4
+
+@media(max-width: 991px)
+	.main-middle-form
+		background-size: cover
+		.container
+			.block-before
+				display: none
+			.title::after
+				display: none
+
+@media(max-width: 767px)
+	.main-middle-form
+		.container
+			.title
+				flex-wrap: wrap
+				h2
+					width: 100%
+					font-size: 32px
+				.subtitle
+					width: 100%
+					text-align: center
+					margin-left: 0
+					margin-top: 20px
+					font-size: 14px
+			.middle-form
+				flex-wrap: wrap
+				margin-left: 0
+				.inputs
+					width: 100%
+					input
+						width: 100%
+				.action
+					width: 100%
+					margin-left: 0
+					textarea
+						width: 100%
+					.wrapper
+						.text
+							font-size: 10px
+							br
+								display: none

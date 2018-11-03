@@ -1,0 +1,128 @@
+/* Fonts family */
+@font-face {
+  font-family: 'HelveticaNeueCyr_bold';
+  src: url('../fonts/HelveticaNeueCyr-Bold.eot');
+  src: url('../fonts/HelveticaNeueCyr-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/HelveticaNeueCyr-Bold.woff2') format('woff2'), url('../fonts/HelveticaNeueCyr-Bold.woff') format('woff'), url('../fonts/HelveticaNeueCyr-Bold.ttf') format('truetype'), url('../fonts/HelveticaNeueCyr-Bold.svg#HelveticaNeueCyr-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeueCyr_med';
+  src: url('../fonts/HelveticaNeueCyr-Medium.eot');
+  src: url('../fonts/HelveticaNeueCyr-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/HelveticaNeueCyr-Medium.woff2') format('woff2'), url('../fonts/HelveticaNeueCyr-Medium.woff') format('woff'), url('../fonts/HelveticaNeueCyr-Medium.ttf') format('truetype'), url('../fonts/HelveticaNeueCyr-Medium.svg#HelveticaNeueCyr-Medium') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeueCyr_rom';
+  src: url('../fonts/HelveticaNeueCyr-Roman.eot');
+  src: url('../fonts/HelveticaNeueCyr-Roman.eot?#iefix') format('embedded-opentype'), url('../fonts/HelveticaNeueCyr-Roman.woff2') format('woff2'), url('../fonts/HelveticaNeueCyr-Roman.woff') format('woff'), url('../fonts/HelveticaNeueCyr-Roman.ttf') format('truetype'), url('../fonts/HelveticaNeueCyr-Roman.svg#HelveticaNeueCyr-Roman') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeueCyr_black';
+  src: url('../fonts/HelveticaNeueCyr-Black.eot');
+  src: url('../fonts/HelveticaNeueCyr-Black.eot?#iefix') format('embedded-opentype'), url('../fonts/HelveticaNeueCyr-Black.woff2') format('woff2'), url('../fonts/HelveticaNeueCyr-Black.woff') format('woff'), url('../fonts/HelveticaNeueCyr-Black.ttf') format('truetype'), url('../fonts/HelveticaNeueCyr-Black.svg#HelveticaNeueCyr-Black') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+/* Colors */
+/* Basic settings */
+html {
+  font-size: 10px;
+}
+a:hover {
+  text-decoration: none;
+}
+button:focus,
+input:focus,
+a:focus,
+  text-area:focus {
+  outline: none;
+}
+a:active {
+  color: @dark;
+}
+.button {
+  padding: 2rem 4rem;
+  border-radius: 4px;
+  font-size: 1.8rem;
+  background-color: #94ca2d;
+  color: #ffffff;
+  text-transform: uppercase;
+  border: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  font-family: 'HelveticaNeueCyr_bold', sans-serif;
+}
+.button:hover {
+  cursor: pointer;
+  background-color: #85b528;
+}
+/* Typography */
+.main {
+  color: #ffffff;
+}
+/* Главный экран */
+.main {
+  height: 100vh;
+  background: url(../img/main/main-bg.jpg) center no-repeat;
+  background-size: cover;
+}
+.main .header {
+  font-family: 'HelveticaNeueCyr_med', sans-serif;
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  padding-top: 1rem;
+}
+.main .header .logo img {
+  margin-top: -3rem;
+  display: inline-block;
+}
+.main .header .logo p {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  display: inline-block;
+}
+.main .header .contacts {
+  margin-top: 0rem;
+  text-align: right;
+}
+.main .header .contacts p {
+  font-size: 2.5rem;
+  margin-bottom: 0rem;
+}
+.main .header .contacts a {
+  color: #94ca2d;
+}
+.main .shadow {
+  position: absolute;
+  width: 100%;
+  height: 9rem;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.main-content {
+  font-family: 'HelveticaNeueCyr_bold', sans-serif;
+}
+.main-content h1 {
+  margin-top: 13rem;
+  line-height: 1.5;
+}
+.main-content h2 {
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+.main-content .button {
+  margin-top: 3rem;
+}
+.main-content .glasses-img {
+  display: block;
+  margin-top: 3.5rem;
+  margin-bottom: 3rem;
+  margin-left: -2.5rem;
+}
+.main-content .dino-img {
+  margin-left: -15rem;
+  margin-top: 25rem;
+}
