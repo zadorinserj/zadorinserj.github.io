@@ -5,38 +5,44 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Photo Dashboard</title>
+
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+  <div id="app">
+
+  </div>
+
 	<section class="layout">
-		<aside class="sidebar layout__sidebar">
-			<section class="profile">
-					<div class="profile__picture"></div>
-					<div class="profile__name">Amelia Rice</div>
-					<div class="profile__file-counter">2390 files</div>
-					<button class="profile__upload-btn">Upload</button>
-			</section>
-			<form class="search-form" action="#">
-				<input class="search-form__input" type="text" placeholder="Search files" required>
-			</form>
-			<section class="filter">
-				<div class="filter__title">Categories</div>
-				<nav class="categories">
-					<a class="filter__link filter__link--active" href="#">Photos</a>
-					<a class="filter__link" href="#">Videos</a>
-					<a class="filter__link" href="#">Projects</a>
-				</nav>
-				<div class="filter__title">
-					Albums
-					<button class="albums__add"></button>
-				</div>
-				<nav class="albums filter__list">
-					<a class="filter__link" href="#">Subcarpathia 2016</a>
-					<a class="filter__link" href="#">Summer 2015</a>
-					<a class="filter__link" href="#">Aspen 2015</a>
-					<a class="filter__link" href="#">Croatia 2015</a>
-				</nav>
-			</section>
-		</aside>
+		<!--<aside class="sidebar layout__sidebar">-->
+			<!--<section class="profile">-->
+					<!--<div class="profile__picture"></div>-->
+					<!--<div class="profile__name">Amelia Rice</div>-->
+					<!--<div class="profile__file-counter">2390 files</div>-->
+					<!--<button class="profile__upload-btn">Upload</button>-->
+			<!--</section>-->
+			<!--<form class="search-form" action="#">-->
+				<!--<input class="search-form__input" type="text" placeholder="Search files" required>-->
+			<!--</form>-->
+			<!--<section class="filter">-->
+				<!--<div class="filter__title">Categories</div>-->
+				<!--<nav class="categories">-->
+					<!--<a class="filter__link filter__link--active" href="#">Photos</a>-->
+					<!--<a class="filter__link" href="#">Videos</a>-->
+					<!--<a class="filter__link" href="#">Projects</a>-->
+				<!--</nav>-->
+				<!--<div class="filter__title">-->
+					<!--Albums-->
+					<!--<button class="albums__add"></button>-->
+				<!--</div>-->
+				<!--<nav class="albums filter__list">-->
+					<!--<a class="filter__link" href="#">Subcarpathia 2016</a>-->
+					<!--<a class="filter__link" href="#">Summer 2015</a>-->
+					<!--<a class="filter__link" href="#">Aspen 2015</a>-->
+					<!--<a class="filter__link" href="#">Croatia 2015</a>-->
+				<!--</nav>-->
+			<!--</section>-->
+		<!--</aside>-->
 		<main class="main layout__main">
 			<section class="period main__item">
 				<div class="period__nav">
@@ -101,8 +107,8 @@
 		</main>
 	</section>
 
-	<link rel="stylesheet" href="styles/style.css">
-
-	<script src="js/script.js"></script>
+  <script src="js/lib/vue.js"></script>
+  <script src="js/utils/api.js"></script>
+	<script src="js/index.js"></script>
 </body>
 </html>
