@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<select class="cards js-cards">
+	<option value="master_card_mass">Master Card Mass</option>
+	<option value="visa_alfatravel_premium_5">Visa Alfatravel Premium</option>
+	<option value="visa_classic">Visa Classic</option>
+	<option value="master_card_world_bl">Master Card Beeline</option>
+</select>
+
+<select class="targets js-targets">
+	<option value="_self">В текущей вкладке</option>
+	<option value="_blank">В новой вкладке</option>
+</select>
+
+<label class="">
+	<input class="query js-query" type="text" value="utm_medium=content">
+</label>
+
+<select class="js-server">
+	<option value="https://testjmb.alfabank.ru/cc-short/post">Сервер интеграции</option>
+	<option value="https://testjmb.alfabank.ru/land/cc-short-test-co-alina/post">Сервер Алины</option>
+	<option value="http://localhost:8080/post">Локальный сервер</option>
+	<option value="https://anketa.alfabank.ru/cc-short/post">Продакшн</option>
+</select>
+
+<form
+	class="form js-form"
+	action=""
+	method="POST"
+	target=""
+>
+	<label class="form__label">
+		<span class="form__text">Фамилия</span>
+		<input class="form__input js-form-input" type="text" name="lastName" value="Тест" />
+	</label>
+	<label class="form__label">
+		<span class="form__text">Имя</span>
+		<input class="form__input js-form-input" type="text" name="firstName" value="Тест" />
+	</label>
+	<label class="form__label">
+		<span class="form__text">Отчество</span>
+		<input class="form__input js-form-input" type="text" name="middleName" value="Тест" />
+	</label>
+	<label class="form__label">
+		<span class="form__text">Пол</span>
+		<input class="form__input js-form-input" type="text" name="gender" value="M" />
+	</label>
+	<label class="form__label">
+		<span class="form__text">Номер телефона</span>
+		<input class="form__input js-form-input" type="text" name="phone" value="+78888888889" />
+	</label>
+	<label class="form__label">
+		<span class="form__text">EMail</span>
+		<input class="form__input js-form-input" type="text" name="email" value="test@test1.test" />
+	</label>
+	<label class="form__label">
+		<span class="form__text">Галочка СОПД</span>
+		<input class="form__input js-form-input" type="checkbox" name="sopdConfirmed" value="true" checked>
+	</label>
+
+	<label>
+		<input class="form__label js-form-input js-submit" type="submit">
+	</label>
+</form>
+
+<script src="index.js"></script>
+</body>
+</html>
