@@ -26,6 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         form.setAttribute('action', action);
         form.setAttribute('target', target.value);
-        // form.submit();
+
+        form.submit();
     });
 });
