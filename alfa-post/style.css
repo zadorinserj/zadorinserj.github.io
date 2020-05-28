@@ -1,17 +1,25 @@
-.form {
-    padding: 20px;
+@media (min-width: 1199.98px) {
+    .container {
+        max-width: 800px;
+    }
 }
 
-.form__label {
-    margin-bottom: 5px;
-    display: flex;
-    align-items: center;
+.container {
+    padding-top: 40px;
 }
 
-.form__text {
-    width: 120px;
+.config {
+    margin-bottom: 40px;
 }
 
-.form__input {
-    margin-left: 5px;
+.heading {
+    margin-bottom: 40px;
+}
+
+.form__heading {
+    margin-bottom: 20px;
+}
+
+.form-check {
+    margin-bottom: 20px;
 }
