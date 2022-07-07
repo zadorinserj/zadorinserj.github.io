@@ -11,7 +11,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
     "async-validator": "^1.8.5",
-    "moment": "^2.23.0",
+    "moment": "^2.29.4",
     "vue": "^2.5.17",
     "vue-masked-input": "^0.5.2",
     "whatwg-fetch": "^3.0.0"
